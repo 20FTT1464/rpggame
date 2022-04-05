@@ -30,7 +30,7 @@ class thegame {
     }
 
     static void newGame() {
-        System.out.println("New Game amongus");
+        System.out.println("Starting new game");
         String nConfirm = "no";
 
         while (nConfirm != "yes") {
