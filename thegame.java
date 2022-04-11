@@ -31,21 +31,26 @@ class thegame {
 
     static void newGame() {
         System.out.println("Starting new game");
-        String nConfirm = "no";
+        String CharName = "character";
 
-        while (nConfirm != "yes") {
+        while (true) {
             System.out.print("Please type in your character name: ");
             Scanner nameInput = new Scanner(System.in);
 
-            String CharName = nameInput.nextLine();
+            CharName = nameInput.nextLine();
             System.out.println("Your character name is " + CharName);
 
-            System.out.println("Do Want to confirm and continue? yes / no");
+            System.out.println("Are you satisfied with the name?");
             Scanner iConfirm = new Scanner(System.in);
-            nConfirm = iConfirm.nextLine();
+            
+            if(iConfirm.nextLine().equals("yes")){
+                break;
+            } 
+        }
 
-        } 
         
+        
+
     }
 
     static void loadGame() {
