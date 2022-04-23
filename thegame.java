@@ -34,7 +34,7 @@ class thegame {
         String CharName = "character";
 
         // Set Modifiers to 100%, so able to stack mods
-        String[] charSt = {"HP", "MP", "STR", "DEF", "SC"};
+        String[] charSt = { "HP", "MP", "STR", "DEF", "SC" };
         // Character Skill { HP, MP, STR, DEF, SC } # initial
         double[] charSk = { 5, 5, 5, 5, 5 };
         // modifier { HP, MP, STR, DEF, SC }
@@ -115,25 +115,29 @@ class thegame {
                 break;
             }
         }
-        int[] aPoints = {0 , 0 , 0 , 0 , 0};
-        System.out.println("________________________________________________________________________________________________________________________________");
-        String titleFormat = "%-20s %-20s %-20s %-20s %-20s";
-        System.out.format(titleFormat, "", "", "Character Stats", "", "");
-        System.out.println("");
-        String charFormat = "%-20s %-20s";
-        System.out.format(charFormat, "Name: "+CharName, "Class: "+CharClassName);
-        System.out.println("");
-        System.out.println("________________________________________________________________________________________________________________________________");
-        String statFormat = "|| %-20s || %-20s || %-20s || %-20s || %-20s";
-        System.out.format(statFormat, "Name", "Points", "Modifiers", "Total Points", "Allocated");
-        System.out.println("");
-        for (int i = 0; i < charSk.length; i++) {
-            System.out.format(statFormat, charSt[i], charSk[i], "%" + (skMod[i]-100), ((charSk[i]/100)*skMod[i]), aPoints[i]);
+        while (true) {
+            int[] aPoints = { 0, 0, 0, 0, 0 };
+            System.out.println(
+                    "________________________________________________________________________________________________________________________________");
+            String titleFormat = "%-20s %-20s %-20s %-20s %-20s";
+            System.out.format(titleFormat, "", "", "Character Stats", "", "");
             System.out.println("");
-        }    
-        System.out.println("Current Allocatable SP: " + roll);
+            String charFormat = "%-20s %-20s";
+            System.out.format(charFormat, "Name: " + CharName, "Class: " + CharClassName);
+            System.out.println("");
+            System.out.println(
+                    "________________________________________________________________________________________________________________________________");
+            String statFormat = "|| %-20s || %-20s || %-20s || %-20s || %-20s";
+            System.out.format(statFormat, "Name", "Points", "Modifiers", "Total Points", "Allocated");
+            System.out.println("");
+            for (int i = 0; i < charSk.length; i++) {
+                System.out.format(statFormat, charSt[i], charSk[i], "%" + (skMod[i] - 100),
+                        ((charSk[i] / 100) * skMod[i]), aPoints[i]);
+                System.out.println("");
+            }
+            System.out.println("Current Allocatable SP: " + roll);
 
-
+        }
 
     }
 
