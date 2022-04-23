@@ -34,10 +34,11 @@ class thegame {
         String CharName = "character";
 
         // Set Modifiers to 100%, so able to stack mods
+        String[] charSt = {"HP", "MP", "STR", "DEF", "SC"};
         // Character Skill { HP, MP, STR, DEF, SC } # initial
-        int[] charSk = { 5, 5, 5, 5, 5 };
+        double[] charSk = { 5, 5, 5, 5, 5 };
         // modifier { HP, MP, STR, DEF, SC }
-        int[] skMod = { 100, 100, 100, 100, 100 };
+        double[] skMod = { 100, 100, 100, 100, 100 };
 
         while (true) { // character naming loop
             System.out.print("Please type in your character name: ");
@@ -55,6 +56,7 @@ class thegame {
         }
 
         String nameInputcheck;
+        String CharClassName = "none";
         while (true) {
             while (true) {
                 // Class Choosing
@@ -69,6 +71,7 @@ class thegame {
                     System.out.println("+20% DEF");
                     System.out.print("Are you sure? (yes/no): ");
                     Scanner nameInputconfirm = new Scanner(System.in);
+                    CharClassName = "Knight";
                     if (nameInputconfirm.nextLine().equals("yes")) {
                         break;
                     }
@@ -78,6 +81,7 @@ class thegame {
                     System.out.println("+20% DEF");
                     System.out.print("Are you sure? (yes/no): ");
                     Scanner nameInputconfirm = new Scanner(System.in);
+                    CharClassName = "Mage";
                     if (nameInputconfirm.nextLine().equals("yes")) {
                         break;
                     }
@@ -111,10 +115,22 @@ class thegame {
                 break;
             }
         }
-
-        System.out.println("Character Stats");
+        int[] aPoints = {0 , 0 , 0 , 0 , 0};
         System.out.println("________________________________________________________________________________________________________________________________");
-        System.out.println("HP: " + charSk[0] + "  %" + (skMod[0]-100) + " = " + ((charSk[0]/100)*skMod[0]) + "");
+        String titleFormat = "%-20s %-20s %-20s %-20s %-20s";
+        System.out.format(titleFormat, "", "", "Character Stats", "", "");
+        System.out.println("");
+        String charFormat = "%-20s %-20s";
+        System.out.format(charFormat, "Name: "+CharName, "Class: "+CharClassName);
+        System.out.println("");
+        System.out.println("________________________________________________________________________________________________________________________________");
+        String statFormat = "|| %-20s || %-20s || %-20s || %-20s || %-20s";
+        System.out.format(statFormat, "Name", "Points", "Modifiers", "Total Points", "Allocated");
+        System.out.println("");
+        for (int i = 0; i < charSk.length; i++) {
+            System.out.format(statFormat, charSt[i], charSk[i], "%" + (skMod[i]-100), ((charSk[i]/100)*skMod[i]), aPoints[i]);
+            System.out.println("");
+        }    
         System.out.println("Current Allocatable SP: " + roll);
 
 
