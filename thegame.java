@@ -34,11 +34,11 @@ class thegame {
         String CharName = "character";
 
         // Set Modifiers to 100%, so able to stack mods
-        String[] charSt = { "HP", "MP", "STR", "DEF", "SC" };
-        // Character Skill { HP, MP, STR, DEF, SC } # initial
-        double[] charSk = { 5, 5, 5, 5, 5 };
-        // modifier { HP, MP, STR, DEF, SC }
-        double[] skMod = { 100, 100, 100, 100, 100 };
+        String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
+        // Character Skill { HP, MP, STR, DEF, SC, PER } # initial
+        double[] charSk = { 5, 5, 5, 5, 5, 5 };
+        // modifier { HP, MP, STR, DEF, SC, PER }
+        double[] skMod = { 100, 100, 100, 100, 100, 100 };
 
         while (true) { // character naming loop
             System.out.print("Please type in your character name: ");
@@ -116,7 +116,7 @@ class thegame {
             }
         }
         while (true) {
-            int[] aPoints = { 0, 0, 0, 0, 0 };
+            int[] aPoints = { 0, 0, 0, 0, 0, 0 };
             System.out.println(
                     "________________________________________________________________________________________________________________________________");
             String titleFormat = "%-20s %-20s %-20s %-20s %-20s";
@@ -132,13 +132,55 @@ class thegame {
             System.out.println("");
             for (int i = 0; i < charSk.length; i++) {
                 System.out.format(statFormat, charSt[i], charSk[i], "%" + (skMod[i] - 100),
-                        ((charSk[i] / 100) * skMod[i]), aPoints[i]);
+                        ((charSk[i] / 100) * skMod[i]), "+" + aPoints[i]);
                 System.out.println("");
             }
             System.out.println("Current Allocatable SP: " + roll);
 
-        }
+            while (true) {
+                System.out.println("1. Allocate SP Points");
+                System.out.println("2. Continue");
+                Scanner alcon = new Scanner(System.in);
+                if (alcon.nextLine().equals("1")) {
+                    while (true) {
+                        for (int i = 0; i < charSk.length; i++) {
+                            System.out.println((i + 1) + ". " + charSt[i] + " " + charSk[i]);
+                        }
+                        String allocateds = "";
+                        Scanner allocate = new Scanner(System.in);
+                        allocateds = allocate.nextLine();
+                        if (allocateds.equals("1") | allocateds.equals("2") | allocateds.equals("3")
+                                | allocateds.equals("4") | allocateds.equals("5") | allocateds.equals("6")) {
+                            while (true) {
+                                System.out.println("1. increase");
+                                System.out.println("2. decrease");
+                                String indecvar = "";
+                                Scanner indec = new Scanner(System.in);
+                                indecvar = indec.nextLine();
+                                if (indecvar.equals("1")){
+                                    
+                                }
+                                
+                                Scanner howmuch = new Scanner(System.in);
+                                indecvar = indec.nextLine();
 
+                            }
+                            
+                        } else {
+                            System.out.println("please choose one of the following options");
+                        }
+
+                    }
+
+                } else if (alcon.nextLine().equals("2")) {
+                    break;
+                } else {
+                    System.out.println("please choose one of the following");
+                }
+
+            }
+
+        }
     }
 
     static void loadGame() {
