@@ -12,6 +12,7 @@ class thegame {
         System.out.print("Choose Number to Continue: ");
 
         String emptyCheck = uinput.nextLine();
+        System.out.println("");
         if (emptyCheck == "") {
             System.out.println("Please type in one of the choices");
         } else {
@@ -33,12 +34,14 @@ class thegame {
                     Scanner nameInput = new Scanner(System.in);
 
                     CharName = nameInput.nextLine();
+                    System.out.println("");
                     System.out.println("Your character name is " + CharName);
 
                     System.out.println("Are you satisfied with the name?");
                     Scanner iConfirm = new Scanner(System.in);
 
                     if (iConfirm.nextLine().equals("yes")) {
+                        System.out.println("");
                         break;
                     }
                 }
@@ -53,6 +56,7 @@ class thegame {
                         System.out.println("2. Mage ");
                         Scanner nameInput = new Scanner(System.in);
                         nameInputcheck = nameInput.nextLine();
+                        System.out.println("");
                         // Knight
                         if (nameInputcheck.equals("1")) {
                             System.out.println("+20% STR");
@@ -61,16 +65,18 @@ class thegame {
                             Scanner nameInputconfirm = new Scanner(System.in);
                             CharClassName = "Knight";
                             if (nameInputconfirm.nextLine().equals("yes")) {
+                                System.out.println("");
                                 break;
                             }
                             // Mage
                         } else if (nameInputcheck.equals("2")) {
-                            System.out.println("+20% STR");
-                            System.out.println("+20% DEF");
+                            System.out.println("+20% MP");
+                            System.out.println("+20% SC");
                             System.out.print("Are you sure? (yes/no): ");
                             Scanner nameInputconfirm = new Scanner(System.in);
                             CharClassName = "Mage";
                             if (nameInputconfirm.nextLine().equals("yes")) {
+                                System.out.println("");
                                 break;
                             }
                         } else {
@@ -100,6 +106,7 @@ class thegame {
                     System.out.print("Are you satisfied with rolled sp? (yes/no): ");
                     Scanner rollconfirm = new Scanner(System.in);
                     if (rollconfirm.nextLine().equals("yes")) {
+                        System.out.println("");
                         break;
                     }
                 }
@@ -122,7 +129,7 @@ class thegame {
                         System.out.println("");
                         for (int i = 0; i < charSk.length; i++) {
                             System.out.format(statFormat, charSt[i], charSk[i], "%" + (skMod[i] - 100),
-                                    ((charSk[i] / 100) * skMod[i]), "+" + aPoints[i]);
+                                    (((charSk[i] + aPoints[i])  / 100) * skMod[i]), "+" + aPoints[i]);
                             System.out.println("");
                         }
                         System.out.println("Current Allocatable SP: " + roll);
@@ -130,6 +137,7 @@ class thegame {
                         System.out.println("2. Continue");
                         Scanner alcon = new Scanner(System.in);
                         if (alcon.nextLine().equals("1")) {
+                            System.out.println("");
                             while (true) {
                                 String alsure = "not";
                                 System.out.println("Choose One of the Following to change");
@@ -148,6 +156,7 @@ class thegame {
                                         String indecvar = "";
                                         Scanner indec = new Scanner(System.in);
                                         indecvar = indec.nextLine();
+                                        System.out.println("");
                                         if (indecvar.equals("1") || indecvar.equals("2")) {
                                             while (true) {
                                                 System.out.println("by how much?");
@@ -171,6 +180,7 @@ class thegame {
                                                 }
                                                 Scanner usure = new Scanner(System.in);
                                                 if (usure.nextLine().equals("yes")) {
+                                                    System.out.println("");
                                                     if (indecvar.equals("1") && hmvar > 0 && hmvar <= roll) {
                                                         aPoints[allocateds-1] = aPoints[allocateds-1] + hmvar;
                                                         roll = roll - hmvar;
@@ -212,6 +222,7 @@ class thegame {
                             }
 
                         } else if (alcon.nextLine().equals("2")) {
+                            System.out.println("");
                             break;
                         } else {
                             System.out.println("please choose one of the following");
@@ -222,6 +233,7 @@ class thegame {
                     System.out.println("are you sure you want to continue? yes/no");
                     Scanner cont = new Scanner(System.in);
                     if (cont.nextLine().equals("yes")) {
+                        System.out.println("");
                         break;
                     } else {
 
