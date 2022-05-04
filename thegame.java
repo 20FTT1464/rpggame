@@ -4,7 +4,14 @@ class thegame {
     public static void main(String[] args) {
         Scanner uinput = new Scanner(System.in);
 
+        //variable setups
+        String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
+        double[] charSk = { 0, 0, 0, 0, 0, 0 };
+        double[] skMod = { 0, 0, 0, 0, 0, 0 };
+
+        // variable setups ends
         // Home page
+
         System.out.println("Welcome!");
         System.out.println("1. New Game");
         System.out.println("2. Load");
@@ -23,11 +30,14 @@ class thegame {
                 String CharName = "character";
 
                 // Set Modifiers to 100%, so able to stack mods
-                String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
                 // Character Skill { HP, MP, STR, DEF, SC, PER } # initial
-                double[] charSk = { 5, 5, 5, 5, 5, 5 };
+                for (int i = 0; i < charSk.length; i++) {
+                    charSk[i] = 5;
+                }
                 // modifier { HP, MP, STR, DEF, SC, PER }
-                double[] skMod = { 100, 100, 100, 100, 100, 100 };
+                for (int i = 0; i < skMod.length; i++) {
+                    skMod[i] = 100;
+                }
 
                 while (true) { // character naming loop
                     System.out.print("Please type in your character name: ");
@@ -242,9 +252,23 @@ class thegame {
                 }
             } else if (nuinput == 2) { // Userinput 2 AKA load
                 System.out.println("Load saved games amongus");
-            } else {
-                System.out.println(nuinput + " is not in the choices");
             }
+
+            // end of load
+
+            // start of story <==== increasing step / checking for new maps
+                // #code
+
+                // start check story scene
+                    // #code
+                // end story scene
+
+                // start check battling system
+                    // #code
+                // end battling
+
+            // end of story
+            // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
         }
     }
 }
