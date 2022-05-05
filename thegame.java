@@ -10,6 +10,9 @@ class thegame {
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 };
         double[] skMod = { 0, 0, 0, 0, 0, 0 };
+        int[] aPoints = { 0, 0, 0, 0, 0, 0 };
+        double healthbar = 0;
+        double manabar = 0;
 
         // variable setups ends
         // Home page
@@ -121,8 +124,6 @@ class thegame {
                     }
                 }
                 while (true) {
-                    int[] aPoints = { 0, 0, 0, 0, 0, 0 };
-
                     while (true) {
                         System.out.println(
                                 "________________________________________________________________________________________________________________________________");
@@ -146,7 +147,8 @@ class thegame {
                         System.out.println("1. Allocate SP Points");
                         System.out.println("2. Continue");
                         Scanner alcon = new Scanner(System.in);
-                        if (alcon.nextLine().equals("1")) {
+                        String alconstr = alcon.nextLine();
+                        if (alconstr.equals("1")) {
                             System.out.println("");
                             while (true) {
                                 String alsure = "not";
@@ -237,7 +239,7 @@ class thegame {
                                 }
                             }
 
-                        } else if (alcon.nextLine().equals("2")) {
+                        } else if (alconstr.equals("2")) {
                             System.out.println("");
                             break;
                         } else {
@@ -265,7 +267,8 @@ class thegame {
 
 
             // end of load
-
+            Boolean load = false;
+            while (true) {
             // start of story <==== increasing step / checking for new maps
             // #code
 
@@ -274,9 +277,48 @@ class thegame {
             // end story scene
 
             // start check battling system
-            // #code
+                while (true) {
+                    double totalhealth = (((charSk[0] + aPoints[0])  / 100) * skMod[0])*100;
+                    double totalmana = (((charSk[1] + aPoints[1])  / 100) * skMod[1])*100;
+                    if (load ==true) {
+                        // healthbar = loadvaluehere;
+                    } else {
+                        healthbar = totalhealth;
+                        manabar = totalmana;
+    
+                    }
+                    Double moduluscalhealth = (totalhealth/100)*10;
+                    Double moduluscalmana = (totalmana/100)*10;
+                    System.out.print("HP ||");
+                    for (int i = 0; i < totalhealth; i++) {
+                        if(i%moduluscalhealth==0 && i < healthbar){
+                            System.out.print("=");
+                        } else if(i%moduluscalhealth==0 && i > healthbar){
+                            System.out.print("-");
+                        }
+                    }
+                    System.out.println("|| " + healthbar + "/" + totalhealth );
+                    System.out.print("MP ||");
+                    for (int i = 0; i < totalmana; i++) {
+                        if(i%moduluscalmana==0 && i < manabar){
+                            System.out.print("=");
+                        } else if(i%moduluscalmana==0 && i > manabar){
+                            System.out.print("-");
+                        }
+                    }
+                    System.out.println("|| " + manabar + "/" + totalmana );
+                    System.out.println("________________________________________________________________________________________________________________________________");
+                    System.out.println("Options");
+                    System.out.println("1. Fight");
+                    System.out.println("2. Skill");
+                    System.out.println("3. Equip");
+                    System.out.println("4. Consume");
+                    System.out.println("5. Run");
+                    break;
+                }
             // end battling
-
+                break;
+            }
             // end of story
             // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
         }
