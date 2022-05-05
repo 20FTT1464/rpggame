@@ -325,102 +325,100 @@ class thegame {
                         // equip
                     } else if(bsscanstr.equals("4")){
                         //consume here
-                        System.out.println("what do you want to consume");
-                        System.out.println("1.potion (mp)");
-                        System.out.println("2.food (hp)");
-                        System.out.println("3.power up (str)");
-    
+                         System.out.println("what do you want to consume");
+                    System.out.println("1.potion (mp)");
+                    System.out.println("2.food (hp)");
+                    System.out.println("3.power up (str)");
+
+                    
+                    Scanner consume = new Scanner(System.in);
+                    
+                    String cons = consume.nextLine();
+
+                        if( cons.equals("1")){
+                            System.out.println("you have selected potion");
+
+                        }else if( cons.equals("2")){
+                            System.out.println("you have selected food");
+                        }else if( cons.equals("3")){
+                            System.out.println("you have selected power up");
+
+                        } else{
+                            System.out.println("Please select an item");
+                        }
+
+                        // System.out.println("are you sure you want to consume?");
+                        // System.out.println("1.yes");
+                        // System.out.println("2.no");
+
+                        // Scanner conscon = new Scanner(System.in);
+
+                        // String conscu = conscon.nextLine();
+
+                        if( cons.equals("1")){
+                            System.out.println("proceed");
+
+                        }else if( cons.equals("2")){
+  
+                        } else{
+                            System.out.println("Please select an item");
+                        }
+
+
+                        System.out.println("select a grade");
+                        System.out.println("1.low");
+                        System.out.println("2.med");
+                        System.out.println("3.high");
+
+                        Scanner grade = new Scanner(System.in);
                         
-                        Scanner consume = new Scanner(System.in);
-                        
-                        String cons = consume.nextLine();
-    
-                            if( cons.equals("1")){
-                                System.out.println("you have selected potion");
-    
-                            }else if( cons.equals("2")){
-                                System.out.println("you have selected food");
-                            }else if( cons.equals("3")){
-                                System.out.println("you have selected power up");
-    
-                            } else{
-                                System.out.println("Please select an item");
+                        String grd = grade.nextLine();
+
+                            if( grd.equals("1")){
+                                System.out.println("low grade item has been selected");
                             }
-    
-                            // System.out.println("are you sure you want to consume?");
-                            // System.out.println("1.yes");
-                            // System.out.println("2.no");
-    
-                            // Scanner conscon = new Scanner(System.in);
-    
-                            // String conscu = conscon.nextLine();
-    
-                            if( cons.equals("1")){
-                                System.out.println("proceed");
-    
-                            }else if( cons.equals("2")){
-      
-                            } else{
-                                System.out.println("Please select an item");
+                            else if( grd.equals("2")){
+                                System.out.println("medium grade item has been selected");
                             }
-    
-    
-                            System.out.println("select a grade");
-                            System.out.println("1.low");
-                            System.out.println("2.med");
-                            System.out.println("3.high");
-    
-                            Scanner grade = new Scanner(System.in);
+                            else if( grd.equals("3")){
+                                System.out.println("high grade item has been selected");
+                            }
+                            else{
+                                System.out.println("choose 1,2 or 3 only");
+                            }
+
                             
-                            String grd = grade.nextLine();
-    
-                                if( grd.equals("1")){
-                                    System.out.println("low grade item has been selected");
-                                }
-                                else if( grd.equals("2")){
-                                    System.out.println("medium grade item has been selected");
-                                }
-                                else if( grd.equals("3")){
-                                    System.out.println("high grade item has been selected");
-                                }
-                                else{
-                                    System.out.println("choose 1,2 or 3 only");
-                                }
-    
-                                
-                                if (cons.equals("1") && grd.equals("1")){
-                                    manabar+=30;
-                                    System.out.println("you current mana is"+manabar);
-                                }
-    
-                                else if (cons.equals("1") && grd.equals("2")){
-                                    manabar*=150;
-                                    manabar/=100;
-                                    System.out.println("you current mana is"+manabar);
-                                }
-                                else if (cons.equals("1") && grd.equals("3")){
-                                    manabar*=200;
-                                    manabar/=100;
-                                    System.out.println("you current mana is"+manabar);
-                                }
-                                else if(cons.equals("2") && grd.equals("1")){
-                                    healthbar+=30;
-                                    System.out.println("you current mana is"+healthbar);
-                                }
-                                else if(cons.equals("2") && grd.equals("2")){
-                                    healthbar*=150;
-                                    healthbar/=100;
-                                    System.out.println("you current mana is"+healthbar);
-                                }
-                                else if(cons.equals("2") && grd.equals("3")){
-                                    healthbar*=200;
-                                    healthbar/=100;
-                                    System.out.println("you current mana is"+healthbar);
-                                }
-    
-                                else{
-                                    System.out.println("nothing has increase");
-                                }
+                            if (cons.equals("1") && grd.equals("1")){
+                                manabar+=30;
+                                System.out.println("you current mana is"+manabar);
+                            }
+
+                            else if (cons.equals("1") && grd.equals("2")){
+                                manabar+=45;
+                                System.out.println("you current mana is"+manabar);
+                            }
+                            else if (cons.equals("1") && grd.equals("3")){
+                                manabar+=60;
+                                System.out.println("you current mana is"+manabar);
+                            }
+                            else if(cons.equals("2") && grd.equals("1")){
+                                healthbar+=30;
+                                System.out.println("you current mana is"+healthbar);
+                            }
+                            else if(cons.equals("2") && grd.equals("2")){
+                                healthbar*=150;
+                                healthbar/=100;
+                                System.out.println("you current mana is"+healthbar);
+                            }
+                            else if(cons.equals("2") && grd.equals("3")){
+                                healthbar*=200;
+                                healthbar/=100;
+                                System.out.println("you current mana is"+healthbar);
+                            }
+
+                            else{
+                                System.out.println("nothing has increase");
+                            }
                     } else if(bsscanstr.equals("5")){
                         //run
                     }
