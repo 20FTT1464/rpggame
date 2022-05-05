@@ -6,7 +6,7 @@ class thegame {
     public static void main(String[] args) {
         Scanner uinput = new Scanner(System.in);
 
-        //variable setups
+        // variable setups
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 };
         double[] skMod = { 0, 0, 0, 0, 0, 0 };
@@ -110,49 +110,6 @@ class thegame {
                     }
                 }
 
-                //Battle System 
-
-                String battleInput;
-                String battleInputTwo;
-                String[] consumeable = { "estusflask", "raysoflight", "buffalodrill", "filosofistone" };
-                String[] enemy = { "bandits", "dragon", "bear", "thieves", "knights", "berzerker", "brutes" };
-                String[] weapon = { "blade", "sword", "dagger", "hammer" };
-                int randEnemy = (int) (Math.random() * 7);
-                String test = enemy[randEnemy];
-                System.out.println(enemy[randEnemy]);
-        
-                if (test == enemy[randEnemy]) {
-        
-                    System.out.println("Do you want to equip your weapon? ");
-                    System.out.println("1. Yes ");
-                    System.out.println("2. No ");
-                    Scanner battleInputConfirm = new Scanner(System.in);
-                    battleInput = battleInputConfirm.nextLine();
-        
-                    if (battleInput.equals("1")) {
-                        System.out.println("weapons equipped!");
-                    } else if (battleInput.equals("2")) {
-                        System.out.println("Please equip your weapon");
-        
-                    }
-                    System.out.println("Do you want to use consumeable? ");
-                    System.out.println("1. Yes ");
-                    System.out.println("2. No ");
-                    Scanner battleInputConfirmTwo = new Scanner(System.in);
-                    battleInputTwo = battleInputConfirmTwo.nextLine();
-        
-                    if (battleInputTwo.equals("1")) {
-                        System.out.println("Pick one ");
-                        System.out.println(Arrays.toString(consumeable));
-                    } else if (battleInputTwo.equals("2")) {
-                        
-        
-                    }
-        
-                }
-
-
-
                 // Allocatable skill point rolling mechanism
                 int roll = 0;
                 while (true) {
@@ -184,7 +141,7 @@ class thegame {
                         System.out.println("");
                         for (int i = 0; i < charSk.length; i++) {
                             System.out.format(statFormat, charSt[i], charSk[i], "%" + (skMod[i] - 100),
-                                    (((charSk[i] + aPoints[i])  / 100) * skMod[i]), "+" + aPoints[i]);
+                                    (((charSk[i] + aPoints[i]) / 100) * skMod[i]), "+" + aPoints[i]);
                             System.out.println("");
                         }
                         System.out.println("Current Allocatable SP: " + roll);
@@ -219,31 +176,37 @@ class thegame {
                                                 Integer hmvar = 0;
                                                 hmvar = howmuch.nextInt();
                                                 if (indecvar.equals("1")) {
-                                                    System.out.println(charSt[allocateds-1] + " Skill points:"
-                                                            + charSk[allocateds-1] + " allocated:" + aPoints[allocateds-1]
-                                                            + " total:" + (charSk[allocateds-1] + aPoints[allocateds-1]));
+                                                    System.out.println(charSt[allocateds - 1] + " Skill points:"
+                                                            + charSk[allocateds - 1] + " allocated:"
+                                                            + aPoints[allocateds - 1]
+                                                            + " total:"
+                                                            + (charSk[allocateds - 1] + aPoints[allocateds - 1]));
                                                     System.out.println(
-                                                            "are you sure you want to increase " + charSt[allocateds-1]
+                                                            "are you sure you want to increase "
+                                                                    + charSt[allocateds - 1]
                                                                     + " by " + hmvar + "?");
                                                 } else if (indecvar.equals("2")) {
-                                                    System.out.println(charSt[allocateds-1] + " Skill points:"
-                                                            + charSk[allocateds-1] + " allocated:" + aPoints[allocateds-1]
-                                                            + " total:" + (charSk[allocateds-1] + aPoints[allocateds-1]));
+                                                    System.out.println(charSt[allocateds - 1] + " Skill points:"
+                                                            + charSk[allocateds - 1] + " allocated:"
+                                                            + aPoints[allocateds - 1]
+                                                            + " total:"
+                                                            + (charSk[allocateds - 1] + aPoints[allocateds - 1]));
                                                     System.out.println(
-                                                            "are you sure you want to decrease " + charSt[allocateds-1]
+                                                            "are you sure you want to decrease "
+                                                                    + charSt[allocateds - 1]
                                                                     + " by " + hmvar + "?");
                                                 }
                                                 Scanner usure = new Scanner(System.in);
                                                 if (usure.nextLine().equals("yes")) {
                                                     System.out.println("");
                                                     if (indecvar.equals("1") && hmvar > 0 && hmvar <= roll) {
-                                                        aPoints[allocateds-1] = aPoints[allocateds-1] + hmvar;
+                                                        aPoints[allocateds - 1] = aPoints[allocateds - 1] + hmvar;
                                                         roll = roll - hmvar;
                                                         indecsure = "sure";
                                                         break;
                                                     } else if (indecvar.equals("2") && hmvar > 0
-                                                            && hmvar <= aPoints[allocateds-1]) {
-                                                        aPoints[allocateds-1] = aPoints[allocateds-1] - hmvar;
+                                                            && hmvar <= aPoints[allocateds - 1]) {
+                                                        aPoints[allocateds - 1] = aPoints[allocateds - 1] - hmvar;
                                                         roll = roll + hmvar;
                                                         indecsure = "sure";
                                                         break;
@@ -299,18 +262,58 @@ class thegame {
                 System.out.println("Load saved games amongus");
             }
 
+            // Battle System
+
+            String battleInput;
+            String battleInputTwo;
+            String[] consumeable = { "estusflask", "raysoflight", "buffalodrill", "filosofistone" };
+            String[] enemy = { "bandits", "dragon", "bear", "thieves", "knights", "berzerker", "brutes" };
+            
+            int randEnemy = (int) (Math.random() * 7);
+            String test = enemy[randEnemy];
+            System.out.println(enemy[randEnemy]);
+
+            if (test == enemy[randEnemy]) {
+
+                System.out.println("Do you want to equip your weapon? ");
+                System.out.println("1. Yes ");
+                System.out.println("2. No ");
+                Scanner battleInputConfirm = new Scanner(System.in);
+                battleInput = battleInputConfirm.nextLine();
+
+                if (battleInput.equals("1")) {
+                    System.out.println("weapons equipped!");
+                } else if (battleInput.equals("2")) {
+                    System.out.println("Please equip your weapon");
+
+                }
+                System.out.println("Do you want to use consumeable? ");
+                System.out.println("1. Yes ");
+                System.out.println("2. No ");
+                Scanner battleInputConfirmTwo = new Scanner(System.in);
+                battleInputTwo = battleInputConfirmTwo.nextLine();
+
+                if (battleInputTwo.equals("1")) {
+                    System.out.println("Pick one ");
+                    System.out.println(Arrays.toString(consumeable));
+                } else if (battleInputTwo.equals("2")) {
+
+                }
+
+            }
+
             // end of load
 
             // start of story <==== increasing step / checking for new maps
-                // #code
+            // #code
 
-                // start check story scene
-                    // #code
-                // end story scene
+            // start check story scene
+            // #code
+            // end story scene
 
-                // start check battling system
-                    // #code
-                // end battling
+            // start check battling system
+            // #code
+            // end battling
 
             // end of story
             // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
