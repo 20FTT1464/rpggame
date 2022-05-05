@@ -276,7 +276,35 @@ class thegame {
             // end story scene
 
             // start check battling system
-            // #code
+            String battleInput;
+            String battleInputTwo;
+            String[] enemy = { "bandits", "dragon", "bear", "thieves", "knights", "berzerker", "brutes" };
+            String[] weapon = { "blade", "sword", "dagger", "hammer" };
+            int randEnemy = (int) (Math.random() * 7);
+            String test = enemy[randEnemy];
+            System.out.println(enemy[randEnemy]);
+    
+            if (test == enemy[randEnemy]) {
+    
+                System.out.println("Do you want to equip your weapon? ");
+                System.out.println("1. Yes ");
+                System.out.println("2. No ");
+                Scanner battleInputConfirm = new Scanner(System.in);
+                battleInput = battleInputConfirm.nextLine();
+    
+                if (battleInput.equals("1")) {
+                    System.out.println("weapons equipped!");
+                } else if (battleInput.equals("2")) {
+                    System.out.println("Please equip your weapon");
+    
+                }
+    
+    
+    
+    
+            }
+
+            }
             // end battling
 
             // end of story
