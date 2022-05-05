@@ -288,27 +288,6 @@ class thegame {
                     System.out.println("Please equip your weapon");
     
                 }
-                System.out.println("Do you want to use consumeable? ");
-                System.out.println("1. Yes ");
-                System.out.println("2. No ");
-                Scanner battleInputConfirmTwo = new Scanner(System.in);
-                battleInputTwo = battleInputConfirmTwo.nextLine();
-    
-                if (battleInputTwo.equals("1")) {
-                    System.out.println("Pick one ");
-                    System.out.println(Arrays.toString(consumeable));
-                    Scanner battleConsume = new Scanner(System.in);
-                    battleInputThree = battleConsume.nextLine();
-                    if(battleInputThree == "estusflask" || battleInputThree == "raysoflight" || battleInputThree == "buffalodrill" || battleInputThree == "filosofistone"){
-                        System.out.print("consumeable used!");
-                    };
-                    
-                    
-                    
-                } else if (battleInputTwo.equals("2")) {
-                    
-                    System.out.println("No consumeable used! ");
-                }
     
     
     
