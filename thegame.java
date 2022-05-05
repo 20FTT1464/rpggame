@@ -314,6 +314,20 @@ class thegame {
                     System.out.println("3. Equip");
                     System.out.println("4. Consume");
                     System.out.println("5. Run");
+                    Scanner bsscan = new Scanner (System.in);
+                    String bsscanstr = bsscan.nextLine();
+                    if(bsscanstr.equals("1")){
+                        //fight
+                    } else if(bsscanstr.equals("2")){
+                        //skill
+                        
+                    } else if(bsscanstr.equals("3")){
+                        // equip
+                    } else if(bsscanstr.equals("4")){
+                        //consume
+                    } else if(bsscanstr.equals("5")){
+                        //run
+                    }
                     break;
                 }
             // end battling
