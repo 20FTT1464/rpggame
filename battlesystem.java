@@ -38,7 +38,7 @@ public class battlesystem {
                 System.out.println("Consumeable used! ");
                 System.out.println(Arrays.toString(consumeable));
             } else if (userInputTwo.equals("2")) {
-                System.out.println("Please equip your weapon");
+                
 
             }
 
