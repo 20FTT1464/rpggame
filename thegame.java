@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
 
 class thegame {
     public static void main(String[] args) {
@@ -107,6 +109,49 @@ class thegame {
 
                     }
                 }
+
+                //Battle System 
+
+                String battleInput;
+                String battleInputTwo;
+                String[] consumeable = { "estusflask", "raysoflight", "buffalodrill", "filosofistone" };
+                String[] enemy = { "bandits", "dragon", "bear", "thieves", "knights", "berzerker", "brutes" };
+                String[] weapon = { "blade", "sword", "dagger", "hammer" };
+                int randEnemy = (int) (Math.random() * 7);
+                String test = enemy[randEnemy];
+                System.out.println(enemy[randEnemy]);
+        
+                if (test == enemy[randEnemy]) {
+        
+                    System.out.println("Do you want to equip your weapon? ");
+                    System.out.println("1. Yes ");
+                    System.out.println("2. No ");
+                    Scanner battleInputConfirm = new Scanner(System.in);
+                    battleInput = battleInputConfirm.nextLine();
+        
+                    if (battleInput.equals("1")) {
+                        System.out.println("weapons equipped!");
+                    } else if (battleInput.equals("2")) {
+                        System.out.println("Please equip your weapon");
+        
+                    }
+                    System.out.println("Do you want to use consumeable? ");
+                    System.out.println("1. Yes ");
+                    System.out.println("2. No ");
+                    Scanner battleInputConfirmTwo = new Scanner(System.in);
+                    battleInputTwo = battleInputConfirmTwo.nextLine();
+        
+                    if (battleInputTwo.equals("1")) {
+                        System.out.println("Pick one ");
+                        System.out.println(Arrays.toString(consumeable));
+                    } else if (battleInputTwo.equals("2")) {
+                        
+        
+                    }
+        
+                }
+
+
 
                 // Allocatable skill point rolling mechanism
                 int roll = 0;
