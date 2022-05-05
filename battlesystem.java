@@ -35,7 +35,7 @@ public class battlesystem {
             userInputTwo = userInputConfirmTwo.nextLine();
 
             if (userInputTwo.equals("1")) {
-                System.out.println("Consumeable used! ");
+                System.out.println("Pick one ");
                 System.out.println(Arrays.toString(consumeable));
             } else if (userInputTwo.equals("2")) {
                 
