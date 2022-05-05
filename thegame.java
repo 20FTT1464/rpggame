@@ -324,7 +324,7 @@ class thegame {
                     } else if(bsscanstr.equals("3")){
                         // equip
                     } else if(bsscanstr.equals("4")){
-                        //consume
+                        //consume here
                     } else if(bsscanstr.equals("5")){
                         //run
                     }
