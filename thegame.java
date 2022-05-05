@@ -304,7 +304,7 @@ class thegame {
     
             }
 
-            }
+            
             // end battling
 
             // end of story
