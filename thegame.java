@@ -266,8 +266,6 @@ class thegame {
 
             String battleInput;
             String battleInputTwo;
-            String battleInputThree;
-            String[] consumeable = { "estusflask", "raysoflight", "buffalodrill", "filosofistone" };
             String[] enemy = { "bandits", "dragon", "bear", "thieves", "knights", "berzerker", "brutes" };
             String[] weapon = { "blade", "sword", "dagger", "hammer" };
             int randEnemy = (int) (Math.random() * 7);
