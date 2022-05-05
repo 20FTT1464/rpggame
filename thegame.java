@@ -5,6 +5,8 @@ class thegame {
         Scanner uinput = new Scanner(System.in);
 
         // variable setups
+        String CharName = "character";
+        String CharClassName = "none";
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 };
         double[] skMod = { 0, 0, 0, 0, 0, 0 };
@@ -27,7 +29,6 @@ class thegame {
 
             if (nuinput == 1) { // Userinput 1 AKA New Game
                 System.out.println("Starting new game");
-                String CharName = "character";
 
                 // Set Modifiers to 100%, so able to stack mods
                 // Character Skill { HP, MP, STR, DEF, SC, PER } # initial
@@ -57,7 +58,6 @@ class thegame {
                 }
 
                 String nameInputcheck;
-                String CharClassName = "none";
                 while (true) {
                     while (true) {
                         // Class Choosing
@@ -175,7 +175,7 @@ class thegame {
                                                 hmvar = howmuch.nextInt();
                                                 if (indecvar.equals("1")) {
                                                     System.out.println(charSt[allocateds - 1] + " Skill points:"
-                                                            + charSk[allocateds - 1] + " allocated:"
+                                                            + charSk[allocateds - 1] + " Allocated:"
                                                             + aPoints[allocateds - 1]
                                                             + " total:"
                                                             + (charSk[allocateds - 1] + aPoints[allocateds - 1]));
@@ -185,7 +185,7 @@ class thegame {
                                                                     + " by " + hmvar + "?");
                                                 } else if (indecvar.equals("2")) {
                                                     System.out.println(charSt[allocateds - 1] + " Skill points:"
-                                                            + charSk[allocateds - 1] + " allocated:"
+                                                            + charSk[allocateds - 1] + " Allocated:"
                                                             + aPoints[allocateds - 1]
                                                             + " total:"
                                                             + (charSk[allocateds - 1] + aPoints[allocateds - 1]));
