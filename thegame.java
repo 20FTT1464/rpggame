@@ -23,11 +23,15 @@ class thegame {
         double defence = 0;
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
+        
+        String [] armory1 = {"knightarmorbasic", "knightarmorstandard","knightarmorelite"};
+        String [] armory2 = {"robebasic", "robestandard","robeelite"};
+        String [] weaponry1 = {"swordbasic", "swordstandard","swordelite"};
+        String [] weaponry2 = {"staffbasic", "staffstandard","staffelite"};
 
-        String [] armory = {"knightarmor", "robe"};
-        String [] weaponry = {"sword", "staff"};
-        String [] mrs = {"basic", "standard","elite"};
-
+        String [] potions = {"lowpotion","midpotion","highpotion"};
+        String [] foods = {"lowfood","midfood","highfood"};
+        String [] powerups = {"lowpowup","midpowup","highpowp"};
         // skill knight
         String[] skillknight = {"Extra Slash", "Circular Slash"};
         Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save 
@@ -396,6 +400,7 @@ class thegame {
                             // equip
                             
                             
+                            
 
                             System.out.println("what would you like to equip?");
                             System.out.println( "1.armor");
@@ -510,6 +515,7 @@ class thegame {
                         } else if (bsscanstr.equals("4")) {
                             // consume here
 
+                            
                             String cons = "";
                             while (true) {
 
