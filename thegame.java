@@ -10,6 +10,7 @@ class thegame {
         String CharName = "character";
         String CharClassName = "none";
         Integer coins = 0;
+        String [] enemy = {"thieves", "bandit", "goblin"};
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 };
         double[] skMod = { 0, 0, 0, 0, 0, 0 };
@@ -285,11 +286,26 @@ class thegame {
 
                 if (battledecide < 69) { // 69 percent to trigger battle
                     // start check battling system
+                   
+                    double enemyQty = Math.random()*3;
+                    Integer enemyQtyint = (int)enemyQty;
+
+                    String [] currentEnemy = {};
+
+                    for (int i = 0; i < enemyQty; i++) {
+                        double enQty = Math.random()*3;
+                        Integer enQtyint = (int)enQty;
+                        System.out.println(enemy[enQtyint]);
+
+                        currentEnemy[i]=enemy[enQtyint];
+                    }
                     while (true) {
                         double totalhealth = (((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100;
                         double totalmana = (((charSk[1] + aPoints[1]) / 100) * skMod[1]) * 100;
                         double totalstrength = (((charSk[2] + aPoints[2]) / 100) * skMod[2]) * 100;
                         double totaldefence = (((charSk[3] + aPoints[3]) / 100) * skMod[3]) * 100;
+                        double minMonsterHp = totalhealth - ((totalhealth/100)*10);
+                        double maxMonsterHp = totalhealth + ((totalhealth/100)*10);
                         if (load == true) {
                             // healthbar = loadvaluehere;
                         } else {
