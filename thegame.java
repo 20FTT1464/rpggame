@@ -27,9 +27,18 @@ class thegame {
         String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
         String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
 
-        String[] potions = { "low potion", "mid potion", "high otion" };
-        String[] foods = { "low food", "mid food", "high food" };
-        String[] powerups = { "low powup", "mid powup", "high powp" };
+        // String[] potions = { "lowpotion", "midpotion", "highpotion" };
+        int lowpot = 5;
+        int midpot = 5;
+        int highpot = 5;
+        // String[] foods = { "lowfood", "midfood", "highfood" };
+        int lowfood = 5;
+        int midfood = 5;
+        int highfood = 5;
+        // String[] powerups = { "lowpowup", "midpowup", "highpowp" };
+        int lowpow = 5;
+        int midpow = 5;
+        int highpow = 5;
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
@@ -728,15 +737,19 @@ class thegame {
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show item
+                                System.out.println(armory1);
+                                System.out.println(armory2);
+                                System.out.println(weaponry1);
+                                System.out.println(weaponry2);
                                 // show inventory
-                                System.out.println(Inventory);
+                                
 
                             } else if (tradeMerch.equals("2")) {
                                 // show money
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show inventory
-                                System.out.println(Inventory);
+                                
 
                             } else if (tradeMerch.equals("3")) {
                                 break;
