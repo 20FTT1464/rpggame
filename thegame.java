@@ -22,7 +22,8 @@ class thegame {
         double strength = 0;
         double defence = 0;
         Integer gameprogress = 0;
-        String[] Inventory = {};
+        String[] Inventory = new String[50];
+        
         String [] armory = {"knightarmor", "robe"};
         String [] weaponry = {"sword", "staff"};
         String [] mrs = {"basic", "standard","elite"};
