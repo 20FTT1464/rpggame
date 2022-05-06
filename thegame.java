@@ -359,7 +359,7 @@ class thegame {
                         if (bsscanstr.equals("1")) {
                             // fight
                             for (int i=0; i<currentEnemy.length; i++){
-                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/" + monsterMaxHP[i]);
+                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/ " + monsterMaxHP[i]);
 
 
                             }
@@ -367,12 +367,7 @@ class thegame {
                             Scanner attack = new Scanner(System.in);
                             Integer attackEnm = attack.nextInt();
                             if (attackEnm==1){
-                                monsterCurHP[attackEnm-1] -= (int)totalstrength;
-                            } else if (attackEnm==2){
-                                monsterCurHP[attackEnm-1] -= (int)totalstrength; 
-                            } else if (attackEnm==3){
-                                monsterCurHP[attackEnm-1] -= (int)totalstrength; 
-                            } else {
+                                (monsterCurHP[attackEnm-1]) - ((int)totalstrength);
                             }
 
                         } else if (bsscanstr.equals("2")) {
@@ -436,10 +431,10 @@ class thegame {
                                 System.out.println(" you have selected elite");
                             }
                             else{
-                                System.out.println(" you haven't selected material rank")
+                                System.out.println(" you haven't selected material rank");
                             }
 
-                            //armor/knight armor/basic
+                            //armor/knight armor/basic/ suiiii
                             if ( quip.equals("1") && mor.equals("1") && ank.equals("1") ){
                             //armor/knight armor/standard
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("2")){
@@ -451,30 +446,20 @@ class thegame {
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("2")){
                             //armor/robe/elite    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("3")){
-                            //weapom/robe/    
+                            //weapon/sword/basic    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("1")){
-                                
+                            //weapon/sword/standard    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("2")){
-                                
+                            //weapon/sword/elite    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("3")){
-                                
+                            //weapon/staff/basic    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("1")){
-                                
+                            //weapon/staff/standard    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("2")){
-                                
+                            //weapon/staff/elite    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("3")){
-                                
-                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("1")){
-                                
-                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("2")){
-                                
-                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("3")){
-                                
-                            }else if( quip.equals("3") && mor.equals("3") && ank.equals("2")){
-                                
-                            }else if( quip.equals("3") && mor.equals("3") && ank.equals("3")){
-                                
-                            }
+                            }     
+                            
 
 
 
