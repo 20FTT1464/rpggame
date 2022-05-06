@@ -494,72 +494,48 @@ class thegame {
                                 }
 
                                 // armor/knight armor/basic/ suiiii
-                                if (quip.equals("1") && mor.equals("1") && ank.equals("1")) {
-                                    defence *= 30;
-                                    defence /= 100;
+                                if (quip.equals("1") && mor.equals("1") && ank.equals("1") && knightarbasic!=0) {
+                                    defence *= 30;defence /= 100; knightarbasic--;
 
                                     // armor/knight armor/standard
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2")) {
-                                    defence *= 50;
-                                    defence /= 100;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandrd!=0) {
+                                    defence *= 50;defence /= 100; knightarstandrd--;
 
                                     // armor/knight armor/elite
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("3")) {
-                                    defence *= 70;
-                                    defence /= 100;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("3") && knightarelite!=0) {
+                                    defence *= 70;defence /= 100;knightarelite--;
 
                                     // armor/robe/basic
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("1")) {
-                                    defence *= 20;
-                                    defence /= 100;
-                                    manabar *= 10;
-                                    manabar /= 100;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("1") && robebasic!=0) {
+                                    defence *= 20;defence /= 100;manabar *= 10;manabar /= 100;robebasic--;
 
                                     // armor/robe/stnadard
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("2")) {
-                                    defence *= 40;
-                                    defence /= 100;
-                                    manabar *= 30;
-                                    manabar /= 100;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("2") && robestandard!=0) {
+                                    defence *= 40;defence /= 100;manabar *= 30;manabar /= 100;robestandard--;
 
                                     // armor/robe/elite
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("3")) {
-                                    defence *= 60;
-                                    defence /= 100;
-                                    manabar *= 50;
-                                    manabar /= 100;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("3") && robeelite!=0) {
+                                    defence *= 60;defence /= 100;manabar *= 50;manabar /= 100;robeelite--;
 
                                     // weapon/sword/basic
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("1")) {
-                                    strength *= 30;
-                                    strength /= 100;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("1") && swordbasic!=0) {
+                                    strength *= 30;strength /= 100;swordbasic--;
 
                                     // weapon/sword/standard
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("2")) {
-                                    strength *= 50;
-                                    strength /= 100;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("2") && swordstandard!=0) {
+                                    strength *= 50; strength /= 100;swordstandard--;
                                     // weapon/sword/elite
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("3")) {
-                                    strength *= 70;
-                                    strength /= 100;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("3") && swordelite!=0) {
+                                    strength *= 70;strength /= 100;swordelite--;
                                     // weapon/staff/basic
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("1")) {
-                                    strength *= 10;
-                                    strength /= 100;
-                                    manabar *= 10;
-                                    manabar /= 100;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("1") && staffbasic!=0) {
+                                    strength *= 10;strength /= 100;manabar *= 10;manabar /= 100;staffbasic--;
                                     // weapon/staff/standard
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("2")) {
-                                    strength *= 20;
-                                    strength /= 100;
-                                    manabar *= 20;
-                                    manabar /= 100;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("2") && staffstandard!=0) {
+                                    strength *= 20;strength /= 100;manabar *= 20;manabar /= 100;staffstandard--;
                                     // weapon/staff/elite
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("3")) {
-                                    strength *= 30;
-                                    strength /= 100;
-                                    manabar *= 40;
-                                    manabar /= 100;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("3") && staffelite!=0) {
+                                    strength *= 30;strength /= 100;manabar *= 40;manabar /= 100;staffelite--;
                                 }
 
                             } else if (bsscanstr.equals("4")) {
