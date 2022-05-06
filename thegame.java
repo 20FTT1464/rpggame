@@ -23,7 +23,8 @@ class thegame {
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
 
-        // String[] armory1 = { "knight armor basic", "knight armor standard", "knight armor elite" };
+        // String[] armory1 = { "knight armor basic", "knight armor standard", "knight
+        // armor elite" };
         Integer knightarbasic = 0;
         Integer knightarstandrd = 0;
         Integer knightarelite = 0;
@@ -33,12 +34,12 @@ class thegame {
         Integer robeelite = 0;
         // String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
         Integer swordbasic = 0;
-        Integer swordstandard =0;
-        Integer swordelite =0;
+        Integer swordstandard = 0;
+        Integer swordelite = 0;
         // String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
-        Integer staffbasic =0;
-        Integer staffstandard =0;
-        Integer staffelite =0;
+        Integer staffbasic = 0;
+        Integer staffstandard = 0;
+        Integer staffelite = 0;
 
         // String[] potions = { "lowpotion", "midpotion", "highpotion" };
         Integer lowpot = 0;
@@ -335,32 +336,37 @@ class thegame {
                 double isbattle = Math.random() * 100;
                 Integer battledecide = (int) isbattle;
 
+                Integer leveluptop = CharLVL * 100;
+                if (CharEXP > leveluptop) {
+                    CharLVL += 1;
+                    CharEXP = CharEXP - leveluptop;
+                } else {
+
+                }
                 if (battledecide < 69) { // 69 percent to trigger battle
                     // start check battling system
-
                     double enemyQty = Math.random() * 3;
-                    System.out.println(enemyQty);
                     Integer enemyQtyint = (int) enemyQty;
 
-                    String[] currentEnemy = {};
-                    Integer[] monsterMaxHP = {};
-                    Integer[] monsterCurHP = {};
+                    String[] currentEnemy;
+                    Integer[] monsterMaxHP;
+                    Integer[] monsterCurHP;
+                    double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
+                            - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
+                    double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
+                            + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
+                    double enQty = Math.random() * 3;
+                    Integer enQtyint = (int) enQty;
+                    double EnmHP = Math.random() * (maxMonsterHp - minMonsterHp);
+                    Integer EnmHPint = (int) EnmHP;
+                    currentEnemy = new String[enemyQtyint];
+                    monsterMaxHP = new Integer[enemyQtyint];
+                    monsterCurHP = new Integer[enemyQtyint];
 
                     for (int i = 0; i < enemyQty - 1; i++) {
-                        double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
-                                - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
-                        double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
-                                + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
-                        double enQty = Math.random() * 3;
-                        Integer enQtyint = (int) enQty;
-                        double EnmHP = Math.random() * (maxMonsterHp - minMonsterHp);
-                        Integer EnmHPint = (int) EnmHP;
-                        currentEnemy = new String[enemyQtyint];
-                        monsterMaxHP = new Integer[enemyQtyint];
-                        monsterCurHP = new Integer[enemyQtyint];
                         currentEnemy[i] = enemy[enQtyint];
-                        monsterMaxHP[i] = (int) (minMonsterHp + EnmHP);
-                        monsterCurHP[i] = (int) (minMonsterHp + EnmHP);
+                        monsterMaxHP[i] = (int) (minMonsterHp + EnmHPint);
+                        monsterCurHP[i] = (int) (minMonsterHp + EnmHPint);
                     }
                     while (true) {
                         double totalhealth = (((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100;
@@ -369,14 +375,15 @@ class thegame {
                         double totaldefence = (((charSk[3] + aPoints[3]) / 100) * skMod[3]) * 100;
                         Integer enemydeathchecker = 0;
                         for (int i = 0; i < monsterCurHP.length; i++) {
-                            if (monsterCurHP[i] == 0) {
+                            if (monsterCurHP[i] < 0) {
                                 enemydeathchecker++;
                             } else {
 
                             }
                         }
                         if (enemydeathchecker == currentEnemy.length) {
-                            
+                            CharEXP += 10;
+                            break;
                         } else {
                             if (load == true) {
                                 // healthbar = loadvaluehere;
@@ -661,8 +668,6 @@ class thegame {
                             } else if (bsscanstr.equals("5")) {
                                 // run
                             }
-
-                            break;
                         }
                     }
 
@@ -770,31 +775,10 @@ class thegame {
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show item
-<<<<<<< HEAD
-                                System.out.println(armory1);
-                                System.out.println(armory2);
-                                System.out.println(weaponry1);
-                                System.out.println(weaponry2);
-                                System.out.println("1. Armory");
-                                System.out.println("2. Weaponry");
-                                System.out.println("3. Back ");
-                                Scanner buy = new Scanner(System.in);
-                                String buyTrade = buy.nextLine();
-                                if (buyTrade.equals("1")){
-                                    
-
-
-                                }else if (buyTrade.equals("2")){
-
-                                }else if (buyTrade.equals("3")){
-                                    break;
-                                }
-=======
                                 // System.out.println(armory1);
                                 // System.out.println(armory2);
                                 // System.out.println(weaponry1);
                                 // System.out.println(weaponry2);
->>>>>>> 1884ba3fa6adca725956f9c3d2904994ee156de3
                                 // show inventory
 
                             } else if (tradeMerch.equals("2")) {
