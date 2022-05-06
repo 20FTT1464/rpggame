@@ -440,19 +440,45 @@ class thegame {
 
                             //armor/knight armor/basic/ suiiii
                             if ( quip.equals("1") && mor.equals("1") && ank.equals("1") ){
+                                defence*=30;
+                                defence/=100;
+                                 
                             //armor/knight armor/standard
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("2")){
-                            //armor/knight armor/elite  
+                                defence*=50;
+                                defence/=100;
+                            
+                                //armor/knight armor/elite  
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("3")){
-                            //armor/robe/basic    
+                                defence*=70;
+                                defence/=100;
+                            
+                                //armor/robe/basic    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("1")){
-                            //armor/robe/stnadard    
+                                defence*=20;
+                                defence/=100;
+                                manabar*=10;
+                                manabar/=100;
+                            
+                                //armor/robe/stnadard    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("2")){
-                            //armor/robe/elite    
+                                defence*=40;
+                                defence/=100;
+                                manabar*=30;
+                                manabar/=100;
+                            
+                                //armor/robe/elite    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("3")){
-                            //weapon/sword/basic    
+                                defence*=60;
+                                defence/=100;
+                                manabar*=50;
+                                manabar/=100;
+                                
+                                //weapon/sword/basic    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("1")){
-                            //weapon/sword/standard    
+                                
+                            
+                                //weapon/sword/standard    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("2")){
                             //weapon/sword/elite    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("3")){
