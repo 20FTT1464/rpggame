@@ -286,6 +286,17 @@ class thegame {
                     if (cont.nextLine().equals("yes")) {
                         System.out.println("");
                         AvailableSP += roll;
+                        Inventory[0] = "low food";
+                        Inventory[1] = "low food";
+                        Inventory[2] = "low potion";
+                        Inventory[3] = "low potion";
+                        if (CharClassName.equals("Knight")){
+                            Inventory[4] = "knight armor basic";
+                            Inventory[5] = "sword basic";
+                        } else if (CharClassName.equals("Mage") ) {
+                            Inventory[4] = "robe basic";
+                            Inventory[5] = "staff basic";
+                        }
                         break;
                     } else {
 
@@ -542,6 +553,7 @@ class thegame {
                                 }
 
                             }
+
 
                             System.out.println("select a grade");
                             System.out.println("1.low");
