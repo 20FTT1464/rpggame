@@ -26,7 +26,7 @@ class thegame {
         // String[] armory1 = { "knight armor basic", "knight armor standard", "knight
         // armor elite" };
         Integer knightarbasic = 0;
-        Integer knightarstandrd = 0;
+        Integer knightarstandard = 0;
         Integer knightarelite = 0;
         // String[] armory2 = { "robe basic", "robe standard", "robe elite" };
         Integer robebasic = 0;
@@ -498,8 +498,8 @@ class thegame {
                                     defence *= 30;defence /= 100; knightarbasic--;
 
                                     // armor/knight armor/standard
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandrd!=0) {
-                                    defence *= 50;defence /= 100; knightarstandrd--;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandard!=0) {
+                                    defence *= 50;defence /= 100; knightarstandard--;
 
                                     // armor/knight armor/elite
                                 } else if (quip.equals("1") && mor.equals("1") && ank.equals("3") && knightarelite!=0) {
@@ -749,13 +749,42 @@ class thegame {
                             String tradeMerch = trade.nextLine();
                             if (tradeMerch.equals("1")) {
                                 // show money
+
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
+
                                 // show item
-                                // System.out.println(armory1);
-                                // System.out.println(armory2);
-                                // System.out.println(weaponry1);
-                                // System.out.println(weaponry2);
+
+                                System.out.println("Pick your destiny");
+                                System.out.println("1. Armory");
+                                System.out.println("2. Weaponry");
+                                System.out.println("3. Back");
+
+                                Scanner buy = new Scanner(System.in);
+                                String buyTrade = buy.nextLine();
+
+                                if(buyTrade.equals("1")){
+
+                                    System.out.println(knightarbasic);
+                                    System.out.println(knightarstandard);
+                                    System.out.println(knightarelite);
+                                    System.out.println(robebasic);
+                                    System.out.println(robestandard);
+                                    System.out.println(robeelite);
+
+                                }else if(buyTrade.equals("2")){
+
+                                    System.out.println(swordbasic);
+                                    System.out.println(swordstandard);
+                                    System.out.println(swordelite);
+                                    System.out.println(staffbasic);
+                                    System.out.println(staffstandard);
+                                    System.out.println(staffelite);
+
+                                }else if(buyTrade.equals("3")){
+                                    break;
+                                }
+
                                 // show inventory
 
                             } else if (tradeMerch.equals("2")) {
