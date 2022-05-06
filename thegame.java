@@ -730,15 +730,19 @@ class thegame {
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show item
+                                System.out.println(armory1);
+                                System.out.println(armory2);
+                                System.out.println(weaponry1);
+                                System.out.println(weaponry2);
                                 // show inventory
-                                System.out.println(Inventory);
+                                
 
                             } else if (tradeMerch.equals("2")) {
                                 // show money
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show inventory
-                                System.out.println(Inventory);
+                                
 
                             } else if (tradeMerch.equals("3")) {
                                 break;
