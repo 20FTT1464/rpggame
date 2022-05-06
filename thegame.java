@@ -734,6 +734,20 @@ class thegame {
                                 System.out.println(armory2);
                                 System.out.println(weaponry1);
                                 System.out.println(weaponry2);
+                                System.out.println("1. Armory");
+                                System.out.println("2. Weaponry");
+                                System.out.println("3. Back ");
+                                Scanner buy = new Scanner(System.in);
+                                String buyTrade = buy.nextLine();
+                                if (buyTrade.equals("1")){
+                                    
+
+
+                                }else if (buyTrade.equals("2")){
+
+                                }else if (buyTrade.equals("3")){
+                                    break;
+                                }
                                 // show inventory
                                 
 
