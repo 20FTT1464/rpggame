@@ -7,28 +7,51 @@ class thegame {
         Scanner uinput = new Scanner(System.in);
 
         // variable setups
+<<<<<<< HEAD
         Integer CharLVL = 0;
         Integer AvailableSP = 0;
         String CharName = "character";
         String CharClassName = "none";
         Integer coins = 0;
         String[] enemy = { "thieves", "bandit", "goblin" };
+=======
+        Integer CharLVL = 0; // save
+        Integer AvailableSP = 0; // save
+        String CharName = "character"; // save
+        String CharClassName = "none"; // save
+        Integer coins = 0; // save
+        String [] enemy = {"thieves", "bandit", "goblin"};
+>>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
-        double[] charSk = { 0, 0, 0, 0, 0, 0 };
-        double[] skMod = { 0, 0, 0, 0, 0, 0 };
-        int[] aPoints = { 0, 0, 0, 0, 0, 0 };
+        double[] charSk = { 0, 0, 0, 0, 0, 0 }; // save
+        double[] skMod = { 0, 0, 0, 0, 0, 0 }; // save
+        int[] aPoints = { 0, 0, 0, 0, 0, 0 }; // save
         double healthbar = 0;
         double manabar = 0;
         double strength = 0;
         double defence = 0;
+<<<<<<< HEAD
         Integer gameprogress = 0;
         String[] Inventory = new String[50];
 
         String[] armory = { "knightarmor", "robe" };
         String[] weaponry = { "sword", "staff" };
         String[] mrs = { "basic", "standard", "elite" };
+=======
+        Integer gameprogress = 0; // save
+        String[] Inventory = new String[50]; // save
+        
+        String [] armory1 = {"knightarmorbasic", "knightarmorstandard","knightarmorelite"};
+        String [] armory2 = {"robebasic", "robestandard","robeelite"};
+        String [] weaponry1 = {"swordbasic", "swordstandard","swordelite"};
+        String [] weaponry2 = {"staffbasic", "staffstandard","staffelite"};
+>>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
 
+        String [] potions = {"lowpotion","midpotion","highpotion"};
+        String [] foods = {"lowfood","midfood","highfood"};
+        String [] powerups = {"lowpowup","midpowup","highpowp"};
         // skill knight
+<<<<<<< HEAD
         String[] skillknight = { "Extra Slash", "Circular Slash", "Stun" };
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked
         Integer[] skdamage = { 2, 1, 1 };
@@ -37,6 +60,16 @@ class thegame {
         // skill mage
         String[] skillmage = { "Extra balls", "Balls All Around Me", "Paralysis" };
         Integer[] skillmagestatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked
+=======
+        String[] skillknight = {"Extra Slash", "Circular Slash"};
+        Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save 
+        Integer[] skdamage = { 2, 1, 1 };
+        Integer[] skusages = { 30, 80, 40 };
+
+        //skill mage
+        String[] skillmage = {"Extra balls", "Balls All Around Me"};
+        Integer[] skillmagestatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save
+>>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
         Integer[] smdamage = { 2, 1, 1 };
         Integer[] smusages = { 30, 80, 40 };
 
@@ -282,6 +315,17 @@ class thegame {
                     if (cont.nextLine().equals("yes")) {
                         System.out.println("");
                         AvailableSP += roll;
+                        Inventory[0] = "low food";
+                        Inventory[1] = "low food";
+                        Inventory[2] = "low potion";
+                        Inventory[3] = "low potion";
+                        if (CharClassName.equals("Knight")){
+                            Inventory[4] = "knight armor basic";
+                            Inventory[5] = "sword basic";
+                        } else if (CharClassName.equals("Mage") ) {
+                            Inventory[4] = "robe basic";
+                            Inventory[5] = "staff basic";
+                        }
                         break;
                     } else {
 
@@ -396,6 +440,12 @@ class thegame {
 
                         } else if (bsscanstr.equals("3")) {
                             // equip
+<<<<<<< HEAD
+=======
+                            
+                            
+                            
+>>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
 
                             System.out.println("what would you like to equip?");
                             System.out.println("1.armor");
@@ -513,6 +563,7 @@ class thegame {
                         } else if (bsscanstr.equals("4")) {
                             // consume here
 
+                            
                             String cons = "";
                             while (true) {
 
@@ -539,6 +590,7 @@ class thegame {
                                 }
 
                             }
+
 
                             System.out.println("select a grade");
                             System.out.println("1.low");
@@ -656,7 +708,39 @@ class thegame {
                             // LEVEL & STATS
                         } else if (progressmenuchecker.equals("5")) {
                             // LEARN SKILL
+<<<<<<< HEAD
                             System.out.println("Learn Skill");
+=======
+                            while (true) {
+                                System.out.println("Learn Skill");
+                                if(CharClassName.equals("Knight")){
+                                    for (int i = 0; i < skillknight.length; i++) {
+                                        System.out.println((i+1)+ ". " +skillknight[i]+ " Cost:" + (i+1)*10);
+                                    }
+                                } else if (CharClassName.equals("Mage")){
+                                    for (int i = 0; i < skillmage.length; i++) {
+                                        System.out.println((i+1)+ ". " +skillmage[i]+ " Cost:" + (i+1)*10);
+                                    }
+                                } 
+                                System.out.println("type exit for exit");
+
+                                Scanner SkillVibes = new Scanner(System.in);
+                                String SV = SkillVibes.nextLine();
+
+                                if(SV.equals("1")){
+
+                                } else if(SV.equals("2")){
+                                    
+                                } else if(SV.equals("exit")){
+                                    
+                                } else {
+
+                                }
+                                 
+                            }
+
+                            
+>>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
 
                         } else if (progressmenuchecker.equals("6")) {
                             // INVENTORY
