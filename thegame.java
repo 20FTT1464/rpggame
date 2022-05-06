@@ -23,6 +23,7 @@ class thegame {
         double defence = 0;
         Integer gameprogress = 0;
         String[] Inventory = {};
+        integer unlocked = 0;
         String[] skillknight = {"Extra Slash", "Circular Slash", "Stun"};
         Integer[] skdamage = { 2, 1, 1 };
         Integer[] skusages = { 30, 80, 40 };
