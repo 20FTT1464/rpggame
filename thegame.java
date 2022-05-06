@@ -338,6 +338,10 @@ class thegame {
                             for (int i = 0; i < Inventory.length; i++) {
                                 System.out.println(Inventory[i]);
                             }
+                            System.out.println("");
+                            System.out.print("press enter to exit:");
+                            Scanner invout = new Scanner(System.in);
+                            
                         }  else if (progressmenuchecker.equals("7")) {
                             // TRADING
                         } 
