@@ -349,7 +349,7 @@ class thegame {
                         System.out.println(
                                 "________________________________________________________________________________________________________________________________");
                         System.out.println("Options");
-                        System.out.println("1. Fight");
+                        System.out.println("1. Attack");
                         System.out.println("2. Skill");
                         System.out.println("3. Equip");
                         System.out.println("4. Consume");
@@ -358,6 +358,12 @@ class thegame {
                         String bsscanstr = bsscan.nextLine();
                         if (bsscanstr.equals("1")) {
                             // fight
+                            for (int i=0; i<currentEnemy.length; i++){
+                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/ " + monsterMaxHP[i]);
+
+
+                            }
+                            Scanner attack = new Scanner(System.in)
                         } else if (bsscanstr.equals("2")) {
                             // skill
 
