@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
-
 class thegame {
     public static void main(String[] args) {
         Scanner uinput = new Scanner(System.in);
@@ -24,14 +22,14 @@ class thegame {
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
 
-        String[] armory1 = { "knightarmorbasic", "knightarmorstandard", "knightarmorelite" };
-        String[] armory2 = { "robebasic", "robestandard", "robeelite" };
+        String[] armory1 = { "knight armor basic", "knight armor standard", "knight armor elite" };
+        String[] armory2 = { "robe basic", "robe standard", "robe elite" };
         String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
         String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
 
-        String[] potions = { "lowpotion", "midpotion", "highpotion" };
-        String[] foods = { "lowfood", "midfood", "highfood" };
-        String[] powerups = { "lowpowup", "midpowup", "highpowp" };
+        String[] potions = { "low potion", "mid potion", "high otion" };
+        String[] foods = { "low food", "mid food", "high food" };
+        String[] powerups = { "low powup", "mid powup", "high powp" };
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
