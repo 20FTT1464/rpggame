@@ -18,7 +18,8 @@ class thegame {
         double manabar = 0;
         double strength = 0;
         Integer gameprogress = 0;
-
+        String[] Inventory = ;
+;
         // variable setups ends
         // Home page
 
@@ -334,6 +335,9 @@ class thegame {
                             //LEARN SKILL
                         }  else if (progressmenuchecker.equals("6")) {
                             // INVENTORY
+                            for (int i = 0; i < Inventory.length; i++) {
+                                System.out.println(Inventory[i]);
+                            }
                         }  else if (progressmenuchecker.equals("7")) {
                             // TRADING
                         } 
