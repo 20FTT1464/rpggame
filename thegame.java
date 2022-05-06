@@ -654,6 +654,7 @@ class thegame {
                     } else {
                         System.out.println("Name: " + CharName);
                         System.out.println("Level: " + CharLVL);
+                        System.out.println("EXP: " + CharEXP + "/" + (CharLVL*100) );
                         // exp bar go here later
                         System.out.println("Coins: " + coins + " g");
                         System.out.println("");
