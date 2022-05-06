@@ -360,8 +360,8 @@ class thegame {
                 while (true) {
                     double totalhealth = (((charSk[0] + aPoints[0])  / 100) * skMod[0])*100;
                     double totalmana = (((charSk[1] + aPoints[1])  / 100) * skMod[1])*100;
-                    double totalstrength = (((charSk[2] + aPoints[2])  / 100) * skMod[1])*100;
-                    double totaldefence = (((charSk[2] + aPoints[2])  / 100) * skMod[1])*100;
+                    double totalstrength = (((charSk[2] + aPoints[2])  / 100) * skMod[2])*100;
+                    double totaldefence = (((charSk[3] + aPoints[3])  / 100) * skMod[3])*100;
                     if (load ==true) {
                         // healthbar = loadvaluehere;
                     } else {
@@ -373,6 +373,7 @@ class thegame {
                     Double moduluscalhealth = (totalhealth/100)*10;
                     Double moduluscalmana = (totalmana/100)*10;
                     Double moduluscalstrength = (totalstrength/100)*10;
+                    Double moduluscaldefence = (totaldefence/100)*10;
                     System.out.print("HP ||");
                     for (int i = 0; i < totalhealth; i++) {
                         if(i%moduluscalhealth==0 && i < healthbar){
