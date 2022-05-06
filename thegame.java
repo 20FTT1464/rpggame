@@ -7,36 +7,36 @@ class thegame {
         Scanner uinput = new Scanner(System.in);
 
         // variable setups
-        Integer CharLVL = 0;
-        Integer AvailableSP = 0;
-        String CharName = "character";
-        String CharClassName = "none";
-        Integer coins = 0;
+        Integer CharLVL = 0; // save
+        Integer AvailableSP = 0; // save
+        String CharName = "character"; // save
+        String CharClassName = "none"; // save
+        Integer coins = 0; // save
         String [] enemy = {"thieves", "bandit", "goblin"};
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
-        double[] charSk = { 0, 0, 0, 0, 0, 0 };
-        double[] skMod = { 0, 0, 0, 0, 0, 0 };
-        int[] aPoints = { 0, 0, 0, 0, 0, 0 };
+        double[] charSk = { 0, 0, 0, 0, 0, 0 }; // save
+        double[] skMod = { 0, 0, 0, 0, 0, 0 }; // save
+        int[] aPoints = { 0, 0, 0, 0, 0, 0 }; // save
         double healthbar = 0;
         double manabar = 0;
         double strength = 0;
         double defence = 0;
-        Integer gameprogress = 0;
-        String[] Inventory = new String[50];
-        
+        Integer gameprogress = 0; // save
+        String[] Inventory = new String[50]; // save
+
         String [] armory = {"knightarmor", "robe"};
         String [] weaponry = {"sword", "staff"};
         String [] mrs = {"basic", "standard","elite"};
 
         // skill knight
-        String[] skillknight = {"Extra Slash", "Circular Slash", "Stun"};
-        Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked 
+        String[] skillknight = {"Extra Slash", "Circular Slash"};
+        Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save 
         Integer[] skdamage = { 2, 1, 1 };
         Integer[] skusages = { 30, 80, 40 };
 
         //skill mage
-        String[] skillmage = {"Extra balls", "Balls All Around Me", "Paralysis"};
-        Integer[] skillmagestatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked
+        String[] skillmage = {"Extra balls", "Balls All Around Me"};
+        Integer[] skillmagestatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save
         Integer[] smdamage = { 2, 1, 1 };
         Integer[] smusages = { 30, 80, 40 };
         
@@ -653,7 +653,34 @@ class thegame {
                             // LEVEL & STATS
                         } else if (progressmenuchecker.equals("5")) {
                             // LEARN SKILL
-                            System.out.println("Learn Skill");
+                            while (true) {
+                                System.out.println("Learn Skill");
+                                if(CharClassName.equals("Knight")){
+                                    for (int i = 0; i < skillknight.length; i++) {
+                                        System.out.println((i+1)+ ". " +skillknight[i]+ " Cost:" + (i+1)*10);
+                                    }
+                                } else if (CharClassName.equals("Mage")){
+                                    for (int i = 0; i < skillmage.length; i++) {
+                                        System.out.println((i+1)+ ". " +skillmage[i]+ " Cost:" + (i+1)*10);
+                                    }
+                                } 
+                                System.out.println("type exit for exit");
+
+                                Scanner SkillVibes = new Scanner(System.in);
+                                String SV = SkillVibes.nextLine();
+
+                                if(SV.equals("1")){
+
+                                } else if(SV.equals("2")){
+                                    
+                                } else if(SV.equals("exit")){
+                                    
+                                } else {
+
+                                }
+                                 
+                            }
+
                             
 
                         } else if (progressmenuchecker.equals("6")) {
