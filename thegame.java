@@ -29,9 +29,18 @@ class thegame {
         String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
         String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
 
-        String[] potions = { "lowpotion", "midpotion", "highpotion" };
-        String[] foods = { "lowfood", "midfood", "highfood" };
-        String[] powerups = { "lowpowup", "midpowup", "highpowp" };
+        // String[] potions = { "lowpotion", "midpotion", "highpotion" };
+        int lowpot = 5;
+        int midpot = 5;
+        int highpot = 5;
+        // String[] foods = { "lowfood", "midfood", "highfood" };
+        int lowfood = 5;
+        int midfood = 5;
+        int highfood = 5;
+        // String[] powerups = { "lowpowup", "midpowup", "highpowp" };
+        int lowpow = 5;
+        int midpow = 5;
+        int highpow = 5;
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
