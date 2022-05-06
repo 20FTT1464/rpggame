@@ -365,6 +365,11 @@ class thegame {
                             }
 
                             Scanner attack = new Scanner(System.in);
+                            Integer attackEnm = attack.nextInt();
+                            if (attackEnm==1){
+                                (monsterCurHP[attackEnm-1]) - ((int)totalstrength);
+                            }
+
                         } else if (bsscanstr.equals("2")) {
                             // skill
 
