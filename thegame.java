@@ -24,11 +24,13 @@ class thegame {
         Integer gameprogress = 0;
         String[] Inventory = {};
 
+        // skill knight
         String[] skillknight = {"Extra Slash", "Circular Slash", "Stun"};
         Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked 
         Integer[] skdamage = { 2, 1, 1 };
         Integer[] skusages = { 30, 80, 40 };
 
+        //skill mage
         String[] skillmage = {"Extra balls", "Balls All Around Me", "Paralysis"};
         Integer[] skillmagestatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked
         Integer[] smdamage = { 2, 1, 1 };
