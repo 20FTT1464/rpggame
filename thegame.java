@@ -28,17 +28,17 @@ class thegame {
         String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
 
         // String[] potions = { "lowpotion", "midpotion", "highpotion" };
-        int lowpot = 5;
-        int midpot = 5;
-        int highpot = 5;
+        Integer lowpot = 0;
+        Integer midpot = 0;
+        Integer highpot = 0;
         // String[] foods = { "lowfood", "midfood", "highfood" };
-        int lowfood = 5;
-        int midfood = 5;
-        int highfood = 5;
+        Integer lowfood = 0;
+        Integer midfood = 0;
+        Integer highfood = 0;
         // String[] powerups = { "lowpowup", "midpowup", "highpowp" };
-        int lowpow = 5;
-        int midpow = 5;
-        int highpow = 5;
+        Integer lowpow = 0;
+        Integer midpow = 0;
+        Integer highpow = 0;
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
@@ -293,16 +293,14 @@ class thegame {
                     if (cont.nextLine().equals("yes")) {
                         System.out.println("");
                         AvailableSP += roll;
-                        Inventory[0] = "low food";
-                        Inventory[1] = "low food";
-                        Inventory[2] = "low potion";
-                        Inventory[3] = "low potion";
+                        lowfood += 2;
+                        lowpot += 2;
                         if (CharClassName.equals("Knight")) {
-                            Inventory[4] = "knight armor basic";
-                            Inventory[5] = "sword basic";
+                            Inventory[0] = "knight armor basic";
+                            Inventory[1] = "sword basic";
                         } else if (CharClassName.equals("Mage")) {
-                            Inventory[4] = "robe basic";
-                            Inventory[5] = "staff basic";
+                            Inventory[0] = "robe basic";
+                            Inventory[1] = "staff basic";
                         }
                         break;
                     } else {
