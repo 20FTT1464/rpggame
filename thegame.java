@@ -593,34 +593,34 @@ class thegame {
 
                             }
 
-                            if (cons.equals("1") && grd.equals("1")) {
-                                manabar += 30;
+                            if (cons.equals("1") && grd.equals("1") && lowpot!=0) {
+                                manabar += 30; lowpot--;
                                 System.out.println("you current mana is" + manabar);
                             }
 
-                            else if (cons.equals("1") && grd.equals("2")) {
-                                manabar += 45;
+                            else if (cons.equals("1") && grd.equals("2") && midpot!=0) {
+                                manabar += 45; midpot--;
                                 System.out.println("you current mana is" + manabar);
-                            } else if (cons.equals("1") && grd.equals("3")) {
-                                manabar += 60;
+                            } else if (cons.equals("1") && grd.equals("3") && highpot!=0) {
+                                manabar += 60; highpot--;
                                 System.out.println("you current mana is" + manabar);
-                            } else if (cons.equals("2") && grd.equals("1")) {
-                                healthbar += 30;
+                            } else if (cons.equals("2") && grd.equals("1") && lowfood!=0) {
+                                healthbar += 30; lowfood--;
                                 System.out.println("you current hp is" + healthbar);
-                            } else if (cons.equals("2") && grd.equals("2")) {
-                                healthbar += 45;
+                            } else if (cons.equals("2") && grd.equals("2") && midfood!=0) {
+                                healthbar += 45;midfood--;
                                 System.out.println("you current hp is" + healthbar);
-                            } else if (cons.equals("2") && grd.equals("3")) {
-                                healthbar += 60;
+                            } else if (cons.equals("2") && grd.equals("3") && highfood!=0) {
+                                healthbar += 60;highfood--;
                                 System.out.println("you current hp is" + totalhealth);
-                            } else if (cons.equals("3") && grd.equals("1")) {
-                                strength += 30;
+                            } else if (cons.equals("3") && grd.equals("1") && lowpow!=0) {
+                                strength += 30;lowpow--;
                                 System.out.println("you current hp is" + strength);
-                            } else if (cons.equals("3") && grd.equals("2")) {
-                                strength += 45;
+                            } else if (cons.equals("3") && grd.equals("2") && midpow!=0) {
+                                strength += 45;midpow--;
                                 System.out.println("you current hp is" + strength);
-                            } else if (cons.equals("3") && grd.equals("3")) {
-                                strength += 60;
+                            } else if (cons.equals("3") && grd.equals("3") && highpow!=0) {
+                                strength += 60;highpow--;
                                 System.out.println("you current hp is" + strength);
                             }
 
