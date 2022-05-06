@@ -12,7 +12,7 @@ class thegame {
         String CharName = "character"; // save
         String CharClassName = "none"; // save
         Integer coins = 0; // save
-        String [] enemy = {"thieves", "bandit", "goblin"};
+        String[] enemy = { "thieves", "bandit", "goblin" };
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 }; // save
         double[] skMod = { 0, 0, 0, 0, 0, 0 }; // save
@@ -23,24 +23,24 @@ class thegame {
         double defence = 0;
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
-        
-        String [] armory1 = {"knightarmorbasic", "knightarmorstandard","knightarmorelite"};
-        String [] armory2 = {"robebasic", "robestandard","robeelite"};
-        String [] weaponry1 = {"swordbasic", "swordstandard","swordelite"};
-        String [] weaponry2 = {"staffbasic", "staffstandard","staffelite"};
 
-        String [] potions = {"lowpotion","midpotion","highpotion"};
-        String [] foods = {"lowfood","midfood","highfood"};
-        String [] powerups = {"lowpowup","midpowup","highpowp"};
+        String[] armory1 = { "knightarmorbasic", "knightarmorstandard", "knightarmorelite" };
+        String[] armory2 = { "robebasic", "robestandard", "robeelite" };
+        String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
+        String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
+
+        String[] potions = { "lowpotion", "midpotion", "highpotion" };
+        String[] foods = { "lowfood", "midfood", "highfood" };
+        String[] powerups = { "lowpowup", "midpowup", "highpowp" };
         // skill knight
-        String[] skillknight = {"Extra Slash", "Circular Slash"};
-        Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save 
+        String[] skillknight = { "Extra Slash", "Circular Slash" };
+        Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
         Integer[] skdamage = { 2, 1, 1 };
         Integer[] skusages = { 30, 80, 40 };
 
-        //skill mage
-        String[] skillmage = {"Extra balls", "Balls All Around Me"};
-        Integer[] skillmagestatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save
+        // skill mage
+        String[] skillmage = { "Extra balls", "Balls All Around Me" };
+        Integer[] skillmagestatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
         Integer[] smdamage = { 2, 1, 1 };
         Integer[] smusages = { 30, 80, 40 };
 
@@ -290,10 +290,10 @@ class thegame {
                         Inventory[1] = "low food";
                         Inventory[2] = "low potion";
                         Inventory[3] = "low potion";
-                        if (CharClassName.equals("Knight")){
+                        if (CharClassName.equals("Knight")) {
                             Inventory[4] = "knight armor basic";
                             Inventory[5] = "sword basic";
-                        } else if (CharClassName.equals("Mage") ) {
+                        } else if (CharClassName.equals("Mage")) {
                             Inventory[4] = "robe basic";
                             Inventory[5] = "staff basic";
                         }
@@ -345,6 +345,7 @@ class thegame {
                         monsterCurHP[i] = (int) (minMonsterHp + EnmHP);
                     }
                     while (true) {
+                        
                         double totalhealth = (((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100;
                         double totalmana = (((charSk[1] + aPoints[1]) / 100) * skMod[1]) * 100;
                         double totalstrength = (((charSk[2] + aPoints[2]) / 100) * skMod[2]) * 100;
@@ -411,9 +412,6 @@ class thegame {
 
                         } else if (bsscanstr.equals("3")) {
                             // equip
-                            
-                            
-                            
 
                             System.out.println("what would you like to equip?");
                             System.out.println("1.armor");
@@ -531,7 +529,6 @@ class thegame {
                         } else if (bsscanstr.equals("4")) {
                             // consume here
 
-                            
                             String cons = "";
                             while (true) {
 
@@ -558,7 +555,6 @@ class thegame {
                                 }
 
                             }
-
 
                             System.out.println("select a grade");
                             System.out.println("1.low");
@@ -678,33 +674,39 @@ class thegame {
                             // LEARN SKILL
                             while (true) {
                                 System.out.println("Learn Skill");
-                                if(CharClassName.equals("Knight")){
+                                if (CharClassName.equals("Knight")) {
                                     for (int i = 0; i < skillknight.length; i++) {
-                                        System.out.println((i+1)+ ". " +skillknight[i]+ " Cost:" + (i+1)*10);
+                                        System.out.println((i + 1) + ". " + skillknight[i] + " Cost:" + (i + 1) * 10);
                                     }
-                                } else if (CharClassName.equals("Mage")){
+                                } else if (CharClassName.equals("Mage")) {
                                     for (int i = 0; i < skillmage.length; i++) {
-                                        System.out.println((i+1)+ ". " +skillmage[i]+ " Cost:" + (i+1)*10);
+                                        System.out.println((i + 1) + ". " + skillmage[i] + " Cost:" + (i + 1) * 10);
                                     }
-                                } 
+                                }
                                 System.out.println("type exit for exit");
 
                                 Scanner SkillVibes = new Scanner(System.in);
                                 String SV = SkillVibes.nextLine();
 
-                                if(SV.equals("1")){
+                                if (SV.equals("1")) {
+                                    if (CharClassName.equals("Knight")) {
 
-                                } else if(SV.equals("2")){
-                                    
-                                } else if(SV.equals("exit")){
-                                    
+                                    } else if (CharClassName.equals("Mage")) {
+
+                                    }
+                                } else if (SV.equals("2")) {
+                                    if (CharClassName.equals("Knight")) {
+
+                                    } else if (CharClassName.equals("Mage")) {
+
+                                    }
+                                } else if (SV.equals("exit")) {
+                                    break;
                                 } else {
 
                                 }
-                                 
-                            }
 
-                            
+                            }
 
                         } else if (progressmenuchecker.equals("6")) {
                             // INVENTORY
@@ -728,19 +730,15 @@ class thegame {
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show item
-                                System.out.println("Armory ");
-                                System.out.println(armory1);
-                                System.out.println(armory2);
-                                System.out.println("Weaponry ");
-                                System.out.println(weaponry1);
-                                System.out.println(weaponry2);
                                 // show inventory
+                                System.out.println(Inventory);
 
                             } else if (tradeMerch.equals("2")) {
                                 // show money
                                 System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show inventory
+                                System.out.println(Inventory);
 
                             } else if (tradeMerch.equals("3")) {
                                 break;
