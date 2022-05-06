@@ -5,8 +5,11 @@ class thegame {
         Scanner uinput = new Scanner(System.in);
 
         // variable setups
+        Integer CharLVL = 0;
+        Integer AvailableSP = 0;
         String CharName = "character";
         String CharClassName = "none";
+        Integer coins = 0;
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 };
         double[] skMod = { 0, 0, 0, 0, 0, 0 };
@@ -14,6 +17,7 @@ class thegame {
         double healthbar = 0;
         double manabar = 0;
         double strength = 0;
+        Integer gameprogress = 0;
 
         // variable setups ends
         // Home page
@@ -114,6 +118,9 @@ class thegame {
 
                 // Allocatable skill point rolling mechanism
                 int roll = 0;
+                coins = 50;
+                CharLVL = 1;
+
                 while (true) {
                     roll = (int) (Math.random() * ((20 - 1) + 1)) + 1;
                     System.out.println("Rolled sp is " + roll);
@@ -253,6 +260,7 @@ class thegame {
                     Scanner cont = new Scanner(System.in);
                     if (cont.nextLine().equals("yes")) {
                         System.out.println("");
+                        AvailableSP += roll;
                         break;
                     } else {
 
@@ -272,6 +280,68 @@ class thegame {
             while (true) {
             // start of story <==== increasing step / checking for new maps
             // #code
+                gameprogress++;
+                Integer progresscounter = gameprogress/10;
+                double isbattle = Math.random()*100;
+                Integer battledecide = (int)isbattle;
+
+                if(battledecide < 69){ // 69 percent to trigger battle
+                     
+                } else {
+                    if(gameprogress%10==0){
+                        //story trigger
+                    } else {
+                        System.out.println("Name: "+CharName);
+                        System.out.println("Level: "+CharLVL);
+                        //exp bar go here later
+                        System.out.println("Coins: " + coins + " g");
+                        System.out.println("");
+                        System.out.println("Progress:");
+                        
+                        System.out.print("||");
+                        for (int i = 0; i <= 10; i++) {
+                            if (i <= progresscounter){
+                                System.out.print("X");
+                            } else if (i > progresscounter) {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println("|| "+ progresscounter + "/10");
+                        System.out.println("");
+        
+                        System.out.println("________________________________________________________________________________________________________________________________");
+                        System.out.println("1. Continue");
+                        System.out.println("2. Save");
+                        System.out.println("3.Load");
+                        System.out.println("4. Level & Stats");
+                        System.out.println("5. Learn Skill");
+                        System.out.println("6. Inventory");
+                        System.out.println("7.Trading");
+
+                        Scanner progressmenu = new Scanner(System.in);
+                        String progressmenuchecker = progressmenu.nextLine();
+
+                        if (progressmenuchecker.equals("1")) {
+                            System.out.println(" ");
+                            break;
+                        } else if (progressmenuchecker.equals("2")) {
+                            //SAVE
+                        }  else if (progressmenuchecker.equals("3")) {
+                            //LOAD
+                        }  else if (progressmenuchecker.equals("4")) {
+                            //LEVEL & STATS
+                        }  else if (progressmenuchecker.equals("5")) {
+                            //LEARN SKILL
+                        }  else if (progressmenuchecker.equals("6")) {
+                            // INVENTORY
+                        }  else if (progressmenuchecker.equals("7")) {
+                            // TRADING
+                        } 
+    
+        
+                    }  
+                }
+            
 
             // start check story scene
             // #code
