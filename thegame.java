@@ -359,7 +359,7 @@ class thegame {
                         if (bsscanstr.equals("1")) {
                             // fight
                             for (int i=0; i<currentEnemy.length; i++){
-                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/ " + monsterMaxHP[i]);
+                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/" + monsterMaxHP[i]);
 
 
                             }
@@ -367,7 +367,12 @@ class thegame {
                             Scanner attack = new Scanner(System.in);
                             Integer attackEnm = attack.nextInt();
                             if (attackEnm==1){
-                                (monsterCurHP[attackEnm-1]) - ((int)totalstrength);
+                                monsterCurHP[attackEnm-1] -= (int)totalstrength;
+                            } else if (attackEnm==2){
+                                monsterCurHP[attackEnm-1] -= (int)totalstrength; 
+                            } else if (attackEnm==3){
+                                monsterCurHP[attackEnm-1] -= (int)totalstrength; 
+                            } else {
                             }
 
                         } else if (bsscanstr.equals("2")) {
