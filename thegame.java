@@ -54,17 +54,20 @@ class thegame {
         Integer lowpow = 0; // save
         Integer midpow = 0; // save
         Integer highpow = 0; // save
+
+
+        Integer SkillMovePoint = 0;
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
-        Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
-        Integer[] skdamage = { 2, 1, 1 };
-        Integer[] skusages = { 30, 80, 40 };
+        Integer[] skillknightstatus = { 0, 0 }; // 0 = locked || 1 = unlocked // save
+        Integer[] skdamage = { 2, 1 };
+        Integer[] skusages = { 30, 80 };
 
         // skill mage
         String[] skillmage = { "Extra balls", "Balls All Around Me" };
-        Integer[] skillmagestatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
-        Integer[] smdamage = { 2, 1, 1 };
-        Integer[] smusages = { 30, 80, 40 };
+        Integer[] skillmagestatus = { 0, 0}; // 0 = locked || 1 = unlocked // save
+        Integer[] smdamage = { 2, 1 };
+        Integer[] smusages = { 30, 80 };
 
         // variable setups ends
         // Home page
@@ -311,11 +314,11 @@ class thegame {
                         lowfood += 2;
                         lowpot += 2;
                         if (CharClassName.equals("Knight")) {
-                            Inventory[0] = "knight armor basic";
-                            Inventory[1] = "sword basic";
+                            knightarbasic += 1;
+                            swordbasic += 1;
                         } else if (CharClassName.equals("Mage")) {
-                            Inventory[0] = "robe basic";
-                            Inventory[1] = "staff basic";
+                            robebasic += 1;
+                            staffbasic += 1;
                         }
                         break;
                     } else {
@@ -344,6 +347,7 @@ class thegame {
                 if (CharEXP > leveluptop) {
                     CharLVL += 1;
                     CharEXP = CharEXP - leveluptop;
+                    SkillMovePoint += 2;
                 } else {
 
                 }
@@ -401,8 +405,17 @@ class thegame {
                             }
                         }
 
+                        if (healthbar > totalhealth) {
+                            healthbar = totalhealth;
+                        } else if (manabar > totalmana){
+                            manabar = totalmana;
+                        } else {
+
+                        }
+
                         if (enemydeathchecker == currentEnemy.length) {
                             CharEXP += 10;
+                            coins += 1;
                             break;
                         } else {
                             if (load == true) {
@@ -468,6 +481,18 @@ class thegame {
                             } else if (bsscanstr.equals("2")) {
                                 // skill
                                 allowdamage = true;
+                                if (CharClassName.equals("Knight")) {
+                                    for (int i = 0; i < skillknight.length; i++) {
+                                        System.out.print((i+1)+ ". " +skillknight[i]);
+                                        if (skillknightstatus[i]==1) {
+                                            System.out.println("Usable");
+                                        } else {
+                                            System.out.println("Locked");
+                                        }
+                                    }
+                                } else if (CharClassName.equals("Mage")) {
+                                    
+                                }
                             } else if (bsscanstr.equals("3")) {
                                 // equip
 
@@ -631,9 +656,30 @@ class thegame {
                                 }
 
                                 System.out.println("select a grade");
-                                System.out.println("1.low");
-                                System.out.println("2.med");
-                                System.out.println("3.high");
+                                System.out.print("1.low ");
+                                    if (cons.equals("1")) {
+                                        System.out.println(lowpot);
+                                    } else if (cons.equals("2")) {
+                                        System.out.println(lowfood);
+                                    } else if (cons.equals("3")) {
+                                        System.out.println(lowpow);
+                                    }
+                                System.out.print("2.med ");
+                                if (cons.equals("1")) {
+                                    System.out.println(midpot);
+                                } else if (cons.equals("2")) {
+                                    System.out.println(midfood);
+                                } else if (cons.equals("3")) {
+                                    System.out.println(midpow);
+                                }
+                                System.out.print("3.high ");
+                                if (cons.equals("1")) {
+                                    System.out.println(highpot);
+                                } else if (cons.equals("2")) {
+                                    System.out.println(highfood);
+                                } else if (cons.equals("3")) {
+                                    System.out.println(highpow);
+                                }
 
                                 Scanner grade = new Scanner(System.in);
 
@@ -705,6 +751,13 @@ class thegame {
                                 }
                             } else if (bsscanstr.equals("5")) {
                                 // run
+                                double catmode = Math.random() * 100;
+                                Integer catmoment = (int)catmode;
+                                if(catmoment<20){
+                                    break;
+                                } else {
+                                    System.out.println("You failed to run! no legs OvO");
+                                }
                             }
                         }
                         if (allowdamage == true) {
@@ -766,11 +819,11 @@ class thegame {
                                 System.out.println("Learn Skill");
                                 if (CharClassName.equals("Knight")) {
                                     for (int i = 0; i < skillknight.length; i++) {
-                                        System.out.println((i + 1) + ". " + skillknight[i] + " Cost:" + (i + 1) * 10);
+                                        System.out.println((i + 1) + ". " + skillknight[i] + " Unlock Cost:" + (i + 1) * 10);
                                     }
                                 } else if (CharClassName.equals("Mage")) {
                                     for (int i = 0; i < skillmage.length; i++) {
-                                        System.out.println((i + 1) + ". " + skillmage[i] + " Cost:" + (i + 1) * 10);
+                                        System.out.println((i + 1) + ". " + skillmage[i] + " Unlock Cost:" + (i + 1) * 10);
                                     }
                                 }
                                 System.out.println("type exit for exit");
@@ -779,17 +832,29 @@ class thegame {
                                 String SV = SkillVibes.nextLine();
 
                                 if (SV.equals("1")) {
-                                    if (CharClassName.equals("Knight")) {
-
-                                    } else if (CharClassName.equals("Mage")) {
-
+                                    if (SkillMovePoint > 10){
+                                        if (CharClassName.equals("Knight")) {
+                                            skillknightstatus[0] = 1;
+                                        } else if (CharClassName.equals("Mage")) {
+                                            skillmagestatus[0] = 1;
+                                        }
+                                        SkillMovePoint -= 10;
+                                    } else {
+                                        System.out.println("Lacking them points");
                                     }
+                                    
                                 } else if (SV.equals("2")) {
-                                    if (CharClassName.equals("Knight")) {
-
-                                    } else if (CharClassName.equals("Mage")) {
-
+                                    if (SkillMovePoint > 20){
+                                        if (CharClassName.equals("Knight")) {
+                                            skillknightstatus[1] = 1;
+                                        } else if (CharClassName.equals("Mage")) {
+                                            skillmagestatus[1] = 1;
+                                        }
+                                        SkillMovePoint -= 20;
+                                    } else {
+                                        System.out.println("Lacking them points");
                                     }
+                                    
                                 } else if (SV.equals("exit")) {
                                     break;
                                 } else {
