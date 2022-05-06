@@ -329,8 +329,13 @@ class thegame {
                     } else if(bsscanstr.equals("4")){
                         //consume here
 
-                    
+                        
+                        String cons = "";
+                     while(true){
                       
+                        Scanner consume = new Scanner(System.in);
+                    
+                         cons = consume.nextLine();
 
                     
 
@@ -340,24 +345,23 @@ class thegame {
                     System.out.println("3.power up (str)");
 
                     
-                    Scanner consume = new Scanner(System.in);
                     
-                    String cons = consume.nextLine();
-                    do{
+                    
                         if( cons.equals("1")){
                             System.out.println("you have selected potion");
-
+                            break;
                         }else if( cons.equals("2")){
                             System.out.println("you have selected food");
+                            break;
                         }else if( cons.equals("3")){
                             System.out.println("you have selected power up");
-
+                            break;
                         } else{
                             System.out.println("Please select an item");
                         }
                      
-                        
-
+                    
+                    }
 
                         System.out.println("select a grade");
                         System.out.println("1.low");
@@ -388,10 +392,13 @@ class thegame {
                         
                             
 
-                        }Scanner conscon = new Scanner(System.in);
+                        
+                        Scanner conscon = new Scanner(System.in);
     
                         String conscu = conscon.nextLine();
-                        while (conscu.equals("yes"));
+                    while(conscu.equals("yes")){
+
+                    }
 
                             
                             if (cons.equals("1") && grd.equals("1")){
