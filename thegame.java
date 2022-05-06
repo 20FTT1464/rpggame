@@ -498,8 +498,8 @@ class thegame {
                                     defence *= 30;defence /= 100; knightarbasic--;
 
                                     // armor/knight armor/standard
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandrd!=0) {
-                                    defence *= 50;defence /= 100; knightarstandrd--;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandard!=0) {
+                                    defence *= 50;defence /= 100; knightarstandard--;
 
                                     // armor/knight armor/elite
                                 } else if (quip.equals("1") && mor.equals("1") && ank.equals("3") && knightarelite!=0) {
@@ -753,7 +753,6 @@ class thegame {
                                 System.out.println(coins);
 
                                 // show item
-<<<<<<< HEAD
 
                                 System.out.println("Pick your destiny");
                                 System.out.println("1. Armory");
@@ -785,12 +784,6 @@ class thegame {
                                     break;
                                 }
 
-=======
-                                // System.out.println(armory1);
-                                // System.out.println(armory2);
-                                // System.out.println(weaponry1);
-                                // System.out.println(weaponry2);
->>>>>>> 3d0e73dacfab37696769acb0d6d0f5fb58cd6187
                                 // show inventory
 
                             } else if (tradeMerch.equals("2")) {
