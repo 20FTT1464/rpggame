@@ -371,7 +371,7 @@ class thegame {
                             System.out.println("2.weapon");
                             
                             Scanner equip = new Scanner(System.in);
-                            String  quip  = eqiup.nextLine();
+                            String  quip  = equip.nextLine();
 
                                 if ( equip.equals("1")){
                                     System.out.println("which armor would you like to equip?");
