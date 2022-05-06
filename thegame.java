@@ -23,7 +23,10 @@ class thegame {
         double defence = 0;
         Integer gameprogress = 0;
         String[] Inventory = {};
-        ;
+        String[] skillknight = {"Extra Slash", "Circular Slash", "Stun"};
+        Integer[] skdamage = { 2, 1, 1 };
+        Integer[] skusages = { 30, 80, 40 };
+
         // variable setups ends
         // Home page
 
@@ -618,6 +621,9 @@ class thegame {
                             // LEVEL & STATS
                         } else if (progressmenuchecker.equals("5")) {
                             // LEARN SKILL
+                            System.out.println("Learn Skill");
+                            
+
                         } else if (progressmenuchecker.equals("6")) {
                             // INVENTORY
                             for (int i = 0; i < Inventory.length; i++) {
