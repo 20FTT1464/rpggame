@@ -288,20 +288,23 @@ class thegame {
                     // start check battling system
                    
                     double enemyQty = Math.random()*3;
+                    System.out.println(enemyQty);
                     Integer enemyQtyint = (int)enemyQty;
 
-                    String [] currentEnemy = {};
-                    Integer [] monsterMaxHP = {};
-                    Integer [] monsterCurHP = {};
+                    String [] currentEnemy;
+                    Integer [] monsterMaxHP;
+                    Integer [] monsterCurHP;
 
-                    for (int i = 0; i < enemyQty; i++) {
+                    for (int i = 0; i < enemyQty-1; i++) {
                         double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)/100)*10);
                         double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)/100)*10);
                         double enQty = Math.random()*3;
                         Integer enQtyint = (int)enQty;
                         double EnmHP = Math.random()*(maxMonsterHp-minMonsterHp);
                         Integer EnmHPint = (int)EnmHP;
-
+                        currentEnemy = new String[enemyQtyint];
+                        monsterMaxHP = new Integer[enemyQtyint];
+                        monsterCurHP = new Integer[enemyQtyint];
                         currentEnemy[i]=enemy[enQtyint];
                         monsterMaxHP[i]=(int)(minMonsterHp+EnmHP);
                         monsterCurHP[i]=(int)(minMonsterHp+EnmHP);
@@ -497,7 +500,6 @@ class thegame {
 
                         if (progressmenuchecker.equals("1")) {
                             System.out.println(" ");
-                            break;
                         } else if (progressmenuchecker.equals("2")) {
                             // SAVE
                         } else if (progressmenuchecker.equals("3")) {
@@ -525,7 +527,6 @@ class thegame {
                 // start check story scene
                 // #code
                 // end story scene
-                break;
             }
             // end of story
             // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
