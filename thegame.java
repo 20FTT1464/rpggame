@@ -562,14 +562,15 @@ class thegame {
                                 String cons = "";
                                 while (true) {
 
-                                    Scanner consume = new Scanner(System.in);
-
-                                    cons = consume.nextLine();
+                                   
 
                                     System.out.println("what do you want to consume");
                                     System.out.println("1.potion (mp)");
                                     System.out.println("2.food (hp)");
                                     System.out.println("3.power up (str)");
+                                    Scanner consume = new Scanner(System.in);
+
+                                    cons = consume.nextLine();
 
                                     if (cons.equals("1")) {
                                         System.out.println("you have selected potion");
