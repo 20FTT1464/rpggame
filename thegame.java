@@ -360,10 +360,7 @@ class thegame {
                             // fight
                             for (int i=0; i<currentEnemy.length; i++){
                                 System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/ " + monsterMaxHP[i]);
-
-
                             }
-
                             Scanner attack = new Scanner(System.in);
                             Integer attackEnm = attack.nextInt();
                             if (attackEnm==1){
