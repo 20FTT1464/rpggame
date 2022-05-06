@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
+
 class thegame {
     public static void main(String[] args) {
         Scanner uinput = new Scanner(System.in);
@@ -353,6 +355,109 @@ class thegame {
 
                         } else if (bsscanstr.equals("3")) {
                             // equip
+                            
+                            
+
+                            System.out.println("what would you like to equip?");
+                            System.out.println( "1.armor");
+                            System.out.println("2.weapon");
+                            
+                            Scanner equip = new Scanner(System.in);
+                            String  quip  = eqiup.nextLine();
+
+                                if ( equip.equals("1")){
+                                    System.out.println("which armor would you like to equip?");
+                                    System.out.println( "1.knightarmor");
+                                    System.out.println("2.robe");
+
+                                    Scanner armor = new Scanner(System.in);
+                                    String  mor  = armor.nextLine();
+                                }
+                                else if (equip.equals("2")){
+                                    System.out.println("which weapon would you like to equip?");
+                                    System.out.println( "1.sword");
+                                    System.out.println("2.staff");
+
+                                    Scanner weapon = new Scanner(System.in);
+                                    String  pon  = weapon.nextLine();
+                                }
+                                else{
+                                    System.out.println("you haven't equip anything");
+                                }
+
+                                
+                                
+
+
+                            
+
+                            
+
+                            System.out.println("select a material rank");
+                            System.out.println( "1.basic");
+                            System.out.println("2.standard");
+                            System.out.println("3.elite");
+
+                            Scanner rank = new Scanner(System.in);
+                            String  ank = rank.nextLine();
+
+                            if ( rank.equals(1)){
+                                System.out.println(" you have selected basic"); 
+                            }
+                            else if( rank.equals(2)){
+                                System.out.println(" you have selected standard");
+                            }
+                            else if( rank.equals(3)){
+                                System.out.println(" you have selected elite");
+                            }
+                            else{
+                                System.out.println(" you haven't selected material rank")
+                            }
+
+                            
+                            if ( quip.equals("1") && mor.equals("1") && ank.equals("1") ){
+
+                            }else if( quip.equals("1") && mor.equals("1") && ank.equals("2")){
+                                
+                            }
+                            else if( quip.equals("1") && mor.equals("1") && ank.equals("3")){
+                                
+                            }else if( quip.equals("1") && mor.equals("2") && ank.equals("1")){
+                                
+                            }else if( quip.equals("1") && mor.equals("2") && ank.equals("2")){
+                                
+                            }else if( quip.equals("1") && mor.equals("2") && ank.equals("3")){
+                                
+                            }else if( quip.equals("2") && mor.equals("1") && ank.equals("1")){
+                                
+                            }else if( quip.equals("2") && mor.equals("1") && ank.equals("2")){
+                                
+                            }else if( quip.equals("2") && mor.equals("1") && ank.equals("3")){
+                                
+                            }else if( quip.equals("2") && mor.equals("2") && ank.equals("1")){
+                                
+                            }else if( quip.equals("2") && mor.equals("2") && ank.equals("2")){
+                                
+                            }else if( quip.equals("2") && mor.equals("2") && ank.equals("3")){
+                                
+                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("1")){
+                                
+                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("2")){
+                                
+                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("3")){
+                                
+                            }else if( quip.equals("3") && mor.equals("3") && ank.equals("2")){
+                                
+                            }else if( quip.equals("3") && mor.equals("3") && ank.equals("3")){
+                                
+                            }
+
+
+
+
+
+
+                            
 
                         } else if (bsscanstr.equals("4")) {
                             // consume here
