@@ -363,7 +363,8 @@ class thegame {
 
 
                             }
-                            Scanner attack = new Scanner(System.in)
+
+                            Scanner attack = new Scanner(System.in);
                         } else if (bsscanstr.equals("2")) {
                             // skill
 
