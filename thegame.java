@@ -669,6 +669,7 @@ class thegame {
                             String tradeMerch = trade.nextLine();
                             if (tradeMerch.equals("1")){
                                 // show money
+                                System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show item
                                 // show inventory
@@ -676,6 +677,7 @@ class thegame {
 
                             }else if (tradeMerch.equals("2")){
                                 // show money
+                                System.out.print("$" + " ");
                                 System.out.println(coins);
                                 // show inventory
                                 System.out.println(Inventory);
