@@ -640,6 +640,31 @@ class thegame {
 
                         } else if (progressmenuchecker.equals("7")) {
                             // TRADING
+                            System.out.println("May I help you?");
+                            System.out.println("1. Purchase");
+                            System.out.println("2. Sell");
+                            System.out.println("3. Back");
+                            Scanner trade = new Scanner(System.in);
+                            String tradeMerch = trade.nextLine();
+                            if (tradeMerch.equals("1")){
+                                // show money
+                                System.out.println(coins);
+                                // show item
+                                // show inventory
+                                System.out.println(Inventory);
+
+                            }else if (tradeMerch.equals("2")){
+                                // show money
+                                System.out.println(coins);
+                                // show inventory
+                                System.out.println(Inventory);
+                                
+                            }else if (tradeMerch.equals("3")){
+                                break;
+                            }else {
+                                System.out.println("Please choose those 3 options!");
+                            }
+
                         }
 
                     }
