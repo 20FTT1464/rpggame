@@ -18,7 +18,7 @@ class thegame {
         double manabar = 0;
         double strength = 0;
         Integer gameprogress = 0;
-        String[] Inventory = ;
+        String[] Inventory = {};
 ;
         // variable setups ends
         // Home page
@@ -341,7 +341,7 @@ class thegame {
                             System.out.println("");
                             System.out.print("press enter to exit:");
                             Scanner invout = new Scanner(System.in);
-                            
+
                         }  else if (progressmenuchecker.equals("7")) {
                             // TRADING
                         } 
