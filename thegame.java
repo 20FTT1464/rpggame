@@ -291,21 +291,26 @@ class thegame {
                     Integer enemyQtyint = (int)enemyQty;
 
                     String [] currentEnemy = {};
+                    Integer [] monsterMaxHP = {};
+                    Integer [] monsterCurHP = {};
 
                     for (int i = 0; i < enemyQty; i++) {
+                        double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)/100)*10);
+                        double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)/100)*10);
                         double enQty = Math.random()*3;
                         Integer enQtyint = (int)enQty;
-                        System.out.println(enemy[enQtyint]);
+                        double EnmHP = Math.random()*(maxMonsterHp-minMonsterHp);
+                        Integer EnmHPint = (int)EnmHP;
 
                         currentEnemy[i]=enemy[enQtyint];
+                        monsterMaxHP[i]=(int)(minMonsterHp+EnmHP);
+                        monsterCurHP[i]=(int)(minMonsterHp+EnmHP);
                     }
                     while (true) {
                         double totalhealth = (((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100;
                         double totalmana = (((charSk[1] + aPoints[1]) / 100) * skMod[1]) * 100;
                         double totalstrength = (((charSk[2] + aPoints[2]) / 100) * skMod[2]) * 100;
                         double totaldefence = (((charSk[3] + aPoints[3]) / 100) * skMod[3]) * 100;
-                        double minMonsterHp = totalhealth - ((totalhealth/100)*10);
-                        double maxMonsterHp = totalhealth + ((totalhealth/100)*10);
                         if (load == true) {
                             // healthbar = loadvaluehere;
                         } else {
