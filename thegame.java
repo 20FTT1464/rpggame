@@ -17,6 +17,7 @@ class thegame {
         double healthbar = 0;
         double manabar = 0;
         double strength = 0;
+        double defence = 0;
         Integer gameprogress = 0;
         String[] Inventory = {};
 ;
@@ -360,12 +361,14 @@ class thegame {
                     double totalhealth = (((charSk[0] + aPoints[0])  / 100) * skMod[0])*100;
                     double totalmana = (((charSk[1] + aPoints[1])  / 100) * skMod[1])*100;
                     double totalstrength = (((charSk[2] + aPoints[2])  / 100) * skMod[1])*100;
+                    double totaldefence = (((charSk[2] + aPoints[2])  / 100) * skMod[1])*100;
                     if (load ==true) {
                         // healthbar = loadvaluehere;
                     } else {
                         healthbar = totalhealth;
                         manabar = totalmana;
                         strength = totalstrength;
+                        defence = totaldefence;
                     }
                     Double moduluscalhealth = (totalhealth/100)*10;
                     Double moduluscalmana = (totalmana/100)*10;
@@ -404,6 +407,7 @@ class thegame {
                         
                     } else if(bsscanstr.equals("3")){
                         // equip
+
                     } else if(bsscanstr.equals("4")){
                         //consume here
 
