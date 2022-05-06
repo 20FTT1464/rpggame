@@ -7,69 +7,41 @@ class thegame {
         Scanner uinput = new Scanner(System.in);
 
         // variable setups
-<<<<<<< HEAD
-        Integer CharLVL = 0;
         Integer AvailableSP = 0;
         String CharName = "character";
         String CharClassName = "none";
         Integer coins = 0;
         String[] enemy = { "thieves", "bandit", "goblin" };
-=======
-        Integer CharLVL = 0; // save
-        Integer AvailableSP = 0; // save
-        String CharName = "character"; // save
-        String CharClassName = "none"; // save
-        Integer coins = 0; // save
-        String [] enemy = {"thieves", "bandit", "goblin"};
->>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
-        double[] charSk = { 0, 0, 0, 0, 0, 0 }; // save
-        double[] skMod = { 0, 0, 0, 0, 0, 0 }; // save
-        int[] aPoints = { 0, 0, 0, 0, 0, 0 }; // save
-        double healthbar = 0;
-        double manabar = 0;
-        double strength = 0;
-        double defence = 0;
-<<<<<<< HEAD
         Integer gameprogress = 0;
         String[] Inventory = new String[50];
 
         String[] armory = { "knightarmor", "robe" };
         String[] weaponry = { "sword", "staff" };
         String[] mrs = { "basic", "standard", "elite" };
-=======
+
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
         
-        String [] armory1 = {"knightarmorbasic", "knightarmorstandard","knightarmorelite"};
-        String [] armory2 = {"robebasic", "robestandard","robeelite"};
-        String [] weaponry1 = {"swordbasic", "swordstandard","swordelite"};
-        String [] weaponry2 = {"staffbasic", "staffstandard","staffelite"};
->>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
+        String [] armory1 = {"knight armor basic", "knight armor standard","knight armor elite"};
+        String [] armory2 = {"robe basic", "robe standard","robe elite"};
+        String [] weaponry1 = {"sword basic", "sword standard","sword elite"};
+        String [] weaponry2 = {"staff basic", "staff standard","staff elite"};
+ 
 
-        String [] potions = {"lowpotion","midpotion","highpotion"};
-        String [] foods = {"lowfood","midfood","highfood"};
-        String [] powerups = {"lowpowup","midpowup","highpowp"};
+        String [] potions = {"low potion","mid potion","high potion"};
+        String [] powerups = {"low powup","mid powup","high powp"};
         // skill knight
-<<<<<<< HEAD
+         HEAD
         String[] skillknight = { "Extra Slash", "Circular Slash", "Stun" };
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked
-        Integer[] skdamage = { 2, 1, 1 };
-        Integer[] skusages = { 30, 80, 40 };
-
-        // skill mage
-        String[] skillmage = { "Extra balls", "Balls All Around Me", "Paralysis" };
-        Integer[] skillmagestatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked
-=======
-        String[] skillknight = {"Extra Slash", "Circular Slash"};
-        Integer[] skillknightstatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save 
         Integer[] skdamage = { 2, 1, 1 };
         Integer[] skusages = { 30, 80, 40 };
 
         //skill mage
         String[] skillmage = {"Extra balls", "Balls All Around Me"};
         Integer[] skillmagestatus = { 0, 0, 0}; // 0 = locked || 1 = unlocked // save
->>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
+
         Integer[] smdamage = { 2, 1, 1 };
         Integer[] smusages = { 30, 80, 40 };
 
@@ -440,12 +412,6 @@ class thegame {
 
                         } else if (bsscanstr.equals("3")) {
                             // equip
-<<<<<<< HEAD
-=======
-                            
-                            
-                            
->>>>>>> a0f66acc921e2cc8a51a61b9f27b04e302323b62
 
                             System.out.println("what would you like to equip?");
                             System.out.println("1.armor");
