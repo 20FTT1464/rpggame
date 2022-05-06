@@ -286,7 +286,18 @@ class thegame {
 
                     double minMonsterHp = totalhealth - ((totalhealth/100)*10);
                     double maxMonsterHp = totalhealth + ((totalhealth/100)*10);
-                    
+                    double enemyQty = Math.random()*3;
+                    Integer enemyQtyint = (int)enemyQty;
+
+                    String [] currentEnemy = {};
+
+                    for (int i = 0; i < enemyQty; i++) {
+                        double enQty = Math.random()*3;
+                        Integer enQtyint = (int)enQty;
+                        System.out.println(enemy[enQtyint]);
+
+                        currentEnemy[i]=enemy[enQtyint];
+                    }
                     
 
                     
