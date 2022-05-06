@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 
 class thegame {
@@ -9,7 +10,7 @@ class thegame {
         String CharName = "character";
         String CharClassName = "none";
         String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
-        String [] enemy = {"thieves", "bandit", "goblin" };
+        String[] enemy = {"thieves", "bandit", "goblin" };
         double[] charSk = { 0, 0, 0, 0, 0, 0 };
         double[] skMod = { 0, 0, 0, 0, 0, 0 };
         int[] aPoints = { 0, 0, 0, 0, 0, 0 };
@@ -282,9 +283,27 @@ class thegame {
                 while (true) {
                     double totalhealth = (((charSk[0] + aPoints[0])  / 100) * skMod[0])*100;
                     double totalmana = (((charSk[1] + aPoints[1])  / 100) * skMod[1])*100;
+
                     double minMonsterHp = totalhealth - ((totalhealth/100)*10);
                     double maxMonsterHp = totalhealth + ((totalhealth/100)*10);
                     
+                    
+
+                    
+                    
+                        
+                    
+                    // int lowerBound = 0;
+                    // int upperBound = enemy.length;
+                    // int range = (upperBound - lowerBound);
+                    // for (int i = 0; i < 2; i ++){
+                    //     int random = (int)(Math.random()*range)+lowerBound;
+                    //     System.out.println(range);
+                    // }
+
+
+                    
+
 
 
                     if (load ==true) {
