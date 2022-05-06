@@ -23,7 +23,10 @@ class thegame {
         double defence = 0;
         Integer gameprogress = 0;
         String[] Inventory = {};
-        ;
+        String[] skillknight = {"Extra Slash", "Circular Slash", "Stun"};
+        Integer[] skdamage = { 2, 1, 1 };
+        Integer[] skusages = { 30, 80, 40 };
+
         // variable setups ends
         // Home page
 
@@ -293,9 +296,9 @@ class thegame {
                     System.out.println(enemyQty);
                     Integer enemyQtyint = (int)enemyQty;
 
-                    String [] currentEnemy;
-                    Integer [] monsterMaxHP;
-                    Integer [] monsterCurHP;
+                    String [] currentEnemy = {};
+                    Integer [] monsterMaxHP = {};
+                    Integer [] monsterCurHP = {};
 
                     for (int i = 0; i < enemyQty-1; i++) {
                         double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)/100)*10);
@@ -359,20 +362,18 @@ class thegame {
                         if (bsscanstr.equals("1")) {
                             // fight
                             for (int i=0; i<currentEnemy.length; i++){
-                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/" + monsterMaxHP[i]);
-
-
+                                System.out.println(currentEnemy[i] + " " + monsterCurHP[i] + "/ " + monsterMaxHP[i]);
                             }
-
                             Scanner attack = new Scanner(System.in);
                             Integer attackEnm = attack.nextInt();
                             if (attackEnm==1){
-                                monsterCurHP[attackEnm-1] -= (int)totalstrength;
+                                (monsterCurHP[attackEnm-1]) -= ((int)totalstrength);
                             } else if (attackEnm==2){
-                                monsterCurHP[attackEnm-1] -= (int)totalstrength; 
+                                (monsterCurHP[attackEnm-1]) -= ((int)totalstrength);
                             } else if (attackEnm==3){
-                                monsterCurHP[attackEnm-1] -= (int)totalstrength; 
+                                (monsterCurHP[attackEnm-1]) -= ((int)totalstrength);
                             } else {
+
                             }
 
                         } else if (bsscanstr.equals("2")) {
@@ -389,6 +390,7 @@ class thegame {
                             
                             Scanner equip = new Scanner(System.in);
                             String  quip  = equip.nextLine();
+                            String  mor  = "";
 
                                 if ( equip.equals("1")){
                                     System.out.println("which armor would you like to equip?");
@@ -396,7 +398,7 @@ class thegame {
                                     System.out.println("2.robe");
 
                                     Scanner armor = new Scanner(System.in);
-                                    String  mor  = armor.nextLine();
+                                    mor  = armor.nextLine();
                                 }
                                 else if (equip.equals("2")){
                                     System.out.println("which weapon would you like to equip?");
@@ -436,45 +438,61 @@ class thegame {
                                 System.out.println(" you have selected elite");
                             }
                             else{
-                                System.out.println(" you haven't selected material rank")
+                                System.out.println(" you haven't selected material rank");
                             }
 
-                            //armor/knight armor/basic
+                            //armor/knight armor/basic/ suiiii
                             if ( quip.equals("1") && mor.equals("1") && ank.equals("1") ){
+                                defence*=30;
+                                defence/=100;
+                                 
                             //armor/knight armor/standard
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("2")){
-                            //armor/knight armor/elite  
+                                defence*=50;
+                                defence/=100;
+                            
+                                //armor/knight armor/elite  
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("3")){
-                            //armor/robe/basic    
+                                defence*=70;
+                                defence/=100;
+                            
+                                //armor/robe/basic    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("1")){
-                            //armor/robe/stnadard    
+                                defence*=20;
+                                defence/=100;
+                                manabar*=10;
+                                manabar/=100;
+                            
+                                //armor/robe/stnadard    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("2")){
-                            //armor/robe/elite    
+                                defence*=40;
+                                defence/=100;
+                                manabar*=30;
+                                manabar/=100;
+                            
+                                //armor/robe/elite    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("3")){
-                            //weapom/robe/    
+                                defence*=60;
+                                defence/=100;
+                                manabar*=50;
+                                manabar/=100;
+                                
+                                //weapon/sword/basic    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("1")){
                                 
+                            
+                                //weapon/sword/standard    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("2")){
-                                
+                            //weapon/sword/elite    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("3")){
-                                
+                            //weapon/staff/basic    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("1")){
-                                
+                            //weapon/staff/standard    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("2")){
-                                
+                            //weapon/staff/elite    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("3")){
-                                
-                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("1")){
-                                
-                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("2")){
-                                
-                            }else if( quip.equals("2") && mor.equals("3") && ank.equals("3")){
-                                
-                            }else if( quip.equals("3") && mor.equals("3") && ank.equals("2")){
-                                
-                            }else if( quip.equals("3") && mor.equals("3") && ank.equals("3")){
-                                
-                            }
+                            }     
+                            
 
 
 
@@ -544,24 +562,24 @@ class thegame {
                             }
 
                             if (cons.equals("1") && grd.equals("1")) {
-                                totalmana += 30;
-                                System.out.println("you current mana is" + totalmana);
+                                manabar += 30;
+                                System.out.println("you current mana is" + manabar);
                             }
 
                             else if (cons.equals("1") && grd.equals("2")) {
-                                totalmana += 45;
-                                System.out.println("you current mana is" + totalmana);
+                                manabar += 45;
+                                System.out.println("you current mana is" + manabar);
                             } else if (cons.equals("1") && grd.equals("3")) {
-                                totalmana += 60;
-                                System.out.println("you current mana is" + totalmana);
+                                manabar += 60;
+                                System.out.println("you current mana is" + manabar);
                             } else if (cons.equals("2") && grd.equals("1")) {
-                                totalhealth += 30;
-                                System.out.println("you current hp is" + totalhealth);
+                                healthbar += 30;
+                                System.out.println("you current hp is" + healthbar);
                             } else if (cons.equals("2") && grd.equals("2")) {
-                                totalhealth += 45;
-                                System.out.println("you current hp is" + totalhealth);
+                                healthbar += 45;
+                                System.out.println("you current hp is" + healthbar);
                             } else if (cons.equals("2") && grd.equals("3")) {
-                                totalhealth += 60;
+                                healthbar += 60;
                                 System.out.println("you current hp is" + totalhealth);
                             } else if (cons.equals("3") && grd.equals("1")) {
                                 totalstrength += 30;
@@ -629,6 +647,9 @@ class thegame {
                             // LEVEL & STATS
                         } else if (progressmenuchecker.equals("5")) {
                             // LEARN SKILL
+                            System.out.println("Learn Skill");
+                            
+
                         } else if (progressmenuchecker.equals("6")) {
                             // INVENTORY
                             for (int i = 0; i < Inventory.length; i++) {
