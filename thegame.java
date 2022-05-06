@@ -293,9 +293,9 @@ class thegame {
                     System.out.println(enemyQty);
                     Integer enemyQtyint = (int)enemyQty;
 
-                    String [] currentEnemy;
-                    Integer [] monsterMaxHP;
-                    Integer [] monsterCurHP;
+                    String [] currentEnemy = {};
+                    Integer [] monsterMaxHP = {};
+                    Integer [] monsterCurHP = {};
 
                     for (int i = 0; i < enemyQty-1; i++) {
                         double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)/100)*10);
@@ -387,6 +387,7 @@ class thegame {
                             
                             Scanner equip = new Scanner(System.in);
                             String  quip  = equip.nextLine();
+                            String  mor  = "";
 
                                 if ( equip.equals("1")){
                                     System.out.println("which armor would you like to equip?");
@@ -394,7 +395,7 @@ class thegame {
                                     System.out.println("2.robe");
 
                                     Scanner armor = new Scanner(System.in);
-                                    String  mor  = armor.nextLine();
+                                    mor  = armor.nextLine();
                                 }
                                 else if (equip.equals("2")){
                                     System.out.println("which weapon would you like to equip?");
