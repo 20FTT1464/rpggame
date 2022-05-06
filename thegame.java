@@ -532,24 +532,24 @@ class thegame {
                             }
 
                             if (cons.equals("1") && grd.equals("1")) {
-                                totalmana += 30;
-                                System.out.println("you current mana is" + totalmana);
+                                manabar += 30;
+                                System.out.println("you current mana is" + manabar);
                             }
 
                             else if (cons.equals("1") && grd.equals("2")) {
-                                totalmana += 45;
-                                System.out.println("you current mana is" + totalmana);
+                                manabar += 45;
+                                System.out.println("you current mana is" + manabar);
                             } else if (cons.equals("1") && grd.equals("3")) {
-                                totalmana += 60;
-                                System.out.println("you current mana is" + totalmana);
+                                manabar += 60;
+                                System.out.println("you current mana is" + manabar);
                             } else if (cons.equals("2") && grd.equals("1")) {
-                                totalhealth += 30;
-                                System.out.println("you current hp is" + totalhealth);
+                                healthbar += 30;
+                                System.out.println("you current hp is" + healthbar);
                             } else if (cons.equals("2") && grd.equals("2")) {
-                                totalhealth += 45;
-                                System.out.println("you current hp is" + totalhealth);
+                                healthbar += 45;
+                                System.out.println("you current hp is" + healthbar);
                             } else if (cons.equals("2") && grd.equals("3")) {
-                                totalhealth += 60;
+                                healthbar += 60;
                                 System.out.println("you current hp is" + totalhealth);
                             } else if (cons.equals("3") && grd.equals("1")) {
                                 totalstrength += 30;
