@@ -5,8 +5,9 @@ class thegame {
         Scanner uinput = new Scanner(System.in);
 
         // variable setups
+        boolean gameover = false;
         Integer CharLVL = 0; // save
-        Integer CharEXP = 0;
+        Integer CharEXP = 0; // save
         Integer AvailableSP = 0; // save
         String CharName = "character"; // save
         String CharClassName = "none"; // save
@@ -25,36 +26,36 @@ class thegame {
 
         // String[] armory1 = { "knight armor basic", "knight armor standard", "knight
         // armor elite" };
-        Integer knightarbasic = 0;
-        Integer knightarstandard = 0;
-        Integer knightarelite = 0;
+        Integer knightarbasic = 0; // save
+        Integer knightarstandard = 0; // save
+        Integer knightarelite = 0; // save
         // String[] armory2 = { "robe basic", "robe standard", "robe elite" };
-        Integer robebasic = 0;
-        Integer robestandard = 0;
-        Integer robeelite = 0;
+        Integer robebasic = 0; // save
+        Integer robestandard = 0; // save
+        Integer robeelite = 0; // save
         // String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
-        Integer swordbasic = 0;
-        Integer swordstandard = 0;
-        Integer swordelite = 0;
+        Integer swordbasic = 0; // save
+        Integer swordstandard = 0; // save
+        Integer swordelite = 0; // save
         // String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
-        Integer staffbasic = 0;
-        Integer staffstandard = 0;
-        Integer staffelite = 0;
+        Integer staffbasic = 0; // save
+        Integer staffstandard = 0; // save
+        Integer staffelite = 0; // save
 
         // String[] potions = { "lowpotion", "midpotion", "highpotion" };
-        Integer lowpot = 0;
-        Integer midpot = 0;
-        Integer highpot = 0;
+        Integer lowpot = 0; // save
+        Integer midpot = 0; // save
+        Integer highpot = 0; // save
         // String[] foods = { "lowfood", "midfood", "highfood" };
-        Integer lowfood = 0;
-        Integer midfood = 0;
-        Integer highfood = 0;
+        Integer lowfood = 0; // save
+        Integer midfood = 0; // save
+        Integer highfood = 0; // save
         // String[] powerups = { "lowpowup", "midpowup", "highpowp" };
-        Integer lowpow = 0;
-        Integer midpow = 0;
-        Integer highpow = 0;
+        Integer lowpow = 0; // save
+        Integer midpow = 0; // save
+        Integer highpow = 0; // save
         // skill knight
-        String[] skillknight = { "Extra Slash", "Circular Slash" };
+        String[] skillknight = { "Extra Slash", "Circular Slash" }; 
         Integer[] skillknightstatus = { 0, 0, 0 }; // 0 = locked || 1 = unlocked // save
         Integer[] skdamage = { 2, 1, 1 };
         Integer[] skusages = { 30, 80, 40 };
@@ -329,6 +330,9 @@ class thegame {
             // end of load
             Boolean load = false;
             while (true) {
+                if (gameover == true) {
+                    break;
+                } 
                 // start of story <==== increasing step / checking for new maps
                 // #code
                 gameprogress++;
@@ -347,14 +351,13 @@ class thegame {
                     // start check battling system
                     double enemyQty = Math.random() * 3;
                     Integer enemyQtyint = (int) enemyQty;
+                    
 
                     String[] currentEnemy;
                     Integer[] monsterMaxHP;
                     Integer[] monsterCurHP;
-                    double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
-                            - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
-                    double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
-                            + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
+                    double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
+                    double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 500);
                     double enQty = Math.random() * 3;
                     Integer enQtyint = (int) enQty;
                     double EnmHP = Math.random() * (maxMonsterHp - minMonsterHp);
@@ -369,6 +372,12 @@ class thegame {
                         monsterCurHP[i] = (int) (minMonsterHp + EnmHPint);
                     }
                     while (true) {
+                        if (healthbar < 0){
+                            gameover = true;
+                        }
+                        if (gameover == true) {
+                            break;
+                        } 
                         double totalhealth = (((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100;
                         double totalmana = (((charSk[1] + aPoints[1]) / 100) * skMod[1]) * 100;
                         double totalstrength = (((charSk[2] + aPoints[2]) / 100) * skMod[2]) * 100;
@@ -378,9 +387,18 @@ class thegame {
                             if (monsterCurHP[i] < 0) {
                                 enemydeathchecker++;
                             } else {
-
+                                if (healthbar == 0) {
+                                    healthbar = totalhealth;
+                                    manabar = totalmana;
+                                    strength = totalstrength;
+                                    defence = totaldefence;
+                                } else {
+                                    
+                                }
+                            
                             }
                         }
+                        
                         if (enemydeathchecker == currentEnemy.length) {
                             CharEXP += 10;
                             break;
@@ -388,10 +406,7 @@ class thegame {
                             if (load == true) {
                                 // healthbar = loadvaluehere;
                             } else {
-                                healthbar = totalhealth;
-                                manabar = totalmana;
-                                strength = totalstrength;
-                                defence = totaldefence;
+                        
                             }
                             Double moduluscalhealth = (totalhealth / 100) * 10;
                             Double moduluscalmana = (totalmana / 100) * 10;
@@ -428,8 +443,11 @@ class thegame {
                             if (bsscanstr.equals("1")) {
                                 // fight
                                 for (int i = 0; i < currentEnemy.length; i++) {
-                                    System.out
-                                            .println(currentEnemy[i] + " " + monsterCurHP[i] + "/ " + monsterMaxHP[i]);
+                                    if(monsterCurHP[i] > 0){
+                                        System.out.println((i+1) + ". " + currentEnemy[i] + " " +  monsterCurHP[i] + "/ " + monsterMaxHP[i]);
+                                    } else {
+                                        System.out.println((i+1) + ". " + currentEnemy[i] + " Dead");
+                                    }
                                 }
                                 Scanner attack = new Scanner(System.in);
                                 Integer attackEnm = attack.nextInt();
@@ -645,6 +663,9 @@ class thegame {
                                 // run
                             }
                         }
+                        double enemydamagedealer = Math.random()*100;
+                        Integer edd = (int) enemydamagedealer;
+                        healthbar = healthbar - ((80+enemydamagedealer)*enemyQty);
                     }
 
                     // end battling
@@ -804,10 +825,21 @@ class thegame {
                     }
                 }
 
+
+
                 // start check story scene
                 // #code
                 // end story scene
             }
+            if (gameover == true) {
+                System.out.println("  ________    _____      _____  ___________ ____________   _________________________ ");
+                System.out.println(" /  _____/   /  _  \\    /     \\ \\_   _____/ \\_____  \\   \\ /   /\\_   _____/\\______   \\");
+                System.out.println("/   \\  ___  /  /_\\  \\  /  \\ /  \\ |    __)_   /   |   \\   Y   /  |    __)_  |       _/");
+                System.out.println("\\    \\_\\  \\/    |    \\/    Y    \\|        \\ /    |    \\     /   |        \\ |    |   \\");
+                System.out.println(" \\______  /\\____|__  /\\____|__  /_______  / \\_______  /\\___/   /_______  / |____|_  /");
+                System.out.println("        \\/         \\/         \\/        \\/          \\/                 \\/         \\/ ");
+            } 
+            
             // end of story
             // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
         }
