@@ -429,20 +429,19 @@ class thegame {
                                 System.out.println(" you haven't selected material rank")
                             }
 
-                            
+                            //armor/knight armor/basic
                             if ( quip.equals("1") && mor.equals("1") && ank.equals("1") ){
-
+                            //armor/knight armor/standard
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("2")){
-                                
-                            }
-                            else if( quip.equals("1") && mor.equals("1") && ank.equals("3")){
-                                
+                            //armor/knight armor/elite  
+                            }else if( quip.equals("1") && mor.equals("1") && ank.equals("3")){
+                            //armor/robe/basic    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("1")){
-                                
+                            //armor/robe/stnadard    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("2")){
-                                
+                            //armor/robe/elite    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("3")){
-                                
+                            //weapom/robe/    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("1")){
                                 
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("2")){
