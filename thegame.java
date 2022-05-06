@@ -6,6 +6,7 @@ class thegame {
 
         // variable setups
         Integer CharLVL = 0; // save
+        Integer CharEXP = 0;
         Integer AvailableSP = 0; // save
         String CharName = "character"; // save
         String CharClassName = "none"; // save
@@ -375,7 +376,7 @@ class thegame {
                             }
                         }
                         if (enemydeathchecker == currentEnemy.length) {
-
+                            
                         } else {
                             if (load == true) {
                                 // healthbar = loadvaluehere;
