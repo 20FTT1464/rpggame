@@ -23,7 +23,8 @@ class thegame {
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
 
-        // String[] armory1 = { "knight armor basic", "knight armor standard", "knight armor elite" };
+        // String[] armory1 = { "knight armor basic", "knight armor standard", "knight
+        // armor elite" };
         Integer knightarbasic = 0;
         Integer knightarstandard = 0;
         Integer knightarelite = 0;
@@ -33,12 +34,12 @@ class thegame {
         Integer robeelite = 0;
         // String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
         Integer swordbasic = 0;
-        Integer swordstandard =0;
-        Integer swordelite =0;
+        Integer swordstandard = 0;
+        Integer swordelite = 0;
         // String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
-        Integer staffbasic =0;
-        Integer staffstandard =0;
-        Integer staffelite =0;
+        Integer staffbasic = 0;
+        Integer staffstandard = 0;
+        Integer staffelite = 0;
 
         // String[] potions = { "lowpotion", "midpotion", "highpotion" };
         Integer lowpot = 0;
@@ -335,32 +336,37 @@ class thegame {
                 double isbattle = Math.random() * 100;
                 Integer battledecide = (int) isbattle;
 
+                Integer leveluptop = CharLVL * 100;
+                if (CharEXP > leveluptop) {
+                    CharLVL += 1;
+                    CharEXP = CharEXP - leveluptop;
+                } else {
+
+                }
                 if (battledecide < 69) { // 69 percent to trigger battle
                     // start check battling system
-
                     double enemyQty = Math.random() * 3;
-                    System.out.println(enemyQty);
                     Integer enemyQtyint = (int) enemyQty;
 
-                    String[] currentEnemy = {};
-                    Integer[] monsterMaxHP = {};
-                    Integer[] monsterCurHP = {};
+                    String[] currentEnemy;
+                    Integer[] monsterMaxHP;
+                    Integer[] monsterCurHP;
+                    double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
+                            - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
+                    double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
+                            + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
+                    double enQty = Math.random() * 3;
+                    Integer enQtyint = (int) enQty;
+                    double EnmHP = Math.random() * (maxMonsterHp - minMonsterHp);
+                    Integer EnmHPint = (int) EnmHP;
+                    currentEnemy = new String[enemyQtyint];
+                    monsterMaxHP = new Integer[enemyQtyint];
+                    monsterCurHP = new Integer[enemyQtyint];
 
                     for (int i = 0; i < enemyQty - 1; i++) {
-                        double minMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
-                                - ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
-                        double maxMonsterHp = ((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100)
-                                + ((((((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100) / 100) * 10);
-                        double enQty = Math.random() * 3;
-                        Integer enQtyint = (int) enQty;
-                        double EnmHP = Math.random() * (maxMonsterHp - minMonsterHp);
-                        Integer EnmHPint = (int) EnmHP;
-                        currentEnemy = new String[enemyQtyint];
-                        monsterMaxHP = new Integer[enemyQtyint];
-                        monsterCurHP = new Integer[enemyQtyint];
                         currentEnemy[i] = enemy[enQtyint];
-                        monsterMaxHP[i] = (int) (minMonsterHp + EnmHP);
-                        monsterCurHP[i] = (int) (minMonsterHp + EnmHP);
+                        monsterMaxHP[i] = (int) (minMonsterHp + EnmHPint);
+                        monsterCurHP[i] = (int) (minMonsterHp + EnmHPint);
                     }
                     while (true) {
                         double totalhealth = (((charSk[0] + aPoints[0]) / 100) * skMod[0]) * 100;
@@ -369,14 +375,15 @@ class thegame {
                         double totaldefence = (((charSk[3] + aPoints[3]) / 100) * skMod[3]) * 100;
                         Integer enemydeathchecker = 0;
                         for (int i = 0; i < monsterCurHP.length; i++) {
-                            if (monsterCurHP[i] == 0) {
+                            if (monsterCurHP[i] < 0) {
                                 enemydeathchecker++;
                             } else {
 
                             }
                         }
                         if (enemydeathchecker == currentEnemy.length) {
-                            
+                            CharEXP += 10;
+                            break;
                         } else {
                             if (load == true) {
                                 // healthbar = loadvaluehere;
@@ -487,72 +494,48 @@ class thegame {
                                 }
 
                                 // armor/knight armor/basic/ suiiii
-                                if (quip.equals("1") && mor.equals("1") && ank.equals("1")) {
-                                    defence *= 30;
-                                    defence /= 100;
+                                if (quip.equals("1") && mor.equals("1") && ank.equals("1") && knightarbasic!=0) {
+                                    defence *= 30;defence /= 100; knightarbasic--;
 
                                     // armor/knight armor/standard
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2")) {
-                                    defence *= 50;
-                                    defence /= 100;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandrd!=0) {
+                                    defence *= 50;defence /= 100; knightarstandrd--;
 
                                     // armor/knight armor/elite
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("3")) {
-                                    defence *= 70;
-                                    defence /= 100;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("3") && knightarelite!=0) {
+                                    defence *= 70;defence /= 100;knightarelite--;
 
                                     // armor/robe/basic
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("1")) {
-                                    defence *= 20;
-                                    defence /= 100;
-                                    manabar *= 10;
-                                    manabar /= 100;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("1") && robebasic!=0) {
+                                    defence *= 20;defence /= 100;manabar *= 10;manabar /= 100;robebasic--;
 
                                     // armor/robe/stnadard
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("2")) {
-                                    defence *= 40;
-                                    defence /= 100;
-                                    manabar *= 30;
-                                    manabar /= 100;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("2") && robestandard!=0) {
+                                    defence *= 40;defence /= 100;manabar *= 30;manabar /= 100;robestandard--;
 
                                     // armor/robe/elite
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("3")) {
-                                    defence *= 60;
-                                    defence /= 100;
-                                    manabar *= 50;
-                                    manabar /= 100;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("3") && robeelite!=0) {
+                                    defence *= 60;defence /= 100;manabar *= 50;manabar /= 100;robeelite--;
 
                                     // weapon/sword/basic
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("1")) {
-                                    strength *= 30;
-                                    strength /= 100;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("1") && swordbasic!=0) {
+                                    strength *= 30;strength /= 100;swordbasic--;
 
                                     // weapon/sword/standard
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("2")) {
-                                    strength *= 50;
-                                    strength /= 100;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("2") && swordstandard!=0) {
+                                    strength *= 50; strength /= 100;swordstandard--;
                                     // weapon/sword/elite
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("3")) {
-                                    strength *= 70;
-                                    strength /= 100;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("3") && swordelite!=0) {
+                                    strength *= 70;strength /= 100;swordelite--;
                                     // weapon/staff/basic
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("1")) {
-                                    strength *= 10;
-                                    strength /= 100;
-                                    manabar *= 10;
-                                    manabar /= 100;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("1") && staffbasic!=0) {
+                                    strength *= 10;strength /= 100;manabar *= 10;manabar /= 100;staffbasic--;
                                     // weapon/staff/standard
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("2")) {
-                                    strength *= 20;
-                                    strength /= 100;
-                                    manabar *= 20;
-                                    manabar /= 100;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("2") && staffstandard!=0) {
+                                    strength *= 20;strength /= 100;manabar *= 20;manabar /= 100;staffstandard--;
                                     // weapon/staff/elite
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("3")) {
-                                    strength *= 30;
-                                    strength /= 100;
-                                    manabar *= 40;
-                                    manabar /= 100;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("3") && staffelite!=0) {
+                                    strength *= 30;strength /= 100;manabar *= 40;manabar /= 100;staffelite--;
                                 }
 
                             } else if (bsscanstr.equals("4")) {
@@ -661,8 +644,6 @@ class thegame {
                             } else if (bsscanstr.equals("5")) {
                                 // run
                             }
-
-                            break;
                         }
                     }
 
@@ -772,6 +753,7 @@ class thegame {
                                 System.out.println(coins);
 
                                 // show item
+<<<<<<< HEAD
 
                                 System.out.println("Pick your destiny");
                                 System.out.println("1. Armory");
@@ -803,6 +785,12 @@ class thegame {
                                     break;
                                 }
 
+=======
+                                // System.out.println(armory1);
+                                // System.out.println(armory2);
+                                // System.out.println(weaponry1);
+                                // System.out.println(weaponry2);
+>>>>>>> 3d0e73dacfab37696769acb0d6d0f5fb58cd6187
                                 // show inventory
 
                             } else if (tradeMerch.equals("2")) {
