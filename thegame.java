@@ -443,54 +443,47 @@ class thegame {
 
                             //armor/knight armor/basic/ suiiii
                             if ( quip.equals("1") && mor.equals("1") && ank.equals("1") ){
-                                defence*=30;
-                                defence/=100;
+                                defence*=30; defence/=100;
                                  
                             //armor/knight armor/standard
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("2")){
-                                defence*=50;
-                                defence/=100;
+                                defence*=50; defence/=100;
                             
                                 //armor/knight armor/elite  
                             }else if( quip.equals("1") && mor.equals("1") && ank.equals("3")){
-                                defence*=70;
-                                defence/=100;
+                                defence*=70; defence/=100;
                             
                                 //armor/robe/basic    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("1")){
-                                defence*=20;
-                                defence/=100;
-                                manabar*=10;
-                                manabar/=100;
+                                defence*=20;defence/=100;manabar*=10;manabar/=100;
                             
                                 //armor/robe/stnadard    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("2")){
-                                defence*=40;
-                                defence/=100;
-                                manabar*=30;
-                                manabar/=100;
+                                defence*=40;defence/=100;manabar*=30;manabar/=100;
                             
                                 //armor/robe/elite    
                             }else if( quip.equals("1") && mor.equals("2") && ank.equals("3")){
-                                defence*=60;
-                                defence/=100;
-                                manabar*=50;
-                                manabar/=100;
+                                defence*=60;defence/=100;manabar*=50;manabar/=100;
                                 
                                 //weapon/sword/basic    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("1")){
-                                
+                                strength*=30;strength/=100;
                             
                                 //weapon/sword/standard    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("2")){
-                            //weapon/sword/elite    
+                                strength*=50;strength/=100;
+                                //weapon/sword/elite    
                             }else if( quip.equals("2") && mor.equals("1") && ank.equals("3")){
-                            //weapon/staff/basic    
+                                strength*=70;strength/=100;
+                                //weapon/staff/basic    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("1")){
-                            //weapon/staff/standard    
+                                strength*=10;strength/=100;manabar*=10;manabar/=100;
+                                //weapon/staff/standard    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("2")){
-                            //weapon/staff/elite    
+                                strength*=20;strength/=100;manabar*=20;manabar/=100;
+                                //weapon/staff/elite    
                             }else if( quip.equals("2") && mor.equals("2") && ank.equals("3")){
+                                strength*=30;strength/=100;manabar*=40;manabar/=100;
                             }     
                             
 
@@ -582,14 +575,14 @@ class thegame {
                                 healthbar += 60;
                                 System.out.println("you current hp is" + totalhealth);
                             } else if (cons.equals("3") && grd.equals("1")) {
-                                totalstrength += 30;
-                                System.out.println("you current hp is" + totalstrength);
+                                strength += 30;
+                                System.out.println("you current hp is" + strength);
                             } else if (cons.equals("3") && grd.equals("2")) {
-                                totalstrength += 45;
-                                System.out.println("you current hp is" + totalstrength);
+                                strength += 45;
+                                System.out.println("you current hp is" + strength);
                             } else if (cons.equals("3") && grd.equals("3")) {
-                                totalstrength += 60;
-                                System.out.println("you current hp is" + totalstrength);
+                                strength += 60;
+                                System.out.println("you current hp is" + strength);
                             }
 
                             else {
