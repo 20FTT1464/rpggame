@@ -22,10 +22,22 @@ class thegame {
         Integer gameprogress = 0; // save
         String[] Inventory = new String[50]; // save
 
-        String[] armory1 = { "knight armor basic", "knight armor standard", "knight armor elite" };
-        String[] armory2 = { "robe basic", "robe standard", "robe elite" };
-        String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
-        String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
+        // String[] armory1 = { "knight armor basic", "knight armor standard", "knight armor elite" };
+        Integer knightarbasic = 0;
+        Integer knightarstandrd = 0;
+        Integer knightarelite = 0;
+        // String[] armory2 = { "robe basic", "robe standard", "robe elite" };
+        Integer robebasic = 0;
+        Integer robestandard = 0;
+        Integer robeelite = 0;
+        // String[] weaponry1 = { "swordbasic", "swordstandard", "swordelite" };
+        Integer swordbasic = 0;
+        Integer swordstandard =0;
+        Integer swordelite =0;
+        // String[] weaponry2 = { "staffbasic", "staffstandard", "staffelite" };
+        Integer staffbasic =0;
+        Integer staffstandard =0;
+        Integer staffelite =0;
 
         // String[] potions = { "lowpotion", "midpotion", "highpotion" };
         Integer lowpot = 0;
