@@ -351,7 +351,7 @@ class thegame {
                 } else {
 
                 }
-                if (battledecide < 69) { // 69 percent to trigger battle
+                if (battledecide < 69 && progresscounter!=0) { // 69 percent to trigger battle
                     // start check battling system
                     double enemyQty = Math.random() * 3;
                     Integer enemyQtyint = (int) enemyQty;
@@ -866,7 +866,7 @@ class thegame {
 
                     // end battling
                 } else {
-                    if (gameprogress % 10 == 0) {
+                    if (gameprogress % 10 == 0 || gameprogresscounter == 0) {
                         // story trigger
                         if(gameprogresscounter==0){
                             //first part go here
