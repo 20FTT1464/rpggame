@@ -56,7 +56,6 @@ class thegame {
         Integer midpow = 0; // save
         Integer highpow = 0; // save
 
-
         Integer SkillMovePoint = 0;
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
@@ -66,7 +65,7 @@ class thegame {
 
         // skill mage
         String[] skillmage = { "Extra balls", "Balls All Around Me" };
-        Integer[] skillmagestatus = { 0, 0}; // 0 = locked || 1 = unlocked // save
+        Integer[] skillmagestatus = { 0, 0 }; // 0 = locked || 1 = unlocked // save
         Integer[] smdamage = { 2, 1 };
         Integer[] smusages = { 30, 80 };
 
@@ -408,7 +407,7 @@ class thegame {
 
                         if (healthbar > totalhealth) {
                             healthbar = totalhealth;
-                        } else if (manabar > totalmana){
+                        } else if (manabar > totalmana) {
                             manabar = totalmana;
                         } else {
 
@@ -481,28 +480,114 @@ class thegame {
 
                             } else if (bsscanstr.equals("2")) {
                                 // skill
-                                allowdamage = true;
                                 if (CharClassName.equals("Knight")) {
                                     for (int i = 0; i < skillknight.length; i++) {
-                                        System.out.print((i+1)+ ". " +skillknight[i]);
-                                        if (skillknightstatus[i]==1) {
-                                            System.out.println("Usable");
+                                        System.out.print((i + 1) + ". " + skillknight[i]);
+                                        if (skillknightstatus[i] == 1) {
+                                            System.out.println(" Usable");
                                         } else {
-                                            System.out.println("Locked");
+                                            System.out.println(" Locked");
                                         }
                                     }
                                 } else if (CharClassName.equals("Mage")) {
                                     for (int i = 0; i < skillmage.length; i++) {
-                                        System.out.print((i+1)+ ". " +skillmage[i]);
-                                        if (skillmagestatus[i]==1) {
-                                            System.out.println("Usable");
+                                        System.out.print((i + 1) + ". " + skillmage[i]);
+                                        if (skillmagestatus[i] == 1) {
+                                            System.out.println(" Usable");
                                         } else {
-                                            System.out.println("Locked");
+                                            System.out.println(" Locked");
                                         }
                                     }
                                 }
+                                System.out.println("type exit to exit");
                                 Scanner skilluse = new Scanner(System.in);
                                 String skillus = skilluse.nextLine();
+
+                                if (skillus.equals("1")) {
+                                    if (CharClassName.equals("Knight")) {
+                                        if (skillknightstatus[0] == 1) {
+                                            for (int i = 0; i < currentEnemy.length; i++) {
+                                                if (monsterCurHP[i] > 0) {
+                                                    System.out.println(
+                                                            (i + 1) + ". " + currentEnemy[i] + " " + monsterCurHP[i]
+                                                                    + "/ " + monsterMaxHP[i]);
+                                                } else {
+                                                    System.out.println((i + 1) + ". " + currentEnemy[i] + " Dead");
+                                                }
+                                            }
+                                            Scanner attack = new Scanner(System.in);
+                                            Integer attackEnm = attack.nextInt();
+                                            if (attackEnm == 1) {
+                                                (monsterCurHP[attackEnm - 1]) -= (((int) totalstrength) / 100) * 120;
+                                            } else if (attackEnm == 2) {
+                                                (monsterCurHP[attackEnm - 1]) -= (((int) totalstrength) / 100) * 120;
+                                            } else if (attackEnm == 3) {
+                                                (monsterCurHP[attackEnm - 1]) -= (((int) totalstrength) / 100) * 120;
+                                            } else {
+
+                                            }
+                                            manabar -= skusages[0];
+                                            allowdamage = true;
+                                        } else {
+                                            System.out.println("Not Unlocked");
+                                            break;
+                                        }
+                                    } else if (CharClassName.equals("Mage")) {
+                                        if (skillmagestatus[0] == 1) {
+                                            for (int i = 0; i < currentEnemy.length; i++) {
+                                                if (monsterCurHP[i] > 0) {
+                                                    System.out.println(
+                                                            (i + 1) + ". " + currentEnemy[i] + " " + monsterCurHP[i]
+                                                                    + "/ " + monsterMaxHP[i]);
+                                                } else {
+                                                    System.out.println((i + 1) + ". " + currentEnemy[i] + " Dead");
+                                                }
+                                            }
+                                            Scanner attack = new Scanner(System.in);
+                                            Integer attackEnm = attack.nextInt();
+                                            if (attackEnm == 1) {
+                                                (monsterCurHP[attackEnm - 1]) -= (((int) totalstrength) / 100) * 120;
+                                            } else if (attackEnm == 2) {
+                                                (monsterCurHP[attackEnm - 1]) -= (((int) totalstrength) / 100) * 120;
+                                            } else if (attackEnm == 3) {
+                                                (monsterCurHP[attackEnm - 1]) -= (((int) totalstrength) / 100) * 120;
+                                            } else {
+
+                                            }
+                                            manabar -= smusages[0];
+                                            allowdamage = true;
+                                        } else {
+                                            System.out.println("Not Unlocked");
+                                            break;
+                                        }
+                                    }
+                                } else if (skillus.equals("2")) {
+                                    if (CharClassName.equals("Knight")) {
+                                        if(skillknightstatus[1]==1){
+                                            for (int i = 0; i < monsterCurHP.length; i++) {
+                                                (monsterCurHP[i]) -= (((int) totalstrength) / 100) * 150;
+                                            }
+                                            manabar -= skusages[1];
+                                            allowdamage = true;
+                                        } else {
+                                            System.out.println("Not Unlocked");
+                                            break;
+                                        }
+                                    } else if (CharClassName.equals("Mage")) {
+                                        if(skillknightstatus[1]==1){
+                                            for (int i = 0; i < monsterCurHP.length; i++) {
+                                                (monsterCurHP[i]) -= (((int) totalstrength) / 100) * 150;
+                                            }
+                                            manabar -= smusages[1];
+                                            allowdamage = true;
+                                        } else {
+                                            System.out.println("Not Unlocked");
+                                            break;
+                                        }
+                                    }
+                                } else if (skillus.equals("exit")) {
+                                    break;
+                                }
 
                             } else if (bsscanstr.equals("3")) {
                                 // equip
@@ -668,13 +753,13 @@ class thegame {
 
                                 System.out.println("select a grade");
                                 System.out.print("1.low ");
-                                    if (cons.equals("1")) {
-                                        System.out.println(lowpot);
-                                    } else if (cons.equals("2")) {
-                                        System.out.println(lowfood);
-                                    } else if (cons.equals("3")) {
-                                        System.out.println(lowpow);
-                                    }
+                                if (cons.equals("1")) {
+                                    System.out.println(lowpot);
+                                } else if (cons.equals("2")) {
+                                    System.out.println(lowfood);
+                                } else if (cons.equals("3")) {
+                                    System.out.println(lowpow);
+                                }
                                 System.out.print("2.med ");
                                 if (cons.equals("1")) {
                                     System.out.println(midpot);
@@ -763,8 +848,8 @@ class thegame {
                             } else if (bsscanstr.equals("5")) {
                                 // run
                                 double catmode = Math.random() * 100;
-                                Integer catmoment = (int)catmode;
-                                if(catmoment<20){
+                                Integer catmoment = (int) catmode;
+                                if (catmoment < 20) {
                                     break;
                                 } else {
                                     System.out.println("You failed to run! no legs OvO");
@@ -775,7 +860,8 @@ class thegame {
                             double enemydamagedealer = Math.random() * 100;
                             Integer edd = (int) enemydamagedealer;
                             healthbar = healthbar - ((80 + enemydamagedealer) * enemyQty);
-                        } else {}
+                        } else {
+                        }
 
                     }
 
@@ -930,8 +1016,6 @@ class thegame {
 
                         } else {}
 
-                        
-
                     } else {
                         System.out.println("Name: " + CharName);
                         System.out.println("Level: " + CharLVL);
@@ -979,11 +1063,13 @@ class thegame {
                                 System.out.println("Learn Skill");
                                 if (CharClassName.equals("Knight")) {
                                     for (int i = 0; i < skillknight.length; i++) {
-                                        System.out.println((i + 1) + ". " + skillknight[i] + " Unlock Cost:" + (i + 1) * 10);
+                                        System.out.println(
+                                                (i + 1) + ". " + skillknight[i] + " Unlock Cost:" + (i + 1) * 10);
                                     }
                                 } else if (CharClassName.equals("Mage")) {
                                     for (int i = 0; i < skillmage.length; i++) {
-                                        System.out.println((i + 1) + ". " + skillmage[i] + " Unlock Cost:" + (i + 1) * 10);
+                                        System.out.println(
+                                                (i + 1) + ". " + skillmage[i] + " Unlock Cost:" + (i + 1) * 10);
                                     }
                                 }
                                 System.out.println("type exit for exit");
@@ -992,7 +1078,7 @@ class thegame {
                                 String SV = SkillVibes.nextLine();
 
                                 if (SV.equals("1")) {
-                                    if (SkillMovePoint > 10){
+                                    if (SkillMovePoint > 10) {
                                         if (CharClassName.equals("Knight")) {
                                             skillknightstatus[0] = 1;
                                         } else if (CharClassName.equals("Mage")) {
@@ -1002,9 +1088,9 @@ class thegame {
                                     } else {
                                         System.out.println("Lacking them points");
                                     }
-                                    
+
                                 } else if (SV.equals("2")) {
-                                    if (SkillMovePoint > 20){
+                                    if (SkillMovePoint > 20) {
                                         if (CharClassName.equals("Knight")) {
                                             skillknightstatus[1] = 1;
                                         } else if (CharClassName.equals("Mage")) {
@@ -1014,7 +1100,7 @@ class thegame {
                                     } else {
                                         System.out.println("Lacking them points");
                                     }
-                                    
+
                                 } else if (SV.equals("exit")) {
                                     break;
                                 } else {
