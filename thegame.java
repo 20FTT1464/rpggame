@@ -457,7 +457,6 @@ class thegame {
                             String bsscanstr = bsscan.nextLine();
                             if (bsscanstr.equals("1")) {
                                 // fight
-                                allowdamage = true;
                                 for (int i = 0; i < currentEnemy.length; i++) {
                                     if (monsterCurHP[i] > 0) {
                                         System.out.println((i + 1) + ". " + currentEnemy[i] + " " + monsterCurHP[i]
@@ -466,14 +465,18 @@ class thegame {
                                         System.out.println((i + 1) + ". " + currentEnemy[i] + " Dead");
                                     }
                                 }
+                                System.out.println("4. exit");
                                 Scanner attack = new Scanner(System.in);
                                 Integer attackEnm = attack.nextInt();
                                 if (attackEnm == 1) {
                                     (monsterCurHP[attackEnm - 1]) -= ((int) totalstrength);
+                                    allowdamage = true;
                                 } else if (attackEnm == 2) {
                                     (monsterCurHP[attackEnm - 1]) -= ((int) totalstrength);
+                                    allowdamage = true;
                                 } else if (attackEnm == 3) {
                                     (monsterCurHP[attackEnm - 1]) -= ((int) totalstrength);
+                                    allowdamage = true;
                                 } else {
 
                                 }
@@ -530,7 +533,6 @@ class thegame {
                                             allowdamage = true;
                                         } else {
                                             System.out.println("Not Unlocked");
-                                            break;
                                         }
                                     } else if (CharClassName.equals("Mage")) {
                                         if (skillmagestatus[0] == 1) {
@@ -558,7 +560,6 @@ class thegame {
                                             allowdamage = true;
                                         } else {
                                             System.out.println("Not Unlocked");
-                                            break;
                                         }
                                     }
                                 } else if (skillus.equals("2")) {
@@ -571,7 +572,6 @@ class thegame {
                                             allowdamage = true;
                                         } else {
                                             System.out.println("Not Unlocked");
-                                            break;
                                         }
                                     } else if (CharClassName.equals("Mage")) {
                                         if(skillknightstatus[1]==1){
@@ -582,7 +582,6 @@ class thegame {
                                             allowdamage = true;
                                         } else {
                                             System.out.println("Not Unlocked");
-                                            break;
                                         }
                                     }
                                 } else if (skillus.equals("exit")) {
@@ -1061,6 +1060,7 @@ class thegame {
                             // LEARN SKILL
                             while (true) {
                                 System.out.println("Learn Skill");
+                                System.out.println("Current Skill Points: "+ SkillMovePoint);
                                 if (CharClassName.equals("Knight")) {
                                     for (int i = 0; i < skillknight.length; i++) {
                                         System.out.println(
@@ -1078,7 +1078,7 @@ class thegame {
                                 String SV = SkillVibes.nextLine();
 
                                 if (SV.equals("1")) {
-                                    if (SkillMovePoint > 10) {
+                                    if (SkillMovePoint >= 10) {
                                         if (CharClassName.equals("Knight")) {
                                             skillknightstatus[0] = 1;
                                         } else if (CharClassName.equals("Mage")) {
@@ -1090,7 +1090,7 @@ class thegame {
                                     }
 
                                 } else if (SV.equals("2")) {
-                                    if (SkillMovePoint > 20) {
+                                    if (SkillMovePoint >= 20) {
                                         if (CharClassName.equals("Knight")) {
                                             skillknightstatus[1] = 1;
                                         } else if (CharClassName.equals("Mage")) {
