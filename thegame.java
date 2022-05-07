@@ -1125,39 +1125,60 @@ class thegame {
                         } else if (progressmenuchecker.equals("6")) {
                             // INVENTORY
                             System.out.println("Armor");
-                            System.out.println("knightarbasic ");System.out.println(knightarbasic);
-                            System.out.println("knightarstandard ");System.out.println(knightarstandard);
-                            System.out.println("knightarelite ");System.out.println(knightarelite);
-                            System.out.println("robebasic ");System.out.println(robebasic);
-                            System.out.println("robestandard ");System.out.println(robestandard);
-                            System.out.println("robeelite ");System.out.println(robeelite);
+                            System.out.println("knightarbasic ");
+                            System.out.println(knightarbasic);
+                            System.out.println("knightarstandard ");
+                            System.out.println(knightarstandard);
+                            System.out.println("knightarelite ");
+                            System.out.println(knightarelite);
+                            System.out.println("robebasic ");
+                            System.out.println(robebasic);
+                            System.out.println("robestandard ");
+                            System.out.println(robestandard);
+                            System.out.println("robeelite ");
+                            System.out.println(robeelite);
                             System.out.println("");
                             System.out.println("weapon");
                             System.out.println("");
-                            System.out.println("swordbasic ");System.out.println(swordbasic);
-                            System.out.println("swordstandard ");System.out.println(swordstandard);
-                            System.out.println("swordelite ");System.out.println(swordelite);
-                            System.out.println("staffbasic ");System.out.println(staffbasic);
-                            System.out.println("staffstandard ");System.out.println(staffstandard);
-                            System.out.println("staffelite ");System.out.println(staffelite);
+                            System.out.println("swordbasic ");
+                            System.out.println(swordbasic);
+                            System.out.println("swordstandard ");
+                            System.out.println(swordstandard);
+                            System.out.println("swordelite ");
+                            System.out.println(swordelite);
+                            System.out.println("staffbasic ");
+                            System.out.println(staffbasic);
+                            System.out.println("staffstandard ");
+                            System.out.println(staffstandard);
+                            System.out.println("staffelite ");
+                            System.out.println(staffelite);
                             System.out.println("");
                             System.out.println("Potion");
                             System.out.println("");
-                            System.out.println("lowpot ");System.out.println(lowpot);
-                            System.out.println("midpot ");System.out.println(midpot);
-                            System.out.println("highpot ");System.out.println(highpot);
+                            System.out.println("lowpot ");
+                            System.out.println(lowpot);
+                            System.out.println("midpot ");
+                            System.out.println(midpot);
+                            System.out.println("highpot ");
+                            System.out.println(highpot);
                             System.out.println("");
                             System.out.println("Food");
                             System.out.println("");
-                            System.out.println("lowfood ");System.out.println(lowfood);
-                            System.out.println("midfood ");System.out.println(midfood);
-                            System.out.println("highfood ");System.out.println(highfood);
+                            System.out.println("lowfood ");
+                            System.out.println(lowfood);
+                            System.out.println("midfood ");
+                            System.out.println(midfood);
+                            System.out.println("highfood ");
+                            System.out.println(highfood);
                             System.out.println("");
                             System.out.println("Power ups");
                             System.out.println("");
-                            System.out.println("lowpow ");System.out.println(lowpow);
-                            System.out.println("midpow ");System.out.println(midpow);
-                            System.out.println("highpow ");System.out.println(highpow);
+                            System.out.println("lowpow ");
+                            System.out.println(lowpow);
+                            System.out.println("midpow ");
+                            System.out.println(midpow);
+                            System.out.println("highpow ");
+                            System.out.println(highpow);
                             System.out.println("");
                             System.out.print("press enter to exit:");
                             Scanner invout = new Scanner(System.in);
@@ -1168,7 +1189,6 @@ class thegame {
                             System.out.println("May I help you?");
                             System.out.println("1. Purchase");
                             System.out.println("2. Sell");
-                            System.out.println("3. Back");
                             Scanner trade = new Scanner(System.in);
                             String tradeMerch = trade.nextLine();
 
@@ -1183,7 +1203,6 @@ class thegame {
                                 System.out.println("Pick your destiny");
                                 System.out.println("1. Armory");
                                 System.out.println("2. Weaponry");
-                                System.out.println("3. Back");
 
                                 Scanner buy = new Scanner(System.in);
                                 String buyTrade = buy.nextLine();
@@ -1194,6 +1213,7 @@ class thegame {
                                     System.out.println("1. Basic");
                                     System.out.println("2. Standard");
                                     System.out.println("3. Elite");
+                                    System.out.println("Use the number 1, 2 or 3 to choose");
 
                                     Scanner grade = new Scanner(System.in);
                                     String buyGrade = grade.nextLine();
@@ -1202,18 +1222,16 @@ class thegame {
 
                                         System.out.println("Knight Ar Basic" + knightarbasic);
                                         System.out.println("Robe Basic" + robebasic);
+                                        System.out.println("Use the number 1 or 2 to choose");
 
                                         Scanner basic = new Scanner(System.in);
                                         String basicTrade = basic.nextLine();
 
-                                        if (basicTrade.equals("1") && coins>=25 ) {
+                                        if (basicTrade.equals("1") && coins >= 25) {
 
                                             coins -= 25;
 
-
-                                      
-
-                                        } else if (basicTrade.equals("2") && coins>=27) {
+                                        } else if (basicTrade.equals("2") && coins >= 27) {
 
                                             coins -= 27;
 
@@ -1223,15 +1241,16 @@ class thegame {
 
                                         System.out.println("Knight Standard" + knightarstandard);
                                         System.out.println("Robe Standard" + robestandard);
+                                        System.out.println("Use the number 1 or 2 to choose");
 
                                         Scanner standard = new Scanner(System.in);
                                         String standardTrade = standard.nextLine();
 
-                                        if (standardTrade.equals("1") && coins>=40) {
+                                        if (standardTrade.equals("1") && coins >= 40) {
 
                                             coins -= 40;
 
-                                        } else if (standardTrade.equals("2")&& coins>=42) {
+                                        } else if (standardTrade.equals("2") && coins >= 42) {
 
                                             coins -= 42;
 
@@ -1241,15 +1260,16 @@ class thegame {
 
                                         System.out.println("Knight Ar Elite" + knightarelite);
                                         System.out.println("Robe Elite" + robeelite);
+                                        System.out.println("Use the number 1 or 2 to choose");
 
                                         Scanner elite = new Scanner(System.in);
                                         String eliteTrade = elite.nextLine();
 
-                                        if (eliteTrade.equals("1")&& coins>=70) {
+                                        if (eliteTrade.equals("1") && coins >= 70) {
 
                                             coins -= 70;
 
-                                        } else if (eliteTrade.equals("2")&& coins>=72) {
+                                        } else if (eliteTrade.equals("2") && coins >= 72) {
 
                                             coins -= 72;
 
@@ -1271,15 +1291,16 @@ class thegame {
 
                                         System.out.println("Sword Basic" + swordbasic);
                                         System.out.println("Staff Basic" + staffbasic);
+                                        System.out.println("Use the number 1 or 2 to choose");
 
                                         Scanner basicWeapon = new Scanner(System.in);
                                         String basicTrade = basicWeapon.nextLine();
 
-                                        if (basicTrade.equals("1")&& coins>=20) {
+                                        if (basicTrade.equals("1") && coins >= 20) {
 
                                             coins -= 20;
 
-                                        } else if (basicTrade.equals("2")&& coins>=23) {
+                                        } else if (basicTrade.equals("2") && coins >= 23) {
 
                                             coins -= 23;
 
@@ -1289,14 +1310,15 @@ class thegame {
 
                                         System.out.println("Staff Standard" + swordstandard);
                                         System.out.println("Sword Standard" + staffstandard);
+                                        System.out.println("Use the number 1 or 2 to choose");
 
                                         Scanner standardWeapon = new Scanner(System.in);
                                         String standardTrade = standardWeapon.nextLine();
 
-                                        if (standardTrade.equals("1")&& coins>=32) {
+                                        if (standardTrade.equals("1") && coins >= 32) {
                                             coins -= 32;
 
-                                        } else if (standardTrade.equals("2")&& coins>=34) {
+                                        } else if (standardTrade.equals("2") && coins >= 34) {
                                             coins -= 34;
 
                                         }
@@ -1305,22 +1327,20 @@ class thegame {
 
                                         System.out.println("Staff Elite" + swordelite);
                                         System.out.println("Sword Elite" + staffelite);
+                                        System.out.println("Use the number 1 or 2 to choose");
 
                                         Scanner eliteWeapon = new Scanner(System.in);
                                         String eliteTrade = eliteWeapon.nextLine();
 
-                                        if (eliteTrade.equals("1")&& coins>=52) {
+                                        if (eliteTrade.equals("1") && coins >= 52) {
                                             coins -= 52;
 
-                                        } else if (eliteTrade.equals("2")&& coins>=54) {
+                                        } else if (eliteTrade.equals("2") && coins >= 54) {
                                             coins -= 54;
 
                                         }
 
                                     }
-
-                                } else if (buyTrade.equals("3")) {
-                                    break;
                                 }
 
                             } else if (tradeMerch.equals("2")) {
@@ -1329,8 +1349,6 @@ class thegame {
                                 System.out.println(coins);
                                 // show inventory
 
-                            } else if (tradeMerch.equals("3")) {
-                                break;
                             } else {
                                 System.out.println("Don't you wanna buy something my friend?");
                             }
