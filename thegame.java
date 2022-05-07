@@ -858,7 +858,7 @@ class thegame {
                         if (allowdamage == true) {
                             double enemydamagedealer = Math.random() * 100;
                             Integer edd = (int) enemydamagedealer;
-                            healthbar = healthbar - ((80 + enemydamagedealer) * enemyQty);
+                            healthbar = healthbar - (((80 + enemydamagedealer) * enemyQty)-(totaldefence/10));
                         } else {
                         }
 
