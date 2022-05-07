@@ -1110,7 +1110,7 @@ class thegame {
                             }
 
                         } else if (progressmenuchecker.equals("6")) {
-                            // INVENTORY
+                            // 
                             for (int i = 0; i < Inventory.length; i++) {
                                 System.out.println(Inventory[i]);
                             }
@@ -1164,13 +1164,13 @@ class thegame {
 
                                         if(basicTrade.equals("1")){
 
-                                            int priceKnightBasic = (int)(coins-25);
-                                            System.out.println(priceKnightBasic);
+                                            coins -= 25;
+                                            
 
                                         }else if(basicTrade.equals("2")){
 
-                                            int priceRobeBasic = (int)(coins-27);
-                                            System.out.println(priceRobeBasic);
+                                            coins -= 27;
+                                            
                                         }
 
                                     } else if (buyGrade.equals("2")) {
@@ -1183,13 +1183,13 @@ class thegame {
 
                                         if(standardTrade.equals("1")){
 
-                                            int priceKnightStandard = (int)(coins-40);
-                                            System.out.println(priceKnightStandard);
+                                            coins -= 40;
+                                           
 
                                         }else if(standardTrade.equals("2")){
 
-                                            int priceRobeStandard = (int)(coins-42);
-                                            System.out.println(priceRobeStandard);
+                                            coins -= 42;
+
 
                                            
 
@@ -1207,14 +1207,12 @@ class thegame {
 
                                         if(eliteTrade.equals("1")){
 
-                                            int priceKnightElite = (int)(coins-70);
-                                            System.out.println(priceKnightElite);
-
+                                            coins -= 70;
+   
                                         }else if(eliteTrade.equals("2")){
 
-                                            int priceRobeElite = (int)(coins-72);
-                                            System.out.println(priceRobeElite);
-
+                                            coins -= 72;
+                
                                            
 
                                         }
@@ -1241,11 +1239,13 @@ class thegame {
                                         String basicTrade = basicWeapon.nextLine();
 
                                         if(basicTrade.equals("1")){
-                                            int priceSwordBasic = (int)(coins-20);
-                                            System.out.println(priceSwordBasic);
+
+                                            coins -= 20;
+
                                         }else if(basicTrade.equals("2")){
-                                            int priceStaffBasic = (int)(coins-23);
-                                            System.out.println(priceStaffBasic);
+
+                                            coins -= 23;
+                                          
                                         }
 
                                     } else if (merchTrade.equals("2")) {
@@ -1257,11 +1257,11 @@ class thegame {
                                         String standardTrade = standardWeapon.nextLine();
 
                                         if(standardTrade.equals("1")){
-                                            int priceSwordStandard = (int)(coins-32);
-                                            System.out.println(priceSwordStandard);
+                                            coins -= 32;
+
                                         }else if(standardTrade.equals("2")){
-                                            int priceStaffStandard = (int)(coins-34);
-                                            System.out.println(priceStaffStandard);
+                                            coins -= 34;
+
                                         }
 
 
@@ -1276,11 +1276,11 @@ class thegame {
 
                                         
                                         if(eliteTrade.equals("1")){
-                                            int priceSwordElite = (int)(coins-32);
-                                            System.out.println(priceSwordElite);
+                                            coins -= 52;
+
                                         }else if(eliteTrade.equals("2")){
-                                            int priceStaffElite = (int)(coins-34);
-                                            System.out.println(priceStaffElite);
+                                            coins -= 54;
+
                                         }
 
 
