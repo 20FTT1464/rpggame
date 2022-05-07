@@ -1292,7 +1292,7 @@ class thegame {
                                     break;
                                 }
 
-                                // show inventory
+                                
                                 
 
                             } else if (tradeMerch.equals("2")) {
