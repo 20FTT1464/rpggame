@@ -351,7 +351,7 @@ class thegame {
                 } else {
 
                 }
-                if (battledecide < 69 && progresscounter!=0) { // 69 percent to trigger battle
+                if (battledecide < 69 && progresscounter != 0) { // 69 percent to trigger battle
                     // start check battling system
                     double enemyQty = Math.random() * 3;
                     Integer enemyQtyint = (int) enemyQty;
@@ -564,7 +564,7 @@ class thegame {
                                     }
                                 } else if (skillus.equals("2")) {
                                     if (CharClassName.equals("Knight")) {
-                                        if(skillknightstatus[1]==1){
+                                        if (skillknightstatus[1] == 1) {
                                             for (int i = 0; i < monsterCurHP.length; i++) {
                                                 (monsterCurHP[i]) -= (((int) totalstrength) / 100) * 150;
                                             }
@@ -574,7 +574,7 @@ class thegame {
                                             System.out.println("Not Unlocked");
                                         }
                                     } else if (CharClassName.equals("Mage")) {
-                                        if(skillknightstatus[1]==1){
+                                        if (skillknightstatus[1] == 1) {
                                             for (int i = 0; i < monsterCurHP.length; i++) {
                                                 (monsterCurHP[i]) -= (((int) totalstrength) / 100) * 150;
                                             }
@@ -858,7 +858,7 @@ class thegame {
                         if (allowdamage == true) {
                             double enemydamagedealer = Math.random() * 100;
                             Integer edd = (int) enemydamagedealer;
-                            healthbar = healthbar - (((80 + enemydamagedealer) * enemyQty)-(totaldefence/10));
+                            healthbar = healthbar - (((80 + enemydamagedealer) * enemyQty) - (totaldefence / 10));
                         } else {
                         }
 
@@ -868,11 +868,12 @@ class thegame {
                 } else {
                     if (gameprogress % 10 == 0 || gameprogresscounter == 0) {
                         // story trigger
-                        if(gameprogresscounter==0){
-                            //first part go here
-                            //story 1
+                        if (gameprogresscounter == 0) {
+                            // first part go here
+                            // story 1
                             Scanner s = new Scanner(System.in);
-                            System.out.println("A mysterious person found Aleph looking very hopeless and helpless. He went to Aleph and help him.");
+                            System.out.println(
+                                    "A mysterious person found Aleph looking very hopeless and helpless. He went to Aleph and help him.");
                             s.nextLine();
                             System.out.println("The mysterious person ask, \"You must be Aleph?\"");
                             s.nextLine();
@@ -886,7 +887,8 @@ class thegame {
                             s.nextLine();
                             System.out.println("Aleph: What is it?");
                             s.nextLine();
-                            System.out.println("Imposter: The only way for you to get out of here is to have the strength, power and willingness to fight all the enemies.");
+                            System.out.println(
+                                    "Imposter: The only way for you to get out of here is to have the strength, power and willingness to fight all the enemies.");
                             s.nextLine();
                             System.out.println("Aleph: But I have nothing...sigh");
                             s.nextLine();
@@ -895,8 +897,8 @@ class thegame {
                             // first part end
                             gameprogresscounter++;
 
-                        } else if (gameprogresscounter==1) {
-                            //second
+                        } else if (gameprogresscounter == 1) {
+                            // second
                             Scanner w = new Scanner(System.in);
                             System.out.println("Aleph: Phew! That was close. We did great right?");
                             w.nextLine();
@@ -912,13 +914,15 @@ class thegame {
                             w.nextLine();
                             System.out.println("Imposter: You will be fine.");
                             w.nextLine();
-                            System.out.println("Aleph was left alone, did not know where to go. At that moment, someone approach him.");
+                            System.out.println(
+                                    "Aleph was left alone, did not know where to go. At that moment, someone approach him.");
                             w.nextLine();
                             System.out.println("Someone: Hello, mas Aleph! I am Eren Yeager. You can call me Eren.");
                             w.nextLine();
                             System.out.println("Aleph: Hello, Eren.");
                             w.nextLine();
-                            System.out.println("Eren: I see that you are trap in this forest and you are trying to get out from here, right?");
+                            System.out.println(
+                                    "Eren: I see that you are trap in this forest and you are trying to get out from here, right?");
                             w.nextLine();
                             System.out.println("Aleph: Yes. Can you help me please?");
                             w.nextLine();
@@ -928,18 +932,20 @@ class thegame {
                             w.nextLine();
                             System.out.println("Eren: There is a way. Come on...through here.");
                             w.nextLine();
-                            System.out.println("Aleph and Eren's move along the forest, leading him unknowingly into deeper forest.");
+                            System.out.println(
+                                    "Aleph and Eren's move along the forest, leading him unknowingly into deeper forest.");
                             w.nextLine();
                             System.out.println("Aleph: How long are we getting out of this forest?");
                             w.nextLine();
                             System.out.println("Eren: Almost there...");
                             w.nextLine();
-                            System.out.println("Aleph senses that Eren was lying and brought him into a scary looking place. Then, Eren ran away from the enemy leaving Aleph alone to fight.");
+                            System.out.println(
+                                    "Aleph senses that Eren was lying and brought him into a scary looking place. Then, Eren ran away from the enemy leaving Aleph alone to fight.");
                             w.nextLine();
                             gameprogresscounter++;
 
-                        } else if (gameprogresscounter==2) {
-                            //third
+                        } else if (gameprogresscounter == 2) {
+                            // third
                             Scanner t = new Scanner(System.in);
                             System.out.println("Aleph: Argh, that was painful!");
                             t.nextLine();
@@ -953,7 +959,8 @@ class thegame {
                             t.nextLine();
                             System.out.println("Sakura: Please wait for a moment. Let me check your injuries.");
                             t.nextLine();
-                            System.out.println("Sakura: Drink this they can heal you up. Also, eat this then you have maximum energy.");
+                            System.out.println(
+                                    "Sakura: Drink this they can heal you up. Also, eat this then you have maximum energy.");
                             t.nextLine();
                             System.out.println("Aleph drank the potion and ate the food. So now Aleph has heal up.");
                             t.nextLine();
@@ -961,17 +968,20 @@ class thegame {
                             t.nextLine();
                             System.out.println("Aleph: But I have no time to rest. I must go home.");
                             t.nextLine();
-                            System.out.println("Sakura: Hmm...well I can not let you go on your own with this kind of state. I will go and help you.");
+                            System.out.println(
+                                    "Sakura: Hmm...well I can not let you go on your own with this kind of state. I will go and help you.");
                             t.nextLine();
                             System.out.println("Aleph: All right, that is fine with me. The more the merrier.");
                             t.nextLine();
-                            System.out.println("While on their way out. They saw an enemy coming towards them. Aleph and Sakura were on their position and getting ready to attack.");
+                            System.out.println(
+                                    "While on their way out. They saw an enemy coming towards them. Aleph and Sakura were on their position and getting ready to attack.");
                             t.nextLine();
                             gameprogresscounter++;
 
-                        } else if (gameprogresscounter==3) {
+                        } else if (gameprogresscounter == 3) {
                             Scanner q = new Scanner(System.in);
-                            System.out.println("Aleph: By now, I must be called \"The Youngest Hero that has been fighting all these enemies from nothing.\" Am I right?");
+                            System.out.println(
+                                    "Aleph: By now, I must be called \"The Youngest Hero that has been fighting all these enemies from nothing.\" Am I right?");
                             q.nextLine();
                             System.out.println("Sakura: Don't bluff yourselves. We still have more to go.");
                             q.nextLine();
@@ -983,19 +993,22 @@ class thegame {
                             q.nextLine();
                             System.out.println("Sakura: No..no you are right.");
                             q.nextLine();
-                            System.out.println("Aleph and Sakura's move to a place where they can set up a bonfire not too far from a lake.");
+                            System.out.println(
+                                    "Aleph and Sakura's move to a place where they can set up a bonfire not too far from a lake.");
                             q.nextLine();
                             System.out.println("Sakura's gave Aleph a potion for him to heal up.");
                             q.nextLine();
-                            System.out.println("As they were having a deep conversation with each other. Aleph looked around and saw an enemy roaming around near the lake.");
+                            System.out.println(
+                                    "As they were having a deep conversation with each other. Aleph looked around and saw an enemy roaming around near the lake.");
                             q.nextLine();
                             System.out.println("He quietly told Sakura. Sakura was alerted getting ready to atttack.");
                             q.nextLine();
                             gameprogresscounter++;
 
-                        } else if (gameprogresscounter==4) {
+                        } else if (gameprogresscounter == 4) {
                             Scanner x = new Scanner(System.in);
-                            System.out.println("Then Aleph finishes off the enemy by slaughtering the enemy's head in one swift movement.");
+                            System.out.println(
+                                    "Then Aleph finishes off the enemy by slaughtering the enemy's head in one swift movement.");
                             x.nextLine();
                             System.out.println("Aleph: Did you see that?");
                             x.nextLine();
@@ -1007,13 +1020,16 @@ class thegame {
                             x.nextLine();
                             System.out.println("Aleph cried as Sakura's slowly fading off.");
                             x.nextLine();
-                            System.out.println("As Aleph stood up, he accidentally slid off a rock while walking. Then, he fell onto the river.");
+                            System.out.println(
+                                    "As Aleph stood up, he accidentally slid off a rock while walking. Then, he fell onto the river.");
                             x.nextLine();
-                            System.out.println("After that, Aleph woke up from his dream only to be disappointed that it was all a dream.");
+                            System.out.println(
+                                    "After that, Aleph woke up from his dream only to be disappointed that it was all a dream.");
                             x.nextLine();
                             gameprogresscounter++;
 
-                        } else {}
+                        } else {
+                        }
 
                     } else {
                         System.out.println("Name: " + CharName);
@@ -1060,7 +1076,7 @@ class thegame {
                             // LEARN SKILL
                             while (true) {
                                 System.out.println("Learn Skill");
-                                System.out.println("Current Skill Points: "+ SkillMovePoint);
+                                System.out.println("Current Skill Points: " + SkillMovePoint);
                                 if (CharClassName.equals("Knight")) {
                                     for (int i = 0; i < skillknight.length; i++) {
                                         System.out.println(
@@ -1110,7 +1126,7 @@ class thegame {
                             }
 
                         } else if (progressmenuchecker.equals("6")) {
-                            // 
+                            //
                             for (int i = 0; i < Inventory.length; i++) {
                                 System.out.println(Inventory[i]);
                             }
@@ -1152,71 +1168,62 @@ class thegame {
                                     System.out.println("3. Elite");
 
                                     Scanner grade = new Scanner(System.in);
-                                    String buyGrade = buy.nextLine();
+                                    String buyGrade = grade.nextLine();
 
                                     if (buyGrade.equals("1")) {
 
-                                        System.out.println("Knight Ar Basic"+knightarbasic);
-                                        System.out.println("Robe Basic"+robebasic);
+                                        System.out.println("Knight Ar Basic" + knightarbasic);
+                                        System.out.println("Robe Basic" + robebasic);
 
                                         Scanner basic = new Scanner(System.in);
                                         String basicTrade = basic.nextLine();
 
-                                        if(basicTrade.equals("1")){
+                                        if (basicTrade.equals("1")) {
 
                                             coins -= 25;
-                                            
+                                      
 
-                                        }else if(basicTrade.equals("2")){
+                                        } else if (basicTrade.equals("2")) {
 
                                             coins -= 27;
-                                            
+
                                         }
 
                                     } else if (buyGrade.equals("2")) {
 
-                                        System.out.println("Knight Standard"+knightarstandard);
-                                        System.out.println("Robe Standard"+robestandard);
+                                        System.out.println("Knight Standard" + knightarstandard);
+                                        System.out.println("Robe Standard" + robestandard);
 
                                         Scanner standard = new Scanner(System.in);
                                         String standardTrade = standard.nextLine();
 
-                                        if(standardTrade.equals("1")){
+                                        if (standardTrade.equals("1")) {
 
                                             coins -= 40;
-                                           
 
-                                        }else if(standardTrade.equals("2")){
+                                        } else if (standardTrade.equals("2")) {
 
                                             coins -= 42;
 
-
-                                           
-
                                         }
-                                        
 
                                     } else if (buyGrade.equals("3")) {
 
-                                        System.out.println("Knight Ar Elite"+knightarelite);
-                                        System.out.println("Robe Elite"+robeelite);
+                                        System.out.println("Knight Ar Elite" + knightarelite);
+                                        System.out.println("Robe Elite" + robeelite);
 
-                                        
                                         Scanner elite = new Scanner(System.in);
                                         String eliteTrade = elite.nextLine();
 
-                                        if(eliteTrade.equals("1")){
+                                        if (eliteTrade.equals("1")) {
 
                                             coins -= 70;
-   
-                                        }else if(eliteTrade.equals("2")){
+
+                                        } else if (eliteTrade.equals("2")) {
 
                                             coins -= 72;
-                
-                                           
 
                                         }
-                                        
 
                                     }
 
@@ -1238,62 +1245,53 @@ class thegame {
                                         Scanner basicWeapon = new Scanner(System.in);
                                         String basicTrade = basicWeapon.nextLine();
 
-                                        if(basicTrade.equals("1")){
+                                        if (basicTrade.equals("1")) {
 
                                             coins -= 20;
 
-                                        }else if(basicTrade.equals("2")){
+                                        } else if (basicTrade.equals("2")) {
 
                                             coins -= 23;
-                                          
+
                                         }
 
                                     } else if (merchTrade.equals("2")) {
 
                                         System.out.println("Staff Standard" + swordstandard);
-                                        System.out.println("Sword Standard"+ staffstandard);
+                                        System.out.println("Sword Standard" + staffstandard);
 
                                         Scanner standardWeapon = new Scanner(System.in);
                                         String standardTrade = standardWeapon.nextLine();
 
-                                        if(standardTrade.equals("1")){
+                                        if (standardTrade.equals("1")) {
                                             coins -= 32;
 
-                                        }else if(standardTrade.equals("2")){
+                                        } else if (standardTrade.equals("2")) {
                                             coins -= 34;
 
                                         }
 
-
-
                                     } else if (merchTrade.equals("3")) {
 
                                         System.out.println("Staff Elite" + swordelite);
-                                        System.out.println("Sword Elite"+ staffelite);
+                                        System.out.println("Sword Elite" + staffelite);
 
                                         Scanner eliteWeapon = new Scanner(System.in);
                                         String eliteTrade = eliteWeapon.nextLine();
 
-                                        
-                                        if(eliteTrade.equals("1")){
+                                        if (eliteTrade.equals("1")) {
                                             coins -= 52;
 
-                                        }else if(eliteTrade.equals("2")){
+                                        } else if (eliteTrade.equals("2")) {
                                             coins -= 54;
 
                                         }
 
-
                                     }
-
-                                    
 
                                 } else if (buyTrade.equals("3")) {
                                     break;
                                 }
-
-                                
-                                
 
                             } else if (tradeMerch.equals("2")) {
                                 // show money
