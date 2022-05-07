@@ -1343,7 +1343,7 @@ class thegame {
 
                                         }
 
-                                    }else if (merchTrade.equals("3")) {
+                                    } else if (merchTrade.equals("3")) {
 
                                         System.out.println("Low Potion" + lowpot);
                                         System.out.println("Mid Potion" + midpot);
@@ -1358,12 +1358,11 @@ class thegame {
                                         } else if (potionTrade.equals("2") && coins >= 7) {
                                             coins -= 7;
 
-                                        }else if (potionTrade.equals("3") && coins >= 10) {
+                                        } else if (potionTrade.equals("3") && coins >= 10) {
                                             coins -= 10;
                                         }
 
-
-                                    }else if (merchTrade.equals("4")) {
+                                    } else if (merchTrade.equals("4")) {
 
                                         System.out.println("Low Food" + lowfood);
                                         System.out.println("Mid Food" + midfood);
@@ -1378,11 +1377,11 @@ class thegame {
                                         } else if (foodTrade.equals("2") && coins >= 7) {
                                             coins -= 7;
 
-                                        }else if (foodTrade.equals("3") && coins >= 9) {
+                                        } else if (foodTrade.equals("3") && coins >= 9) {
                                             coins -= 9;
                                         }
 
-                                    }else if (merchTrade.equals("5")) {
+                                    } else if (merchTrade.equals("5")) {
 
                                         System.out.println("Low Power" + lowpow);
                                         System.out.println("Mid Power" + midpow);
@@ -1397,47 +1396,48 @@ class thegame {
                                         } else if (powerTrade.equals("2") && coins >= 6) {
                                             coins -= 6;
 
-                                        }else if (powerTrade.equals("3") && coins >= 8) {
+                                        } else if (powerTrade.equals("3") && coins >= 8) {
                                             coins -= 8;
                                         }
+                                    }
+
+                                } else if (tradeMerch.equals("2")) {
+                                    // show money
+                                    System.out.print("$" + " ");
+                                    System.out.println(coins);
+                                    // show inventory
+
+                                } else {
+                                    System.out.println("Don't you wanna buy something my friend?");
                                 }
 
-                            } else if (tradeMerch.equals("2")) {
-                                // show money
-                                System.out.print("$" + " ");
-                                System.out.println(coins);
-                                // show inventory
-
-                            } else {
-                                System.out.println("Don't you wanna buy something my friend?");
                             }
 
                         }
-
                     }
+
+                    // start check story scene
+                    // #code
+                    // end story scene
+                }
+                if (gameover == true) {
+                    System.out.println(
+                            "  ________    _____      _____  ___________ ____________   _________________________ ");
+                    System.out.println(
+                            " /  _____/   /  _  \\    /     \\ \\_   _____/ \\_____  \\   \\ /   /\\_   _____/\\______   \\");
+                    System.out.println(
+                            "/   \\  ___  /  /_\\  \\  /  \\ /  \\ |    __)_   /   |   \\   Y   /  |    __)_  |       _/");
+                    System.out.println(
+                            "\\    \\_\\  \\/    |    \\/    Y    \\|        \\ /    |    \\     /   |        \\ |    |   \\");
+                    System.out.println(
+                            " \\______  /\\____|__  /\\____|__  /_______  / \\_______  /\\___/   /_______  / |____|_  /");
+                    System.out.println(
+                            "        \\/         \\/         \\/        \\/          \\/                 \\/         \\/ ");
                 }
 
-                // start check story scene
-                // #code
-                // end story scene
+                // end of story
+                // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
             }
-            if (gameover == true) {
-                System.out.println(
-                        "  ________    _____      _____  ___________ ____________   _________________________ ");
-                System.out.println(
-                        " /  _____/   /  _  \\    /     \\ \\_   _____/ \\_____  \\   \\ /   /\\_   _____/\\______   \\");
-                System.out.println(
-                        "/   \\  ___  /  /_\\  \\  /  \\ /  \\ |    __)_   /   |   \\   Y   /  |    __)_  |       _/");
-                System.out.println(
-                        "\\    \\_\\  \\/    |    \\/    Y    \\|        \\ /    |    \\     /   |        \\ |    |   \\");
-                System.out.println(
-                        " \\______  /\\____|__  /\\____|__  /_______  / \\_______  /\\___/   /_______  / |____|_  /");
-                System.out.println(
-                        "        \\/         \\/         \\/        \\/          \\/                 \\/         \\/ ");
-            }
-
-            // end of story
-            // ps inventory stuff or any stats stuff go to line 25 -> 30 ish
         }
     }
 }
