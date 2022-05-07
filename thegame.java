@@ -13,17 +13,16 @@ class thegame {
         String CharClassName = "none"; // save
         Integer coins = 0; // save
         String[] enemy = { "thieves", "bandit", "goblin" };
-        String[] charSt = { "HP", "MP", "STR", "DEF", "SC", "PER" };
-        double[] charSk = { 0, 0, 0, 0, 0, 0 }; // save
-        double[] skMod = { 0, 0, 0, 0, 0, 0 }; // save
-        int[] aPoints = { 0, 0, 0, 0, 0, 0 }; // save
+        String[] charSt = { "HP", "MP", "STR", "DEF" };
+        double[] charSk = { 0, 0, 0, 0 }; // save
+        double[] skMod = { 0, 0, 0, 0 }; // save
+        int[] aPoints = { 0, 0, 0, 0 }; // save
         double healthbar = 0;
         double manabar = 0;
         double strength = 0;
         double defence = 0;
         Integer gameprogress = 0; // save
         Integer gameprogresscounter = 0; // save
-        String[] Inventory = new String[50]; // save
 
         // String[] armory1 = { "knight armor basic", "knight armor standard", "knight
         // armor elite" };
@@ -60,13 +59,11 @@ class thegame {
         // skill knight
         String[] skillknight = { "Extra Slash", "Circular Slash" };
         Integer[] skillknightstatus = { 0, 0 }; // 0 = locked || 1 = unlocked // save
-        Integer[] skdamage = { 2, 1 };
         Integer[] skusages = { 30, 80 };
 
         // skill mage
         String[] skillmage = { "Extra balls", "Balls All Around Me" };
         Integer[] skillmagestatus = { 0, 0 }; // 0 = locked || 1 = unlocked // save
-        Integer[] smdamage = { 2, 1 };
         Integer[] smusages = { 30, 80 };
 
         // variable setups ends
@@ -1126,10 +1123,41 @@ class thegame {
                             }
 
                         } else if (progressmenuchecker.equals("6")) {
-                            //
-                            for (int i = 0; i < Inventory.length; i++) {
-                                System.out.println(Inventory[i]);
-                            }
+                            // INVENTORY
+                            System.out.println("Armor");
+                            System.out.println("knightarbasic ");System.out.println(knightarbasic);
+                            System.out.println("knightarstandard ");System.out.println(knightarstandard);
+                            System.out.println("knightarelite ");System.out.println(knightarelite);
+                            System.out.println("robebasic ");System.out.println(robebasic);
+                            System.out.println("robestandard ");System.out.println(robestandard);
+                            System.out.println("robeelite ");System.out.println(robeelite);
+                            System.out.println("");
+                            System.out.println("weapon");
+                            System.out.println("");
+                            System.out.println("swordbasic ");System.out.println(swordbasic);
+                            System.out.println("swordstandard ");System.out.println(swordstandard);
+                            System.out.println("swordelite ");System.out.println(swordelite);
+                            System.out.println("staffbasic ");System.out.println(staffbasic);
+                            System.out.println("staffstandard ");System.out.println(staffstandard);
+                            System.out.println("staffelite ");System.out.println(staffelite);
+                            System.out.println("");
+                            System.out.println("Potion");
+                            System.out.println("");
+                            System.out.println("lowpot ");System.out.println(lowpot);
+                            System.out.println("midpot ");System.out.println(midpot);
+                            System.out.println("highpot ");System.out.println(highpot);
+                            System.out.println("");
+                            System.out.println("Food");
+                            System.out.println("");
+                            System.out.println("lowfood ");System.out.println(lowfood);
+                            System.out.println("midfood ");System.out.println(midfood);
+                            System.out.println("highfood ");System.out.println(highfood);
+                            System.out.println("");
+                            System.out.println("Power ups");
+                            System.out.println("");
+                            System.out.println("lowpow ");System.out.println(lowpow);
+                            System.out.println("midpow ");System.out.println(midpow);
+                            System.out.println("highpow ");System.out.println(highpow);
                             System.out.println("");
                             System.out.print("press enter to exit:");
                             Scanner invout = new Scanner(System.in);
