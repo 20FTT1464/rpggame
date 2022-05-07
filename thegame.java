@@ -513,6 +513,7 @@ class thegame {
                     CharLVL += 1;
                     CharEXP = CharEXP - leveluptop;
                     SkillMovePoint += 2;
+                    AvailableSP += 1;
                 } else {
 
                 }
