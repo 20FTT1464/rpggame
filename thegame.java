@@ -494,48 +494,89 @@ class thegame {
                                 }
 
                                 // armor/knight armor/basic/ suiiii
-                                if (quip.equals("1") && mor.equals("1") && ank.equals("1") && knightarbasic!=0) {
-                                    defence *= 30;defence /= 100; knightarbasic--;
+                                if (quip.equals("1") && mor.equals("1") && ank.equals("1") && knightarbasic != 0) {
+                                    defence *= 30;
+                                    defence /= 100;
+                                    knightarbasic--;
 
                                     // armor/knight armor/standard
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2") && knightarstandard!=0) {
-                                    defence *= 50;defence /= 100; knightarstandard--;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("2")
+                                        && knightarstandard != 0) {
+                                    defence *= 50;
+                                    defence /= 100;
+                                    knightarstandard--;
 
                                     // armor/knight armor/elite
-                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("3") && knightarelite!=0) {
-                                    defence *= 70;defence /= 100;knightarelite--;
+                                } else if (quip.equals("1") && mor.equals("1") && ank.equals("3")
+                                        && knightarelite != 0) {
+                                    defence *= 70;
+                                    defence /= 100;
+                                    knightarelite--;
 
                                     // armor/robe/basic
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("1") && robebasic!=0) {
-                                    defence *= 20;defence /= 100;manabar *= 10;manabar /= 100;robebasic--;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("1") && robebasic != 0) {
+                                    defence *= 20;
+                                    defence /= 100;
+                                    manabar *= 10;
+                                    manabar /= 100;
+                                    robebasic--;
 
                                     // armor/robe/stnadard
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("2") && robestandard!=0) {
-                                    defence *= 40;defence /= 100;manabar *= 30;manabar /= 100;robestandard--;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("2")
+                                        && robestandard != 0) {
+                                    defence *= 40;
+                                    defence /= 100;
+                                    manabar *= 30;
+                                    manabar /= 100;
+                                    robestandard--;
 
                                     // armor/robe/elite
-                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("3") && robeelite!=0) {
-                                    defence *= 60;defence /= 100;manabar *= 50;manabar /= 100;robeelite--;
+                                } else if (quip.equals("1") && mor.equals("2") && ank.equals("3") && robeelite != 0) {
+                                    defence *= 60;
+                                    defence /= 100;
+                                    manabar *= 50;
+                                    manabar /= 100;
+                                    robeelite--;
 
                                     // weapon/sword/basic
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("1") && swordbasic!=0) {
-                                    strength *= 30;strength /= 100;swordbasic--;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("1") && swordbasic != 0) {
+                                    strength *= 30;
+                                    strength /= 100;
+                                    swordbasic--;
 
                                     // weapon/sword/standard
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("2") && swordstandard!=0) {
-                                    strength *= 50; strength /= 100;swordstandard--;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("2")
+                                        && swordstandard != 0) {
+                                    strength *= 50;
+                                    strength /= 100;
+                                    swordstandard--;
                                     // weapon/sword/elite
-                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("3") && swordelite!=0) {
-                                    strength *= 70;strength /= 100;swordelite--;
+                                } else if (quip.equals("2") && mor.equals("1") && ank.equals("3") && swordelite != 0) {
+                                    strength *= 70;
+                                    strength /= 100;
+                                    swordelite--;
                                     // weapon/staff/basic
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("1") && staffbasic!=0) {
-                                    strength *= 10;strength /= 100;manabar *= 10;manabar /= 100;staffbasic--;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("1") && staffbasic != 0) {
+                                    strength *= 10;
+                                    strength /= 100;
+                                    manabar *= 10;
+                                    manabar /= 100;
+                                    staffbasic--;
                                     // weapon/staff/standard
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("2") && staffstandard!=0) {
-                                    strength *= 20;strength /= 100;manabar *= 20;manabar /= 100;staffstandard--;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("2")
+                                        && staffstandard != 0) {
+                                    strength *= 20;
+                                    strength /= 100;
+                                    manabar *= 20;
+                                    manabar /= 100;
+                                    staffstandard--;
                                     // weapon/staff/elite
-                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("3") && staffelite!=0) {
-                                    strength *= 30;strength /= 100;manabar *= 40;manabar /= 100;staffelite--;
+                                } else if (quip.equals("2") && mor.equals("2") && ank.equals("3") && staffelite != 0) {
+                                    strength *= 30;
+                                    strength /= 100;
+                                    manabar *= 40;
+                                    manabar /= 100;
+                                    staffelite--;
                                 }
 
                             } else if (bsscanstr.equals("4")) {
@@ -654,7 +695,7 @@ class thegame {
                     } else {
                         System.out.println("Name: " + CharName);
                         System.out.println("Level: " + CharLVL);
-                        System.out.println("EXP: " + CharEXP + "/" + (CharLVL*100) );
+                        System.out.println("EXP: " + CharEXP + "/" + (CharLVL * 100));
                         // exp bar go here later
                         System.out.println("Coins: " + coins + " g");
                         System.out.println("");
@@ -741,16 +782,18 @@ class thegame {
 
                         } else if (progressmenuchecker.equals("7")) {
                             // TRADING
+
                             System.out.println("May I help you?");
                             System.out.println("1. Purchase");
                             System.out.println("2. Sell");
                             System.out.println("3. Back");
                             Scanner trade = new Scanner(System.in);
                             String tradeMerch = trade.nextLine();
+
                             if (tradeMerch.equals("1")) {
                                 // show money
 
-                                System.out.print("$" + " ");
+                                System.out.print(" " + "g");
                                 System.out.println(coins);
 
                                 // show item
@@ -763,29 +806,156 @@ class thegame {
                                 Scanner buy = new Scanner(System.in);
                                 String buyTrade = buy.nextLine();
 
-                                if(buyTrade.equals("1")){
+                                if (buyTrade.equals("1")) {
 
-                                    System.out.println(knightarbasic);
-                                    System.out.println(knightarstandard);
-                                    System.out.println(knightarelite);
-                                    System.out.println(robebasic);
-                                    System.out.println(robestandard);
-                                    System.out.println(robeelite);
+                                    System.out.println("Pick your armory grade");
+                                    System.out.println("1. Basic");
+                                    System.out.println("2. Standard");
+                                    System.out.println("3. Elite");
 
-                                }else if(buyTrade.equals("2")){
+                                    Scanner grade = new Scanner(System.in);
+                                    String buyGrade = buy.nextLine();
 
-                                    System.out.println(swordbasic);
-                                    System.out.println(swordstandard);
-                                    System.out.println(swordelite);
-                                    System.out.println(staffbasic);
-                                    System.out.println(staffstandard);
-                                    System.out.println(staffelite);
+                                    if (buyGrade.equals("1")) {
 
-                                }else if(buyTrade.equals("3")){
+                                        System.out.println("Knight Ar Basic"+knightarbasic);
+                                        System.out.println("Robe Basic"+robebasic);
+
+                                        Scanner basic = new Scanner(System.in);
+                                        String basicTrade = basic.nextLine();
+
+                                        if(basicTrade.equals("1")){
+
+                                            int priceKnightBasic = (int)(coins-25);
+                                            System.out.println(priceKnightBasic);
+
+                                        }else if(basicTrade.equals("2")){
+
+                                            int priceRobeBasic = (int)(coins-27);
+                                            System.out.println(priceRobeBasic);
+                                        }
+
+                                    } else if (buyGrade.equals("2")) {
+
+                                        System.out.println("Knight Standard"+knightarstandard);
+                                        System.out.println("Robe Standard"+robestandard);
+
+                                        Scanner standard = new Scanner(System.in);
+                                        String standardTrade = standard.nextLine();
+
+                                        if(standardTrade.equals("1")){
+
+                                            int priceKnightStandard = (int)(coins-40);
+                                            System.out.println(priceKnightStandard);
+
+                                        }else if(standardTrade.equals("2")){
+
+                                            int priceRobeStandard = (int)(coins-42);
+                                            System.out.println(priceRobeStandard);
+
+                                           
+
+                                        }
+                                        
+
+                                    } else if (buyGrade.equals("3")) {
+
+                                        System.out.println("Knight Ar Elite"+knightarelite);
+                                        System.out.println("Robe Elite"+robeelite);
+
+                                        
+                                        Scanner elite = new Scanner(System.in);
+                                        String eliteTrade = elite.nextLine();
+
+                                        if(eliteTrade.equals("1")){
+
+                                            int priceKnightElite = (int)(coins-70);
+                                            System.out.println(priceKnightElite);
+
+                                        }else if(eliteTrade.equals("2")){
+
+                                            int priceRobeElite = (int)(coins-72);
+                                            System.out.println(priceRobeElite);
+
+                                           
+
+                                        }
+                                        
+
+                                    }
+
+                                } else if (buyTrade.equals("2")) {
+
+                                    System.out.println("Pick your weaponry grade");
+                                    System.out.println("1. Basic");
+                                    System.out.println("2. Standard");
+                                    System.out.println("3. Elite");
+
+                                    Scanner merch = new Scanner(System.in);
+                                    String merchTrade = merch.nextLine();
+
+                                    if (merchTrade.equals("1")) {
+
+                                        System.out.println("Sword Basic" + swordbasic);
+                                        System.out.println("Staff Basic" + staffbasic);
+
+                                        Scanner basicWeapon = new Scanner(System.in);
+                                        String basicTrade = basicWeapon.nextLine();
+
+                                        if(basicTrade.equals("1")){
+                                            int priceSwordBasic = (int)(coins-20);
+                                            System.out.println(priceSwordBasic);
+                                        }else if(basicTrade.equals("2")){
+                                            int priceStaffBasic = (int)(coins-23);
+                                            System.out.println(priceStaffBasic);
+                                        }
+
+                                    } else if (merchTrade.equals("2")) {
+
+                                        System.out.println("Staff Standard" + swordstandard);
+                                        System.out.println("Sword Standard"+ staffstandard);
+
+                                        Scanner standardWeapon = new Scanner(System.in);
+                                        String standardTrade = standardWeapon.nextLine();
+
+                                        if(standardTrade.equals("1")){
+                                            int priceSwordStandard = (int)(coins-32);
+                                            System.out.println(priceSwordStandard);
+                                        }else if(standardTrade.equals("2")){
+                                            int priceStaffStandard = (int)(coins-34);
+                                            System.out.println(priceStaffStandard);
+                                        }
+
+
+
+                                    } else if (merchTrade.equals("3")) {
+
+                                        System.out.println("Staff Elite" + swordelite);
+                                        System.out.println("Sword Elite"+ staffelite);
+
+                                        Scanner eliteWeapon = new Scanner(System.in);
+                                        String eliteTrade = eliteWeapon.nextLine();
+
+                                        
+                                        if(eliteTrade.equals("1")){
+                                            int priceSwordElite = (int)(coins-32);
+                                            System.out.println(priceSwordElite);
+                                        }else if(eliteTrade.equals("2")){
+                                            int priceStaffElite = (int)(coins-34);
+                                            System.out.println(priceStaffElite);
+                                        }
+
+
+                                    }
+
+                                    
+
+                                } else if (buyTrade.equals("3")) {
                                     break;
                                 }
 
                                 // show inventory
+                                
 
                             } else if (tradeMerch.equals("2")) {
                                 // show money
@@ -796,7 +966,7 @@ class thegame {
                             } else if (tradeMerch.equals("3")) {
                                 break;
                             } else {
-                                System.out.println("Please choose those 3 options!");
+                                System.out.println("Don't you wanna buy something my friend?");
                             }
 
                         }
