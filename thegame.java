@@ -136,7 +136,6 @@ class thegame {
                             // Mage
                         } else if (nameInputcheck.equals("2")) {
                             System.out.println("+20% MP");
-                            System.out.println("+20% SC");
                             System.out.print("Are you sure? (yes/no): ");
                             Scanner nameInputconfirm = new Scanner(System.in);
                             CharClassName = "Mage";
@@ -156,7 +155,6 @@ class thegame {
                         break;
                     } else if (nameInputcheck.equals("2")) {
                         skMod[1] += 20;
-                        skMod[4] += 20;
                         break;
                     } else {
 
@@ -1069,6 +1067,7 @@ class thegame {
                             // LOAD
                         } else if (progressmenuchecker.equals("4")) {
                             // LEVEL & STATS
+                            
                         } else if (progressmenuchecker.equals("5")) {
                             // LEARN SKILL
                             while (true) {
