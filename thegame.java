@@ -1206,12 +1206,14 @@ class thegame {
                                         Scanner basic = new Scanner(System.in);
                                         String basicTrade = basic.nextLine();
 
-                                        if (basicTrade.equals("1")) {
+                                        if (basicTrade.equals("1") && coins>=25 ) {
 
                                             coins -= 25;
+
+
                                       
 
-                                        } else if (basicTrade.equals("2")) {
+                                        } else if (basicTrade.equals("2") && coins>=27) {
 
                                             coins -= 27;
 
@@ -1225,11 +1227,11 @@ class thegame {
                                         Scanner standard = new Scanner(System.in);
                                         String standardTrade = standard.nextLine();
 
-                                        if (standardTrade.equals("1")) {
+                                        if (standardTrade.equals("1") && coins>=40) {
 
                                             coins -= 40;
 
-                                        } else if (standardTrade.equals("2")) {
+                                        } else if (standardTrade.equals("2")&& coins>=42) {
 
                                             coins -= 42;
 
@@ -1243,11 +1245,11 @@ class thegame {
                                         Scanner elite = new Scanner(System.in);
                                         String eliteTrade = elite.nextLine();
 
-                                        if (eliteTrade.equals("1")) {
+                                        if (eliteTrade.equals("1")&& coins>=70) {
 
                                             coins -= 70;
 
-                                        } else if (eliteTrade.equals("2")) {
+                                        } else if (eliteTrade.equals("2")&& coins>=72) {
 
                                             coins -= 72;
 
@@ -1273,11 +1275,11 @@ class thegame {
                                         Scanner basicWeapon = new Scanner(System.in);
                                         String basicTrade = basicWeapon.nextLine();
 
-                                        if (basicTrade.equals("1")) {
+                                        if (basicTrade.equals("1")&& coins>=20) {
 
                                             coins -= 20;
 
-                                        } else if (basicTrade.equals("2")) {
+                                        } else if (basicTrade.equals("2")&& coins>=23) {
 
                                             coins -= 23;
 
@@ -1291,10 +1293,10 @@ class thegame {
                                         Scanner standardWeapon = new Scanner(System.in);
                                         String standardTrade = standardWeapon.nextLine();
 
-                                        if (standardTrade.equals("1")) {
+                                        if (standardTrade.equals("1")&& coins>=32) {
                                             coins -= 32;
 
-                                        } else if (standardTrade.equals("2")) {
+                                        } else if (standardTrade.equals("2")&& coins>=34) {
                                             coins -= 34;
 
                                         }
@@ -1307,10 +1309,10 @@ class thegame {
                                         Scanner eliteWeapon = new Scanner(System.in);
                                         String eliteTrade = eliteWeapon.nextLine();
 
-                                        if (eliteTrade.equals("1")) {
+                                        if (eliteTrade.equals("1")&& coins>=52) {
                                             coins -= 52;
 
-                                        } else if (eliteTrade.equals("2")) {
+                                        } else if (eliteTrade.equals("2")&& coins>=54) {
                                             coins -= 54;
 
                                         }
