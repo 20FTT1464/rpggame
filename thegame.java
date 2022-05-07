@@ -1203,6 +1203,9 @@ class thegame {
                                 System.out.println("Pick your destiny");
                                 System.out.println("1. Armory");
                                 System.out.println("2. Weaponry");
+                                System.out.println("3. Food");
+                                System.out.println("4. Potion");
+                                System.out.println("5. Power");
 
                                 Scanner buy = new Scanner(System.in);
                                 String buyTrade = buy.nextLine();
@@ -1340,7 +1343,63 @@ class thegame {
 
                                         }
 
-                                    }
+                                    }else if (merchTrade.equals("3")) {
+
+                                        System.out.println("Low Potion" + lowpot);
+                                        System.out.println("Mid Potion" + midpot);
+                                        System.out.println("High Potion" + highpot);
+
+                                        Scanner potion = new Scanner(System.in);
+                                        String potionTrade = potion.nextLine();
+
+                                        if (potionTrade.equals("1") && coins >= 3) {
+                                            coins -= 3;
+
+                                        } else if (potionTrade.equals("2") && coins >= 7) {
+                                            coins -= 7;
+
+                                        }else if (potionTrade.equals("3") && coins >= 10) {
+                                            coins -= 10;
+                                        }
+
+
+                                    }else if (merchTrade.equals("4")) {
+
+                                        System.out.println("Low Food" + lowfood);
+                                        System.out.println("Mid Food" + midfood);
+                                        System.out.println("High Food" + highfood);
+
+                                        Scanner food = new Scanner(System.in);
+                                        String foodTrade = food.nextLine();
+
+                                        if (foodTrade.equals("1") && coins >= 5) {
+                                            coins -= 5;
+
+                                        } else if (foodTrade.equals("2") && coins >= 7) {
+                                            coins -= 7;
+
+                                        }else if (foodTrade.equals("3") && coins >= 9) {
+                                            coins -= 9;
+                                        }
+
+                                    }else if (merchTrade.equals("5")) {
+
+                                        System.out.println("Low Power" + lowpow);
+                                        System.out.println("Mid Power" + midpow);
+                                        System.out.println("High Power" + highpow);
+
+                                        Scanner power = new Scanner(System.in);
+                                        String powerTrade = power.nextLine();
+
+                                        if (powerTrade.equals("1") && coins >= 4) {
+                                            coins -= 4;
+
+                                        } else if (powerTrade.equals("2") && coins >= 6) {
+                                            coins -= 6;
+
+                                        }else if (powerTrade.equals("3") && coins >= 8) {
+                                            coins -= 8;
+                                        }
                                 }
 
                             } else if (tradeMerch.equals("2")) {
