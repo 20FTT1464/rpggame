@@ -22,6 +22,7 @@ class thegame {
         double strength = 0;
         double defence = 0;
         Integer gameprogress = 0; // save
+        Integer gameprogresscounter = 0; // save
         String[] Inventory = new String[50]; // save
 
         // String[] armory1 = { "knight armor basic", "knight armor standard", "knight
@@ -491,8 +492,18 @@ class thegame {
                                         }
                                     }
                                 } else if (CharClassName.equals("Mage")) {
-                                    
+                                    for (int i = 0; i < skillmage.length; i++) {
+                                        System.out.print((i+1)+ ". " +skillmage[i]);
+                                        if (skillmagestatus[i]==1) {
+                                            System.out.println("Usable");
+                                        } else {
+                                            System.out.println("Locked");
+                                        }
+                                    }
                                 }
+                                Scanner skilluse = new Scanner(System.in);
+                                String skillus = skilluse.nextLine();
+
                             } else if (bsscanstr.equals("3")) {
                                 // equip
 
@@ -772,6 +783,23 @@ class thegame {
                 } else {
                     if (gameprogress % 10 == 0) {
                         // story trigger
+                        if(gameprogresscounter==0){
+                            //first part go here
+
+                            // first part end
+                            gameprogresscounter++;
+                        } else if (gameprogresscounter==1) {
+                            //second
+
+                            gameprogresscounter++;
+                        } else if (gameprogresscounter==2) {
+                            //third
+
+                            gameprogresscounter++;
+                        }
+
+                        
+
                     } else {
                         System.out.println("Name: " + CharName);
                         System.out.println("Level: " + CharLVL);
