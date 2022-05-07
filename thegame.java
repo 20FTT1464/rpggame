@@ -327,167 +327,170 @@ class thegame {
 
                 }
             } else if (nuinput == 2) { // Userinput 2 AKA load
-                String[] load2;
+                String[] load;
                             for (int j = 0; j < saveslot.length; j++) {
                                 System.out.println((j+1)+". "+ saveslot[j]);
                             }
                             Scanner file = new Scanner(System.in);
 
                             if (file.nextLine().equals("1")) {
-                               Scanner fileReader = new Scanner(saveslot[0]);
-                               load2 = new String[42]; 
+                                File files = new File(saveslot[0]+".txt");
+                               Scanner fileReader = new Scanner(files);
+                               load = new String[42]; 
                             int loader = 0;
                             while (fileReader.hasNextLine()) {
-                              load2[loader] = fileReader.nextLine();
+                              load[loader] = fileReader.nextLine();
                               loader++;
                             }
                             
-                            CharLVL = Integer.parseInt(load2[0]);
-                            CharEXP= Integer.parseInt(load2[1]);
-                            AvailableSP= Integer.parseInt(load2[2]);
-                            CharName= (load2[3]);
-                            CharClassName= (load2[4]);
-                            coins = Integer.parseInt(load2[5]);
-                            charSk[0] = Integer.parseInt(load2[6]);
-                            charSk[1] = Integer.parseInt(load2[7]);
-                            charSk[2] = Integer.parseInt(load2[8]);
-                            charSk[3] = Integer.parseInt(load2[9]);
-                            skMod[0] = Integer.parseInt(load2[10]);
-                            skMod[1] = Integer.parseInt(load2[11]);
-                            skMod[2]= Integer.parseInt(load2[12]);
-                            skMod[3] = Integer.parseInt(load2[13]);
-                            aPoints[0] = Integer.parseInt(load2[14]);
-                            aPoints[1] = Integer.parseInt(load2[15]); 
-                            aPoints[2] = Integer.parseInt(load2[16]);
-                            aPoints[3] = Integer.parseInt(load2[17]);
-                            gameprogress = Integer.parseInt(load2[18]);
-                            gameprogresscounter = Integer.parseInt(load2[19]);
-                            knightarbasic = Integer.parseInt(load2[20]);
-                            knightarstandard= Integer.parseInt(load2[21]);
-                            knightarelite = Integer.parseInt(load2[22]);
-                            robebasic = Integer.parseInt(load2[23]);
-                            robestandard = Integer.parseInt(load2[24]);
-                            robeelite = Integer.parseInt(load2[25]);
-                            swordbasic = Integer.parseInt(load2[26]);
-                            swordstandard = Integer.parseInt(load2[27]);
-                            swordelite = Integer.parseInt(load2[28]);
-                            staffbasic = Integer.parseInt(load2[29]);
-                            staffstandard = Integer.parseInt(load2[30]);
-                            staffelite = Integer.parseInt(load2[31]);
-                            lowpot = Integer.parseInt(load2[32]);
-                            midpot = Integer.parseInt(load2[33]);
-                            highpot = Integer.parseInt(load2[34]);
-                            lowfood = Integer.parseInt(load2[35]);
-                            midfood = Integer.parseInt(load2[36]);
-                            highfood = Integer.parseInt(load2[37]);
-                            lowpow = Integer.parseInt(load2[38]);
-                            midpow = Integer.parseInt(load2[39]);
-                            highpow = Integer.parseInt(load2[40]);
-                            SkillMovePoint = Integer.parseInt(load2[41]);
+                            CharLVL = Integer.parseInt(load[0]);
+                            CharEXP= Integer.parseInt(load[1]);
+                            AvailableSP= Integer.parseInt(load[2]);
+                            CharName= (load[3]);
+                            CharClassName= (load[4]);
+                            coins = Integer.parseInt(load[5]);
+                            charSk[0] = Double.parseDouble(load[6]);
+                            charSk[1] = Double.parseDouble(load[7]);
+                            charSk[2] = Double.parseDouble(load[8]);
+                            charSk[3] = Double.parseDouble(load[9]);
+                            skMod[0] = Double.parseDouble(load[10]);
+                            skMod[1] = Double.parseDouble(load[11]);
+                            skMod[2]= Double.parseDouble(load[12]);
+                            skMod[3] = Double.parseDouble(load[13]);
+                            aPoints[0] = Integer.parseInt(load[14]);
+                            aPoints[1] = Integer.parseInt(load[15]); 
+                            aPoints[2] = Integer.parseInt(load[16]);
+                            aPoints[3] = Integer.parseInt(load[17]);
+                            gameprogress = Integer.parseInt(load[18]);
+                            gameprogresscounter = Integer.parseInt(load[19]);
+                            knightarbasic = Integer.parseInt(load[20]);
+                            knightarstandard= Integer.parseInt(load[21]);
+                            knightarelite = Integer.parseInt(load[22]);
+                            robebasic = Integer.parseInt(load[23]);
+                            robestandard = Integer.parseInt(load[24]);
+                            robeelite = Integer.parseInt(load[25]);
+                            swordbasic = Integer.parseInt(load[26]);
+                            swordstandard = Integer.parseInt(load[27]);
+                            swordelite = Integer.parseInt(load[28]);
+                            staffbasic = Integer.parseInt(load[29]);
+                            staffstandard = Integer.parseInt(load[30]);
+                            staffelite = Integer.parseInt(load[31]);
+                            lowpot = Integer.parseInt(load[32]);
+                            midpot = Integer.parseInt(load[33]);
+                            highpot = Integer.parseInt(load[34]);
+                            lowfood = Integer.parseInt(load[35]);
+                            midfood = Integer.parseInt(load[36]);
+                            highfood = Integer.parseInt(load[37]);
+                            lowpow = Integer.parseInt(load[38]);
+                            midpow = Integer.parseInt(load[39]);
+                            highpow = Integer.parseInt(load[40]);
+                            SkillMovePoint = Integer.parseInt(load[41]);
                             fileReader.close();
                             }  else if (file.nextLine().equals("2")) {
-                               Scanner fileReader = new Scanner(saveslot[1]);
-                               load2 = new String[42]; 
+                                File files = new File(saveslot[1]+".txt");
+                               Scanner fileReader = new Scanner(files+".txt");
+                               load = new String[42]; 
                             int loader = 0;
                             while (fileReader.hasNextLine()) {
-                              load2[loader] = fileReader.nextLine();
+                              load[loader] = fileReader.nextLine();
                               loader++;
                             }
                             
-                            CharLVL = Integer.parseInt(load2[0]);
-                            CharEXP= Integer.parseInt(load2[1]);
-                            AvailableSP= Integer.parseInt(load2[2]);
-                            CharName= (load2[3]);
-                            CharClassName= (load2[4]);
-                            coins = Integer.parseInt(load2[5]);
-                            charSk[0] = Integer.parseInt(load2[6]);
-                            charSk[1] = Integer.parseInt(load2[7]);
-                            charSk[2] = Integer.parseInt(load2[8]);
-                            charSk[3] = Integer.parseInt(load2[9]);
-                            skMod[0] = Integer.parseInt(load2[10]);
-                            skMod[1] = Integer.parseInt(load2[11]);
-                            skMod[2]= Integer.parseInt(load2[12]);
-                            skMod[3] = Integer.parseInt(load2[13]);
-                            aPoints[0] = Integer.parseInt(load2[14]);
-                            aPoints[1] = Integer.parseInt(load2[15]); 
-                            aPoints[2] = Integer.parseInt(load2[16]);
-                            aPoints[3] = Integer.parseInt(load2[17]);
-                            gameprogress = Integer.parseInt(load2[18]);
-                            gameprogresscounter = Integer.parseInt(load2[19]);
-                            knightarbasic = Integer.parseInt(load2[20]);
-                            knightarstandard= Integer.parseInt(load2[21]);
-                            knightarelite = Integer.parseInt(load2[22]);
-                            robebasic = Integer.parseInt(load2[23]);
-                            robestandard = Integer.parseInt(load2[24]);
-                            robeelite = Integer.parseInt(load2[25]);
-                            swordbasic = Integer.parseInt(load2[26]);
-                            swordstandard = Integer.parseInt(load2[27]);
-                            swordelite = Integer.parseInt(load2[28]);
-                            staffbasic = Integer.parseInt(load2[29]);
-                            staffstandard = Integer.parseInt(load2[30]);
-                            staffelite = Integer.parseInt(load2[31]);
-                            lowpot = Integer.parseInt(load2[32]);
-                            midpot = Integer.parseInt(load2[33]);
-                            highpot = Integer.parseInt(load2[34]);
-                            lowfood = Integer.parseInt(load2[35]);
-                            midfood = Integer.parseInt(load2[36]);
-                            highfood = Integer.parseInt(load2[37]);
-                            lowpow = Integer.parseInt(load2[38]);
-                            midpow = Integer.parseInt(load2[39]);
-                            highpow = Integer.parseInt(load2[40]);
-                            SkillMovePoint = Integer.parseInt(load2[41]);
+                            CharLVL = Integer.parseInt(load[0]);
+                            CharEXP= Integer.parseInt(load[1]);
+                            AvailableSP= Integer.parseInt(load[2]);
+                            CharName= (load[3]);
+                            CharClassName= (load[4]);
+                            coins = Integer.parseInt(load[5]);
+                            charSk[0] = Double.parseDouble(load[6]);
+                            charSk[1] = Double.parseDouble(load[7]);
+                            charSk[2] = Double.parseDouble(load[8]);
+                            charSk[3] = Double.parseDouble(load[9]);
+                            skMod[0] = Double.parseDouble(load[10]);
+                            skMod[1] = Double.parseDouble(load[11]);
+                            skMod[2]= Double.parseDouble(load[12]);
+                            skMod[3] = Double.parseDouble(load[13]);
+                            aPoints[0] = Integer.parseInt(load[14]);
+                            aPoints[1] = Integer.parseInt(load[15]); 
+                            aPoints[2] = Integer.parseInt(load[16]);
+                            aPoints[3] = Integer.parseInt(load[17]);
+                            gameprogress = Integer.parseInt(load[18]);
+                            gameprogresscounter = Integer.parseInt(load[19]);
+                            knightarbasic = Integer.parseInt(load[20]);
+                            knightarstandard= Integer.parseInt(load[21]);
+                            knightarelite = Integer.parseInt(load[22]);
+                            robebasic = Integer.parseInt(load[23]);
+                            robestandard = Integer.parseInt(load[24]);
+                            robeelite = Integer.parseInt(load[25]);
+                            swordbasic = Integer.parseInt(load[26]);
+                            swordstandard = Integer.parseInt(load[27]);
+                            swordelite = Integer.parseInt(load[28]);
+                            staffbasic = Integer.parseInt(load[29]);
+                            staffstandard = Integer.parseInt(load[30]);
+                            staffelite = Integer.parseInt(load[31]);
+                            lowpot = Integer.parseInt(load[32]);
+                            midpot = Integer.parseInt(load[33]);
+                            highpot = Integer.parseInt(load[34]);
+                            lowfood = Integer.parseInt(load[35]);
+                            midfood = Integer.parseInt(load[36]);
+                            highfood = Integer.parseInt(load[37]);
+                            lowpow = Integer.parseInt(load[38]);
+                            midpow = Integer.parseInt(load[39]);
+                            highpow = Integer.parseInt(load[40]);
+                            SkillMovePoint = Integer.parseInt(load[41]);
                             fileReader.close();
                             } else if (file.nextLine().equals("3")) {
-                               Scanner fileReader = new Scanner(saveslot[2]);
-                               load2 = new String[42]; 
+                                File files = new File(saveslot[2]+".txt");
+                               Scanner fileReader = new Scanner(files);
+                               load = new String[42]; 
                             int loader = 0;
                             while (fileReader.hasNextLine()) {
-                              load2[loader] = fileReader.nextLine();
+                              load[loader] = fileReader.nextLine();
                               loader++;
                             }
                             
-                            CharLVL = Integer.parseInt(load2[0]);
-                            CharEXP= Integer.parseInt(load2[1]);
-                            AvailableSP= Integer.parseInt(load2[2]);
-                            CharName= (load2[3]);
-                            CharClassName= (load2[4]);
-                            coins = Integer.parseInt(load2[5]);
-                            charSk[0] = Integer.parseInt(load2[6]);
-                            charSk[1] = Integer.parseInt(load2[7]);
-                            charSk[2] = Integer.parseInt(load2[8]);
-                            charSk[3] = Integer.parseInt(load2[9]);
-                            skMod[0] = Integer.parseInt(load2[10]);
-                            skMod[1] = Integer.parseInt(load2[11]);
-                            skMod[2]= Integer.parseInt(load2[12]);
-                            skMod[3] = Integer.parseInt(load2[13]);
-                            aPoints[0] = Integer.parseInt(load2[14]);
-                            aPoints[1] = Integer.parseInt(load2[15]); 
-                            aPoints[2] = Integer.parseInt(load2[16]);
-                            aPoints[3] = Integer.parseInt(load2[17]);
-                            gameprogress = Integer.parseInt(load2[18]);
-                            gameprogresscounter = Integer.parseInt(load2[19]);
-                            knightarbasic = Integer.parseInt(load2[20]);
-                            knightarstandard= Integer.parseInt(load2[21]);
-                            knightarelite = Integer.parseInt(load2[22]);
-                            robebasic = Integer.parseInt(load2[23]);
-                            robestandard = Integer.parseInt(load2[24]);
-                            robeelite = Integer.parseInt(load2[25]);
-                            swordbasic = Integer.parseInt(load2[26]);
-                            swordstandard = Integer.parseInt(load2[27]);
-                            swordelite = Integer.parseInt(load2[28]);
-                            staffbasic = Integer.parseInt(load2[29]);
-                            staffstandard = Integer.parseInt(load2[30]);
-                            staffelite = Integer.parseInt(load2[31]);
-                            lowpot = Integer.parseInt(load2[32]);
-                            midpot = Integer.parseInt(load2[33]);
-                            highpot = Integer.parseInt(load2[34]);
-                            lowfood = Integer.parseInt(load2[35]);
-                            midfood = Integer.parseInt(load2[36]);
-                            highfood = Integer.parseInt(load2[37]);
-                            lowpow = Integer.parseInt(load2[38]);
-                            midpow = Integer.parseInt(load2[39]);
-                            highpow = Integer.parseInt(load2[40]);
-                            SkillMovePoint = Integer.parseInt(load2[41]);
+                            CharLVL = Integer.parseInt(load[0]);
+                            CharEXP= Integer.parseInt(load[1]);
+                            AvailableSP= Integer.parseInt(load[2]);
+                            CharName= (load[3]);
+                            CharClassName= (load[4]);
+                            coins = Integer.parseInt(load[5]);
+                            charSk[0] = Double.parseDouble(load[6]);
+                            charSk[1] = Double.parseDouble(load[7]);
+                            charSk[2] = Double.parseDouble(load[8]);
+                            charSk[3] = Double.parseDouble(load[9]);
+                            skMod[0] = Double.parseDouble(load[10]);
+                            skMod[1] = Double.parseDouble(load[11]);
+                            skMod[2]= Double.parseDouble(load[12]);
+                            skMod[3] = Double.parseDouble(load[13]);
+                            aPoints[0] = Integer.parseInt(load[14]);
+                            aPoints[1] = Integer.parseInt(load[15]); 
+                            aPoints[2] = Integer.parseInt(load[16]);
+                            aPoints[3] = Integer.parseInt(load[17]);
+                            gameprogress = Integer.parseInt(load[18]);
+                            gameprogresscounter = Integer.parseInt(load[19]);
+                            knightarbasic = Integer.parseInt(load[20]);
+                            knightarstandard= Integer.parseInt(load[21]);
+                            knightarelite = Integer.parseInt(load[22]);
+                            robebasic = Integer.parseInt(load[23]);
+                            robestandard = Integer.parseInt(load[24]);
+                            robeelite = Integer.parseInt(load[25]);
+                            swordbasic = Integer.parseInt(load[26]);
+                            swordstandard = Integer.parseInt(load[27]);
+                            swordelite = Integer.parseInt(load[28]);
+                            staffbasic = Integer.parseInt(load[29]);
+                            staffstandard = Integer.parseInt(load[30]);
+                            staffelite = Integer.parseInt(load[31]);
+                            lowpot = Integer.parseInt(load[32]);
+                            midpot = Integer.parseInt(load[33]);
+                            highpot = Integer.parseInt(load[34]);
+                            lowfood = Integer.parseInt(load[35]);
+                            midfood = Integer.parseInt(load[36]);
+                            highfood = Integer.parseInt(load[37]);
+                            lowpow = Integer.parseInt(load[38]);
+                            midpow = Integer.parseInt(load[39]);
+                            highpow = Integer.parseInt(load[40]);
+                            SkillMovePoint = Integer.parseInt(load[41]);
                             fileReader.close();
                             } 
             }
@@ -1231,7 +1234,7 @@ class thegame {
                             // SAVE
                             String[] save = {String.valueOf(CharLVL), String.valueOf(CharEXP), String.valueOf(AvailableSP), CharName, CharClassName, String.valueOf(coins), String.valueOf(charSk[0]), 
                                 String.valueOf(charSk[1]), String.valueOf(charSk[2]), String.valueOf(charSk[3]), String.valueOf(skMod[0]), String.valueOf(skMod[1]), String.valueOf(skMod[2]), 
-                                String.valueOf(skMod[3]), String.valueOf(aPoints), String.valueOf(gameprogress), String.valueOf(gameprogresscounter), String.valueOf(knightarbasic), String.valueOf(knightarstandard), 
+                                String.valueOf(skMod[3]), String.valueOf(aPoints[0]),String.valueOf(aPoints[1]),String.valueOf(aPoints[2]),String.valueOf(aPoints[3]), String.valueOf(gameprogress), String.valueOf(gameprogresscounter), String.valueOf(knightarbasic), String.valueOf(knightarstandard), 
                                 String.valueOf(knightarelite), String.valueOf(robebasic), String.valueOf(robestandard), String.valueOf(robeelite), String.valueOf(swordbasic), String.valueOf(swordstandard), 
                                 String.valueOf(swordelite), String.valueOf(staffbasic), String.valueOf(staffstandard), String.valueOf(staffelite), String.valueOf(lowpot), String.valueOf(midpot), 
                                 String.valueOf(highpot), String.valueOf(lowfood), String.valueOf(midfood), String.valueOf(highfood), String.valueOf(lowpow), String.valueOf(midpow), String.valueOf(highpow), 
@@ -1333,7 +1336,8 @@ class thegame {
                             Scanner file = new Scanner(System.in);
 
                             if (file.nextLine().equals("1")) {
-                               Scanner fileReader = new Scanner(saveslot[0]);
+                                File files = new File(saveslot[0]+".txt");
+                               Scanner fileReader = new Scanner(files);
                                load2 = new String[42]; 
                             int loader = 0;
                             while (fileReader.hasNextLine()) {
@@ -1347,14 +1351,14 @@ class thegame {
                             CharName= (load2[3]);
                             CharClassName= (load2[4]);
                             coins = Integer.parseInt(load2[5]);
-                            charSk[0] = Integer.parseInt(load2[6]);
-                            charSk[1] = Integer.parseInt(load2[7]);
-                            charSk[2] = Integer.parseInt(load2[8]);
-                            charSk[3] = Integer.parseInt(load2[9]);
-                            skMod[0] = Integer.parseInt(load2[10]);
-                            skMod[1] = Integer.parseInt(load2[11]);
-                            skMod[2]= Integer.parseInt(load2[12]);
-                            skMod[3] = Integer.parseInt(load2[13]);
+                            charSk[0] = Double.parseDouble(load2[6]);
+                            charSk[1] = Double.parseDouble(load2[7]);
+                            charSk[2] = Double.parseDouble(load2[8]);
+                            charSk[3] = Double.parseDouble(load2[9]);
+                            skMod[0] = Double.parseDouble(load2[10]);
+                            skMod[1] = Double.parseDouble(load2[11]);
+                            skMod[2]= Double.parseDouble(load2[12]);
+                            skMod[3] = Double.parseDouble(load2[13]);
                             aPoints[0] = Integer.parseInt(load2[14]);
                             aPoints[1] = Integer.parseInt(load2[15]); 
                             aPoints[2] = Integer.parseInt(load2[16]);
@@ -1385,7 +1389,8 @@ class thegame {
                             SkillMovePoint = Integer.parseInt(load2[41]);
                             fileReader.close();
                             }  else if (file.nextLine().equals("2")) {
-                               Scanner fileReader = new Scanner(saveslot[1]);
+                                File files = new File(saveslot[1]+".txt");
+                               Scanner fileReader = new Scanner(files);
                                load2 = new String[42]; 
                             int loader = 0;
                             while (fileReader.hasNextLine()) {
@@ -1399,14 +1404,14 @@ class thegame {
                             CharName= (load2[3]);
                             CharClassName= (load2[4]);
                             coins = Integer.parseInt(load2[5]);
-                            charSk[0] = Integer.parseInt(load2[6]);
-                            charSk[1] = Integer.parseInt(load2[7]);
-                            charSk[2] = Integer.parseInt(load2[8]);
-                            charSk[3] = Integer.parseInt(load2[9]);
-                            skMod[0] = Integer.parseInt(load2[10]);
-                            skMod[1] = Integer.parseInt(load2[11]);
-                            skMod[2]= Integer.parseInt(load2[12]);
-                            skMod[3] = Integer.parseInt(load2[13]);
+                            charSk[0] = Double.parseDouble(load2[6]);
+                            charSk[1] = Double.parseDouble(load2[7]);
+                            charSk[2] = Double.parseDouble(load2[8]);
+                            charSk[3] = Double.parseDouble(load2[9]);
+                            skMod[0] = Double.parseDouble(load2[10]);
+                            skMod[1] = Double.parseDouble(load2[11]);
+                            skMod[2]= Double.parseDouble(load2[12]);
+                            skMod[3] = Double.parseDouble(load2[13]);
                             aPoints[0] = Integer.parseInt(load2[14]);
                             aPoints[1] = Integer.parseInt(load2[15]); 
                             aPoints[2] = Integer.parseInt(load2[16]);
@@ -1437,7 +1442,8 @@ class thegame {
                             SkillMovePoint = Integer.parseInt(load2[41]);
                             fileReader.close();
                             } else if (file.nextLine().equals("3")) {
-                               Scanner fileReader = new Scanner(saveslot[2]);
+                                File files = new File(saveslot[2]+".txt");
+                               Scanner fileReader = new Scanner(files);
                                load2 = new String[42]; 
                             int loader = 0;
                             while (fileReader.hasNextLine()) {
@@ -1451,14 +1457,14 @@ class thegame {
                             CharName= (load2[3]);
                             CharClassName= (load2[4]);
                             coins = Integer.parseInt(load2[5]);
-                            charSk[0] = Integer.parseInt(load2[6]);
-                            charSk[1] = Integer.parseInt(load2[7]);
-                            charSk[2] = Integer.parseInt(load2[8]);
-                            charSk[3] = Integer.parseInt(load2[9]);
-                            skMod[0] = Integer.parseInt(load2[10]);
-                            skMod[1] = Integer.parseInt(load2[11]);
-                            skMod[2]= Integer.parseInt(load2[12]);
-                            skMod[3] = Integer.parseInt(load2[13]);
+                            charSk[0] = Double.parseDouble(load2[6]);
+                            charSk[1] = Double.parseDouble(load2[7]);
+                            charSk[2] = Double.parseDouble(load2[8]);
+                            charSk[3] = Double.parseDouble(load2[9]);
+                            skMod[0] = Double.parseDouble(load2[10]);
+                            skMod[1] = Double.parseDouble(load2[11]);
+                            skMod[2]= Double.parseDouble(load2[12]);
+                            skMod[3] = Double.parseDouble(load2[13]);
                             aPoints[0] = Integer.parseInt(load2[14]);
                             aPoints[1] = Integer.parseInt(load2[15]); 
                             aPoints[2] = Integer.parseInt(load2[16]);
