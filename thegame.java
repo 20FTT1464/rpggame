@@ -324,7 +324,19 @@ class thegame {
 
                 }
             } else if (nuinput == 2) { // Userinput 2 AKA load
-                System.out.println("Load saved games amongus");
+                String[] load;
+                Scanner fileReader = new Scanner(file);
+                load = new String[3]; 
+                int loader = 0;
+                while (fileReader.hasNextLine()) {
+                  load[loader] = fileReader.nextLine();
+                  loader++;
+                }
+    
+                System.out.println("loader 1" + " " + load[0]);
+                System.out.println("loader 2" + " " + load[1]);
+                System.out.println("loader 3" + " " + load[2]);
+                fileReader.close();
             }
 
             // end of load
@@ -867,7 +879,6 @@ class thegame {
                         // story trigger
                         if (gameprogresscounter == 0) {
                             // first part go here
-                            // story 1
                             Scanner s = new Scanner(System.in);
                             System.out.println(
                                     "A mysterious person found Aleph looking very hopeless and helpless. He went to Aleph and help him.");
@@ -1065,8 +1076,59 @@ class thegame {
                             System.out.println(" ");
                         } else if (progressmenuchecker.equals("2")) {
                             // SAVE
+                            String[] save = {String.valueOf(CharLVL), String.valueOf(CharEXP), String.valueOf(AvailableSP), CharName, CharClassName, String.valueOf(coins), String.valueOf(charSk[0]), 
+                                String.valueOf(charSk[1]), String.valueOf(charSk[2]), String.valueOf(charSk[3]), String.valueOf(skMod[0]), String.valueOf(skMod[1]), String.valueOf(skMod[2]), 
+                                String.valueOf(skMod[3]), String.valueOf(aPoints), String.valueOf(gameprogress), String.valueOf(gameprogresscounter), String.valueOf(knightarbasic), String.valueOf(knightarstandard), 
+                                String.valueOf(knightarelite), String.valueOf(robebasic), String.valueOf(robestandard), String.valueOf(robeelite), String.valueOf(swordbasic), String.valueOf(swordstandard), 
+                                String.valueOf(swordelite), String.valueOf(staffbasic), String.valueOf(staffstandard), String.valueOf(staffelite), String.valueOf(lowpot), String.valueOf(midpot), 
+                                String.valueOf(highpot), String.valueOf(lowfood), String.valueOf(midfood), String.valueOf(highfood), String.valueOf(lowpow), String.valueOf(midpow), String.valueOf(highpow), 
+                                String.valueOf(SkillMovePoint), String.valueOf(skillknight), String.valueOf(skillknightstatus), String.valueOf(skusages), String.valueOf(skillmage), String.valueOf(skillmagestatus), 
+                                String.valueOf(smusages)};
+                                
+                                while (true) {
+                                    System.out.print("Please enter slot name: ");
+                                    Scanner gs = new Scanner(System.in);
+                        
+                                    File file = new File(gs.nextLine() + ".txt");
+                                    if (file.createNewFile()) {
+                                        System.out.println("File created: " + file.getName());
+                                    } else {
+                                        System.out.println("File already exists.");
+                                    }
+                        
+                                    FileWriter writer = new FileWriter(file);
+                                    for (int i = 0; i < save.length; i++) {
+                                        writer.write(save[i] + System.lineSeparator());
+                                    }
+                                    writer.close();
+                        
+                                    if (file.exists()) {
+                                        System.out.println("Do you want to overwrite?");
+                                        Scanner ovcon = new Scanner(System.in);
+                                        String line = ovcon.nextLine();
+                                            if (line.equals("yes")) {
+                                                System.out.println("Enter description: ");
+                                                Scanner ercon = new Scanner(System.in);
+                                                String ayat = ercon.nextLine();
+                                                break;
+                                            } else if (line.equals("no")) {
+                                            }
+                                    }
                         } else if (progressmenuchecker.equals("3")) {
                             // LOAD
+                            String[] load;
+                            Scanner fileReader = new Scanner(file);
+                            load = new String[3]; 
+                            int loader = 0;
+                            while (fileReader.hasNextLine()) {
+                              load[loader] = fileReader.nextLine();
+                              loader++;
+                            }
+                
+                            System.out.println("loader 1" + " " + load[0]);
+                            System.out.println("loader 2" + " " + load[1]);
+                            System.out.println("loader 3" + " " + load[2]);
+                            fileReader.close();
                         } else if (progressmenuchecker.equals("4")) {
                             // LEVEL & STATS
                         } else if (progressmenuchecker.equals("5")) {
