@@ -869,20 +869,152 @@ class thegame {
                 } else {
                     if (gameprogress % 10 == 0) {
                         // story trigger
-                        if (gameprogresscounter == 0) {
-                            // first part go here
-
+                        if(gameprogresscounter==0){
+                            //first part go here
+                            //story 1
+                            Scanner s = new Scanner(System.in);
+                            System.out.println("A mysterious person found Aleph looking very hopeless and helpless. He went to Aleph and help him.");
+                            s.nextLine();
+                            System.out.println("The mysterious person ask, \"You must be Aleph?\"");
+                            s.nextLine();
+                            System.out.println("Aleph: Who are you? How did you find me?");
+                            s.nextLine();
+                            System.out.println("Mysterious person: I am Imposter.");
+                            s.nextLine();
+                            System.out.println("Aleph: Please help me get out of here.");
+                            s.nextLine();
+                            System.out.println("Imposter: I will show you the way but...you have one problem.");
+                            s.nextLine();
+                            System.out.println("Aleph: What is it?");
+                            s.nextLine();
+                            System.out.println("Imposter: The only way for you to get out of here is to have the strength, power and willingness to fight all the enemies.");
+                            s.nextLine();
+                            System.out.println("Aleph: But I have nothing...sigh");
+                            s.nextLine();
+                            System.out.println("Imposter: Quick! We're being attack.");
+                            s.nextLine();
                             // first part end
                             gameprogresscounter++;
-                        } else if (gameprogresscounter == 1) {
-                            // second
 
+                        } else if (gameprogresscounter==1) {
+                            //second
+                            Scanner w = new Scanner(System.in);
+                            System.out.println("Aleph: Phew! That was close. We did great right?");
+                            w.nextLine();
+                            System.out.println("No response.");
+                            w.nextLine();
+                            System.out.println("Aleph: Right?");
+                            w.nextLine();
+                            System.out.println("Aleph look behind him saw Impostor slowly fading off.");
+                            w.nextLine();
+                            System.out.println("Imposter: You have to do this on your own now.");
+                            w.nextLine();
+                            System.out.println("Aleph: Wait. I have no where to go.");
+                            w.nextLine();
+                            System.out.println("Imposter: You will be fine.");
+                            w.nextLine();
+                            System.out.println("Aleph was left alone, did not know where to go. At that moment, someone approach him.");
+                            w.nextLine();
+                            System.out.println("Someone: Hello, mas Aleph! I am Eren Yeager. You can call me Eren.");
+                            w.nextLine();
+                            System.out.println("Aleph: Hello, Eren.");
+                            w.nextLine();
+                            System.out.println("Eren: I see that you are trap in this forest and you are trying to get out from here, right?");
+                            w.nextLine();
+                            System.out.println("Aleph: Yes. Can you help me please?");
+                            w.nextLine();
+                            System.out.println("Eren: I will help you get out from here.");
+                            w.nextLine();
+                            System.out.println("Aleph: Thank you!");
+                            w.nextLine();
+                            System.out.println("Eren: There is a way. Come on...through here.");
+                            w.nextLine();
+                            System.out.println("Aleph and Eren's move along the forest, leading him unknowingly into deeper forest.");
+                            w.nextLine();
+                            System.out.println("Aleph: How long are we getting out of this forest?");
+                            w.nextLine();
+                            System.out.println("Eren: Almost there...");
+                            w.nextLine();
+                            System.out.println("Aleph senses that Eren was lying and brought him into a scary looking place. Then, Eren ran away from the enemy leaving Aleph alone to fight.");
+                            w.nextLine();
                             gameprogresscounter++;
-                        } else if (gameprogresscounter == 2) {
-                            // third
 
+                        } else if (gameprogresscounter==2) {
+                            //third
+                            Scanner t = new Scanner(System.in);
+                            System.out.println("Aleph: Argh, that was painful!");
+                            t.nextLine();
+                            System.out.println("\"Boo!\"");
+                            t.nextLine();
+                            System.out.println("Aleph: Ahhh.... W-Who are you?");
+                            t.nextLine();
+                            System.out.println("Lady: Hahaha. Hello, I am Sakura. I can heal you.");
+                            t.nextLine();
+                            System.out.println("Aleph: Please.");
+                            t.nextLine();
+                            System.out.println("Sakura: Please wait for a moment. Let me check your injuries.");
+                            t.nextLine();
+                            System.out.println("Sakura: Drink this they can heal you up. Also, eat this then you have maximum energy.");
+                            t.nextLine();
+                            System.out.println("Aleph drank the potion and ate the food. So now Aleph has heal up.");
+                            t.nextLine();
+                            System.out.println("Sakura: Now that you heal up. You must rest.");
+                            t.nextLine();
+                            System.out.println("Aleph: But I have no time to rest. I must go home.");
+                            t.nextLine();
+                            System.out.println("Sakura: Hmm...well I can not let you go on your own with this kind of state. I will go and help you.");
+                            t.nextLine();
+                            System.out.println("Aleph: All right, that is fine with me. The more the merrier.");
+                            t.nextLine();
+                            System.out.println("While on their way out. They saw an enemy coming towards them. Aleph and Sakura were on their position and getting ready to attack.");
+                            t.nextLine();
                             gameprogresscounter++;
-                        }
+
+                        } else if (gameprogresscounter==3) {
+                            Scanner q = new Scanner(System.in);
+                            System.out.println("Aleph: By now, I must be called \"The Youngest Hero that has been fighting all these enemies from nothing.\" Am I right?");
+                            q.nextLine();
+                            System.out.println("Sakura: Don't bluff yourselves. We still have more to go.");
+                            q.nextLine();
+                            System.out.println("Aleph: Ouch!");
+                            q.nextLine();
+                            System.out.println("Sakura: Oh my..are you hurt? Where? Let me see.");
+                            q.nextLine();
+                            System.out.println("Aleph: I was just joking. Hahahaha. A little joke won't hurt, do you?");
+                            q.nextLine();
+                            System.out.println("Sakura: No..no you are right.");
+                            q.nextLine();
+                            System.out.println("Aleph and Sakura's move to a place where they can set up a bonfire not too far from a lake.");
+                            q.nextLine();
+                            System.out.println("Sakura's gave Aleph a potion for him to heal up.");
+                            q.nextLine();
+                            System.out.println("As they were having a deep conversation with each other. Aleph looked around and saw an enemy roaming around near the lake.");
+                            q.nextLine();
+                            System.out.println("He quietly told Sakura. Sakura was alerted getting ready to atttack.");
+                            q.nextLine();
+                            gameprogresscounter++;
+
+                        } else if (gameprogresscounter==4) {
+                            Scanner x = new Scanner(System.in);
+                            System.out.println("Then Aleph finishes off the enemy by slaughtering the enemy's head in one swift movement.");
+                            x.nextLine();
+                            System.out.println("Aleph: Did you see that?");
+                            x.nextLine();
+                            System.out.println("Then, Aleph saw Sakura was bleeding profusely.");
+                            x.nextLine();
+                            System.out.println("Aleph: No..no don't leave me yet.");
+                            x.nextLine();
+                            System.out.println("Sakura: I am sorry, I can not promise you that. Here take this.");
+                            x.nextLine();
+                            System.out.println("Aleph cried as Sakura's slowly fading off.");
+                            x.nextLine();
+                            System.out.println("As Aleph stood up, he accidentally slid off a rock while walking. Then, he fell onto the river.");
+                            x.nextLine();
+                            System.out.println("After that, Aleph woke up from his dream only to be disappointed that it was all a dream.");
+                            x.nextLine();
+                            gameprogresscounter++;
+
+                        } else {}
 
                     } else {
                         System.out.println("Name: " + CharName);
@@ -988,16 +1120,18 @@ class thegame {
 
                         } else if (progressmenuchecker.equals("7")) {
                             // TRADING
+
                             System.out.println("May I help you?");
                             System.out.println("1. Purchase");
                             System.out.println("2. Sell");
                             System.out.println("3. Back");
                             Scanner trade = new Scanner(System.in);
                             String tradeMerch = trade.nextLine();
+
                             if (tradeMerch.equals("1")) {
                                 // show money
 
-                                System.out.print("$" + " ");
+                                System.out.print(" " + "g");
                                 System.out.println(coins);
 
                                 // show item
@@ -1012,27 +1146,154 @@ class thegame {
 
                                 if (buyTrade.equals("1")) {
 
-                                    System.out.println(knightarbasic);
-                                    System.out.println(knightarstandard);
-                                    System.out.println(knightarelite);
-                                    System.out.println(robebasic);
-                                    System.out.println(robestandard);
-                                    System.out.println(robeelite);
+                                    System.out.println("Pick your armory grade");
+                                    System.out.println("1. Basic");
+                                    System.out.println("2. Standard");
+                                    System.out.println("3. Elite");
+
+                                    Scanner grade = new Scanner(System.in);
+                                    String buyGrade = buy.nextLine();
+
+                                    if (buyGrade.equals("1")) {
+
+                                        System.out.println("Knight Ar Basic"+knightarbasic);
+                                        System.out.println("Robe Basic"+robebasic);
+
+                                        Scanner basic = new Scanner(System.in);
+                                        String basicTrade = basic.nextLine();
+
+                                        if(basicTrade.equals("1")){
+
+                                            int priceKnightBasic = (int)(coins-25);
+                                            System.out.println(priceKnightBasic);
+
+                                        }else if(basicTrade.equals("2")){
+
+                                            int priceRobeBasic = (int)(coins-27);
+                                            System.out.println(priceRobeBasic);
+                                        }
+
+                                    } else if (buyGrade.equals("2")) {
+
+                                        System.out.println("Knight Standard"+knightarstandard);
+                                        System.out.println("Robe Standard"+robestandard);
+
+                                        Scanner standard = new Scanner(System.in);
+                                        String standardTrade = standard.nextLine();
+
+                                        if(standardTrade.equals("1")){
+
+                                            int priceKnightStandard = (int)(coins-40);
+                                            System.out.println(priceKnightStandard);
+
+                                        }else if(standardTrade.equals("2")){
+
+                                            int priceRobeStandard = (int)(coins-42);
+                                            System.out.println(priceRobeStandard);
+
+                                           
+
+                                        }
+                                        
+
+                                    } else if (buyGrade.equals("3")) {
+
+                                        System.out.println("Knight Ar Elite"+knightarelite);
+                                        System.out.println("Robe Elite"+robeelite);
+
+                                        
+                                        Scanner elite = new Scanner(System.in);
+                                        String eliteTrade = elite.nextLine();
+
+                                        if(eliteTrade.equals("1")){
+
+                                            int priceKnightElite = (int)(coins-70);
+                                            System.out.println(priceKnightElite);
+
+                                        }else if(eliteTrade.equals("2")){
+
+                                            int priceRobeElite = (int)(coins-72);
+                                            System.out.println(priceRobeElite);
+
+                                           
+
+                                        }
+                                        
+
+                                    }
 
                                 } else if (buyTrade.equals("2")) {
 
-                                    System.out.println(swordbasic);
-                                    System.out.println(swordstandard);
-                                    System.out.println(swordelite);
-                                    System.out.println(staffbasic);
-                                    System.out.println(staffstandard);
-                                    System.out.println(staffelite);
+                                    System.out.println("Pick your weaponry grade");
+                                    System.out.println("1. Basic");
+                                    System.out.println("2. Standard");
+                                    System.out.println("3. Elite");
+
+                                    Scanner merch = new Scanner(System.in);
+                                    String merchTrade = merch.nextLine();
+
+                                    if (merchTrade.equals("1")) {
+
+                                        System.out.println("Sword Basic" + swordbasic);
+                                        System.out.println("Staff Basic" + staffbasic);
+
+                                        Scanner basicWeapon = new Scanner(System.in);
+                                        String basicTrade = basicWeapon.nextLine();
+
+                                        if(basicTrade.equals("1")){
+                                            int priceSwordBasic = (int)(coins-20);
+                                            System.out.println(priceSwordBasic);
+                                        }else if(basicTrade.equals("2")){
+                                            int priceStaffBasic = (int)(coins-23);
+                                            System.out.println(priceStaffBasic);
+                                        }
+
+                                    } else if (merchTrade.equals("2")) {
+
+                                        System.out.println("Staff Standard" + swordstandard);
+                                        System.out.println("Sword Standard"+ staffstandard);
+
+                                        Scanner standardWeapon = new Scanner(System.in);
+                                        String standardTrade = standardWeapon.nextLine();
+
+                                        if(standardTrade.equals("1")){
+                                            int priceSwordStandard = (int)(coins-32);
+                                            System.out.println(priceSwordStandard);
+                                        }else if(standardTrade.equals("2")){
+                                            int priceStaffStandard = (int)(coins-34);
+                                            System.out.println(priceStaffStandard);
+                                        }
+
+
+
+                                    } else if (merchTrade.equals("3")) {
+
+                                        System.out.println("Staff Elite" + swordelite);
+                                        System.out.println("Sword Elite"+ staffelite);
+
+                                        Scanner eliteWeapon = new Scanner(System.in);
+                                        String eliteTrade = eliteWeapon.nextLine();
+
+                                        
+                                        if(eliteTrade.equals("1")){
+                                            int priceSwordElite = (int)(coins-32);
+                                            System.out.println(priceSwordElite);
+                                        }else if(eliteTrade.equals("2")){
+                                            int priceStaffElite = (int)(coins-34);
+                                            System.out.println(priceStaffElite);
+                                        }
+
+
+                                    }
+
+                                    
 
                                 } else if (buyTrade.equals("3")) {
                                     break;
                                 }
 
                                 // show inventory
+                                
 
                             } else if (tradeMerch.equals("2")) {
                                 // show money
@@ -1043,7 +1304,7 @@ class thegame {
                             } else if (tradeMerch.equals("3")) {
                                 break;
                             } else {
-                                System.out.println("Please choose those 3 options!");
+                                System.out.println("Don't you wanna buy something my friend?");
                             }
 
                         }
