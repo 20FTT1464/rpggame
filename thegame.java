@@ -1018,6 +1018,7 @@ class thegame {
                                     break;
                                 } else {
                                     System.out.println("You failed to run! no legs OvO");
+                                    allowdamage = true;
                                 }
                             }
                         }
